@@ -192,6 +192,7 @@ VERTS.forEach(([k,crit])=>add(k,'B',ROOT+'/phase-1/verticals/'+k+'.md',{crit,cid
 PLATS.forEach(([k,cid])=>add(k,'C',ROOT+'/phase-1/platforms/'+k+'.md',{cid}));
 SYNTH.forEach(([k,t])=>add(k,'S',ROOT+'/phase-2/'+k+'.md',{navTitle:t}));
 REFS.forEach(([k,t,p])=>add(k,'R',p,{navTitle:t}));
+add('executive-brief','X',ROOT+'/executive-brief.md',{navTitle:'Executive Brief'});
 const clOrder=['A1','A2','A3','A4','A5','A6','A7','A8','A9','A10'];
 function critClass(c){return 'crit-'+(c||'').toLowerCase().replace(/[^a-z]/g,'');}
 
@@ -212,6 +213,7 @@ let sBody='';SYNTH.forEach(([k,t])=>sBody+=item(k,'',t));
 let rBody='';REFS.forEach(([k,t])=>rBody+=item(k,'',t));
 let side='';
 side+='<button class="navitem nav-top" data-key="overview"><span class="ni-id">◎</span><span class="ni-t">Overview & Map</span></button>';
+side+='<button class="navitem nav-top nav-feature" data-key="executive-brief"><span class="ni-id">★</span><span class="ni-t">Executive Brief</span></button>';
 side+=accGroup('Axis A','Capabilities',23,aBody);
 side+=accGroup('Axis B','Verticals',16,bBody);
 side+=accGroup('Axis C','Platforms',10,cBody);
@@ -250,6 +252,7 @@ ov+='<div class="hero"><div class="eyebrow">Engineering Eligibility & Training F
 ov+='<h1 class="hero-h">AI for Robotics — the complete capability map</h1>';
 ov+='<p class="hero-sub">Who is eligible to build AI for robotics, and how to train them — mapped across every capability, industry vertical and robot platform. 49 researched profiles, one navigable map.</p>';
 ov+='<div class="metrics">'+metric('49','Niche profiles')+metric('23','Capabilities · A')+metric('16','Verticals · B')+metric('10','Platforms · C')+metric('3','Orthogonal axes')+'</div></div>';
+ov+='<button class="execcallout" data-key="executive-brief"><div class="ec-l"><span class="ec-tag">Start here · for leaders</span><div class="ec-t">Executive Brief — Manufacturing &amp; Humanoids</div><div class="ec-b">A plain-language view of the roles, hiring, training and partners that matter for factory robotics and next-generation humanoids — no AI background needed.</div></div><div class="ec-go">Open →</div></button>';
 ov+='<div class="mapsec"><div class="mapsec-head"><h2 class="ov-h">The map</h2><p class="ov-lead">Three orthogonal axes. Expand a branch to see what it contains; click any node to open its profile.</p></div>';
 ov+=buildTree();
 ov+='<p class="tm-caption"><span class="mono">the coordinate idea —</span> an engineer is a point in this space: a <b>capability</b> (A) operating on a <b>platform</b> (C) within a <b>vertical</b> (B). The axes stay orthogonal, so the map never duplicates a curriculum.</p></div>';
