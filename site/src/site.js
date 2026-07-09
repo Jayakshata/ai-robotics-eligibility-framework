@@ -19,7 +19,6 @@
   updIcon();
   themeBtn.addEventListener('click',function(){var n=curTheme()==='dark'?'light':'dark';root.setAttribute('data-theme',n);updIcon();try{localStorage.setItem('airb-theme',n);}catch(e){}});
 
-  /* open the accordion path to a nav item */
   function openAncestors(el){var p=el.parentElement;while(p&&p!==nav){if(p.hasAttribute&&p.hasAttribute('data-acc'))p.classList.add('open');p=p.parentElement;}}
 
   function go(key){
@@ -39,6 +38,8 @@
   document.addEventListener('click',function(e){
     var keyEl=e.target.closest('[data-key]');
     if(keyEl){e.preventDefault();go(keyEl.getAttribute('data-key'));return;}
+    var sn=e.target.closest('.secnav-i');
+    if(sn){e.preventDefault();var id=(sn.getAttribute('href')||'').slice(1);var tgt=document.getElementById(id);if(tgt)tgt.scrollIntoView({block:'start'});return;}
     var tt=e.target.closest('[data-tt]');
     if(tt){var br=tt.closest('.tm-branch');if(br)br.classList.toggle('tm-open');return;}
     var all=e.target.closest('[data-tmall]');

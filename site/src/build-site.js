@@ -46,10 +46,22 @@ function inline(s){
   s=s.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
   s=s.replace(/(^|[^*\w])\*([^*\n]+)\*(?=[^*\w]|$)/g,'$1<em>$2</em>');
   s=s.replace(/\\([*_])/g,'$1');
-  s=s.replace(ZRE,function(m,i){return '<code>'+esc(codes[+i])+'</code>';});
+  s=s.replace(ZRE,function(m,i){
+    const c=codes[+i],t=c.trim();
+    if(t.length<=10 && /^[✓~⏱★🆕◆FS\[\]\s]+$/u.test(t) && (/[✓~⏱★🆕◆]/u.test(t) || /^\[[FS]\]/.test(t))){
+      let cls='ctag';
+      if(t.indexOf('⏱')>=0)cls+=' t-time';
+      else if(t.indexOf('✓')>=0)cls+=' t-ok';
+      else if(t.indexOf('🆕')>=0||t.indexOf('★')>=0)cls+=' t-new';
+      else if(t.indexOf('~')>=0)cls+=' t-warn';
+      else cls+=' t-type';
+      return '<span class="'+cls+'">'+esc(c)+'</span>';
+    }
+    return '<code>'+esc(c)+'</code>';
+  });
   return s;
 }
-function mdToHtml(md){
+function parseBlocks(md){
   const lines=md.replace(/\r/g,'').split('\n');
   let out=[],i=0;
   const isTableRow=l=>/^\s*\|.*\|\s*$/.test(l);
@@ -72,7 +84,7 @@ function mdToHtml(md){
     if(/^\s*>\s?/.test(l)){
       const buf=[];
       while(i<lines.length&&/^\s*>\s?/.test(lines[i])){buf.push(lines[i].replace(/^\s*>\s?/,''));i++;}
-      out.push('<blockquote>'+mdToHtml(buf.join('\n'))+'</blockquote>');continue;
+      out.push('<blockquote>'+parseBlocks(buf.join('\n')).join('\n')+'</blockquote>');continue;
     }
     if(/^\s*[-*]\s+/.test(l)){
       const buf=[];
@@ -83,7 +95,7 @@ function mdToHtml(md){
     while(i<lines.length&&!/^\s*$/.test(lines[i])&&!/^\s*[-*]\s+/.test(lines[i])&&!/^(#{1,6})\s+/.test(lines[i])&&!/^\s*>\s?/.test(lines[i])&&!/^\s*---+\s*$/.test(lines[i])&&!isTableRow(lines[i])){para.push(lines[i]);i++;}
     out.push('<p>'+inline(para.join(' ').trim())+'</p>');
   }
-  return out.join('\n');
+  return out;
 }
 function renderList(buf){
   let html='<ul>',j=0;
@@ -92,23 +104,88 @@ function renderList(buf){
     const indent=(line.match(/^\s*/)[0]||'').length;
     const m=line.match(/^\s*[-*]\s+(.*)$/);
     if(!m){j++;continue;}
+    const raw=m[1];
     const nested=[];j++;
     while(j<buf.length){
       const ni=(buf[j].match(/^\s*/)[0]||'').length;
       if(/^\s*[-*]\s+/.test(buf[j])&&ni>indent){nested.push(buf[j]);j++;}else break;
     }
-    html+='<li>'+inline(m[1])+(nested.length?renderList(nested):'')+'</li>';
+    // keyed multi-item bullet ("**Key:** a · b · c …") -> key heading + sub-bullets
+    const km=raw.match(/^\*\*([\s\S]+?)\*\*(?:\s*(?:—|–)\s*|\s*:?\s*)([\s\S]+)$/);
+    const segs=km?km[2].split(/\s+·\s+/):null;
+    const bal=segs&&segs.every(function(x){return (x.match(/\*\*/g)||[]).length%2===0&&(x.match(/`/g)||[]).length%2===0;});
+    if(km&&segs&&segs.length>=3&&bal&&nested.length===0){
+      const key=km[1].replace(/\s*:\s*$/,'');
+      let sub='<ul class="toklist">';
+      segs.forEach(function(s){sub+='<li>'+inline(s.trim())+'</li>';});
+      sub+='</ul>';
+      html+='<li class="keyed"><span class="li-k">'+inline(key)+'</span>'+sub+'</li>';
+      continue;
+    }
+    let li=inline(raw);
+    li=li.replace(/^<strong>([\s\S]+?)<\/strong>(\s*(?:—|–|:)\s*)/,'<span class="li-k">$1</span>$2');
+    html+='<li>'+li+(nested.length?renderList(nested):'')+'</li>';
   }
   return html+'</ul>';
 }
 
-/* ---------------- read + convert ---------------- */
+/* ---------------- document renderer (sectioned) ---------------- */
+function stripTags(s){return s.replace(/<[^>]+>/g,'');}
+function transformBlock(b){
+  const m=b.match(/^<p><strong>([\s\S]+?)<\/strong>\s*(?:—|–|:)\s*([\s\S]*)<\/p>$/);
+  if(m) return '<div class="field"><div class="field-k">'+m[1]+'</div><div class="field-v">'+m[2]+'</div></div>';
+  return b;
+}
+function transformPreamble(b){
+  if(/^<p>/.test(b)){
+    const inner=b.replace(/^<p>/,'').replace(/<\/p>$/,'');
+    if((inner.match(/<strong>[^<]*:<\/strong>/g)||[]).length>=2){
+      const segs=inner.split(/\s*·\s*(?=<strong>)/);
+      let items='';
+      segs.forEach(function(seg){
+        const mm=seg.match(/^<strong>([\s\S]+?):<\/strong>\s*([\s\S]*)$/);
+        if(mm) items+='<div class="meta-i"><span class="meta-k">'+mm[1]+'</span><span class="meta-v">'+mm[2]+'</span></div>';
+        else items+='<div class="meta-i meta-free">'+seg+'</div>';
+      });
+      return '<div class="meta-row">'+items+'</div>';
+    }
+  }
+  return b;
+}
+function renderDoc(md){
+  const blocks=parseBlocks(md);
+  let head='',preamble=[],secs=[],parts=[],cur=null,body='';
+  function flush(){ if(cur){ parts.push('<section class="sec"><div class="sec-h"><span class="sec-n">'+cur.num+'</span><h2 id="'+cur.id+'">'+cur.title+'</h2></div><div class="sec-b">'+body+'</div></section>'); body=''; } }
+  blocks.forEach(function(b){
+    if(/^<h1>/.test(b)){head+=b;return;}
+    if(/^<h2>/.test(b)){
+      flush();
+      const mm=b.match(/^<h2>([\s\S]*)<\/h2>$/); let t=mm?mm[1]:'';
+      const nm=t.match(/^(\d+)\.\s*([\s\S]*)$/); const num=nm?nm[1]:String(secs.length+1); const title=nm?nm[2]:t;
+      cur={num:num,title:title,id:'sec-'+num}; secs.push(cur); return;
+    }
+    if(!cur){preamble.push(b);return;}
+    body+=transformBlock(b);
+  });
+  flush();
+  let pre='';
+  preamble.forEach(function(b){ if(/^<blockquote>/.test(b))return; pre+=transformPreamble(b); });
+  let nav='';
+  if(secs.length>=3){
+    nav='<nav class="secnav" aria-label="Sections">';
+    secs.forEach(function(s){ nav+='<a class="secnav-i" href="#'+s.id+'"><span class="secnav-n">'+s.num+'</span><span class="secnav-t">'+esc(stripTags(s.title))+'</span></a>'; });
+    nav+='</nav>';
+  }
+  return head+pre+nav+'<div class="secs">'+parts.join('')+'</div>';
+}
+
+/* ---------------- read ---------------- */
 function read(p){try{return fs.readFileSync(p,'utf8');}catch(e){return null;}}
 function titleOf(md,fallback){const m=md.match(/^#\s+(.*)$/m);let t=m?m[1]:fallback;t=t.replace(/^Per-Niche Profile —\s*/,'').replace(/^Vertical Overlay —\s*/,'').replace(/^Platform Track —\s*/,'').replace(/\s*\(.*$/,'').trim();return t;}
 const DATA={};
 function add(key,group,path,extra){
   const md=read(path);if(md===null){console.error('MISSING',path);return;}
-  DATA[key]=Object.assign({key,group,title:titleOf(md,key),html:mdToHtml(md)},extra||{});
+  DATA[key]=Object.assign({key,group,title:titleOf(md,key),html:renderDoc(md)},extra||{});
 }
 CAPS.forEach(([k,cl],ix)=>add(k,'A',ROOT+'/phase-1/'+k+'.md',{cluster:cl,cid:'A'+(ix+1)}));
 VERTS.forEach(([k,crit])=>add(k,'B',ROOT+'/phase-1/verticals/'+k+'.md',{crit,cid:VAXIS[k]}));
@@ -182,7 +259,7 @@ ov+=synthCard('common-core-vs-specialization','Common Core vs Specialization','T
 ov+=synthCard('progression-paths','Progression Paths','The L1→L5 ladder, the lattice of how niches combine and worked career paths.');
 ov+=synthCard('lab-procurement-and-partnerships','Lab & Partnerships','The consolidated buy-list — robots, sensors, compute, sim — tiered entry/mid/flagship, plus partnership targets.');
 ov+='</div>';
-ov+='<div class="tagkey"><span class="tk">Confidence tags used throughout</span> <span class="chip">✓ research-grounded</span> <span class="chip">~ verify at publish</span> <span class="chip">⏱ time-sensitive</span> <span class="chip">★ frontier</span></div>';
+ov+='<div class="tagkey"><span class="tk">Confidence tags used throughout</span> <span class="ctag t-ok">✓</span> research-grounded <span class="ctag t-warn">~</span> verify at publish <span class="ctag t-time">⏱</span> time-sensitive <span class="ctag t-new">★</span> frontier</div>';
 DATA['overview']={key:'overview',group:'top',title:'Overview',html:ov};
 
 /* ---------------- assemble ---------------- */
