@@ -194,4 +194,36 @@ docs/
 
 ---
 
+## Update log — Executive Brief + applied-AI extension (added after the initial handoff, same day)
+
+All committed & pushed.
+
+### Executive Brief (DONE, live on the site)
+`executive-brief.md` — a plain-language **"Manufacturing & Humanoids"** view for a **non-AI-expert leader** (the company's leader is focused on factory robotics + tomorrow's humanoids). Wired into the site as a featured nav item **★ Executive Brief** + a "Start here · for leaders" callout on the overview. Covers three kinds of AI, the roles that matter, a hiring order, what to buy, key partners, the humanoid frontier.
+
+### The "kinds of AI" model — `applied-ai-taxonomy.md`
+Five kinds of AI, **by what the AI acts on**: (1) **Embodied** → the robot = the 23 Axis-A niches (built) · (2) **Agentic/assistive** → people & workflows → new **Area 1** · (3) **Analytics/predictive** → data → new **Area 2** · (4) **Generative/design** → engineering → folded into Area 1 · (5) **Governance** → the AI itself → folded into Area 1 · (6) Foundation-model research = **out of scope** ("consume, don't build").
+
+### Two NEW build areas
+- **Area 1 — Agentic & Applied AI** (8 niches): agentic-LLM-orchestration · **engineering-robotics-copilots ✅ exemplar** · knowledge-rag-systems · operations-erp-ai · conversational-hmi-agents · llmops-ai-platform · generative-ai-design · responsible-ai-governance. *Backgrounds: software + LLM/agent (CS/ML).*
+- **Area 2 — Analytics / Predictive AI** (5 niches): **predictive-maintenance ✅ exemplar** · quality-yield-defect-analytics · process-production-optimization · forecasting-planning-analytics · anomaly-fault-detection. *Backgrounds: data science + reliability domain.*
+
+### Two exemplars built (research-backed, mid-2026)
+- `phase-1/agentic/engineering-robotics-copilots.md`
+- `phase-1/analytics/predictive-maintenance.md`
+Their **full source research (4 background agents) is preserved** in `phase-1/.research/`: `engineering-robotics-copilots.creds.md`/`.trending.md`, `predictive-maintenance.creds.md`/`.trending.md`. **Nothing the background agents produced is lost.**
+
+### ⏸ WHERE WE STOPPED — RESUME HERE
+Awaiting the user's **sign-off on the two exemplars' adapted format.** On "go":
+1. **Fan out the remaining 11** applied-AI niches (7 in Area 1, 4 in Area 2) via a research→write workflow — using the two exemplars as the gold standard and the `.research/` reports + `applied-ai-taxonomy.md` as grounding (same process that built the 49 profiles).
+2. **Wire both new areas into the site** — in `site/src/build-site.js` add two content-registry blocks + two accordion sidebar groups + two tree-map branches (mirror the Axis A/B/C wiring) and register the profiles; then `node site/src/build-site.js && node site/src/pages-wrap.js`, commit/push (Pages auto-rebuilds), re-publish the Artifact.
+
+### Adapted-template notes for applied-AI profiles (differ from embodied)
+- **§3 eligibility:** Area 1 → CS/SE + applied-LLM (software-first; robotics domain is the *differentiator*, not the entry ticket). Area 2 → data-science/stats core + reliability-domain certs (**CMRP, CRE, ISO 18436-2 vibration**). Neither wants kinematics/control.
+- **§9 labs/hardware:** compute / LLM APIs / vector DBs / agent frameworks / sim-CAM-PLC sandboxes (Area 1); time-series DBs / **C-MAPSS & PRONOSTIA** datasets / condition-monitoring sensors (Area 2) — **not robots**.
+- **§7 trending:** agent frameworks (LangGraph 1.0, MCP, Claude Agent SDK), shipping copilots (Path Robotics, Hirebotics, Siemens TIA, CloudNC) (Area 1); time-series foundation models (Amazon Chronos-2), physics-informed RUL, AWS Lookout retirement, edge/TinyML (Area 2).
+- **§6 training:** copilots track is *faster* (~7–9 mo, a software conversion); predictive-maintenance ~9–11 mo.
+
+---
+
 *To resume: read this file, open the live site, skim `master-niche-taxonomy.md` + `phase-1/README.md` + `phase-1/_grounding-reference.md`, and treat the repo as the source of truth. Then say what you want to work on next.*
