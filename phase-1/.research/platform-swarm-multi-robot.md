@@ -1,0 +1,59 @@
+# Platform Track — Swarm / Multi-Robot Platforms
+
+> **Platform profile (Axis C).** Bundles Axis-A capabilities into the "swarm / multi-robot engineer" archetype — it references the capability profiles rather than restating them. `✓` grounded · `~` to-verify · `⏱` time-sensitive. Web-verified mid-2026; sources at end.
+
+**Platform:** Swarm / Multi-Robot Platforms · **Axis C:** C9 · **Frontier:** `[★]` partial (the coordination-*brain* layer — multi-agent foundation models — is frontier)
+**Signature capabilities (Axis A, load-bearing first):** A9 multi-robot coordination / swarm / fleet orchestration · A3 planning + MAPF · A2 collaborative SLAM / relative localization · A10 middleware / comms / real-time + fleet safety · A6 MARL · A1 collaborative perception · A7 multi-agent foundation models (emerging brain) · **Typical verticals (B):** B2 warehouse/logistics · B6 defense · B7 agriculture · B14 mapping/inspection · search & rescue
+
+---
+
+## 1. Definition & Scope
+The "platform" is not a single body but a **collective** — N robots (10s to 100,000s), homogeneous or heterogeneous (ground AMRs, nano-quadrotors, field bots), whose intelligence lives in the *interactions between* them. What makes it distinct as an engineering target: unlike every embodiment-centric platform (arm, humanoid, quadruped), the load-bearing problem is **not** balance/grasp/locomotion of one machine but **coordination under decentralization, partial observability, and communication constraints**. The per-robot embodiment can be trivial (a $14 Kilobot); the engineering *is* the algorithm plus the systems/comms substrate. Two poles that hire differently: (a) a **swarm / distributed-algorithms research** pole (consensus, flocking, self-organization, MARL, MAPF) and (b) an **applied fleet-orchestration** pole (heterogeneous AMR/AGV fleets, traffic deconfliction, task allocation) — essentially distributed-systems software wearing a robotics hat. Scale, robustness, and emergence replace single-robot determinism.
+
+## 2. Signature Capability Stack
+- **A9 Multi-Robot Coordination / Swarm / Fleet Orchestration** *(load-bearing — the platform **is** this capability)* — consensus, formation/flocking, coverage (Voronoi), multi-robot task allocation (MRTA), fleet orchestration. → `multi-robot-swarm`
+- **A3 Planning & Navigation + MAPF** — per-agent Nav2 beneath the collective; **multi-agent path finding** (CBS/LaCAM) is the warehouse workhorse, sitting at the A3×A9 seam. → `motion-planning-navigation`
+- **A2 State Estimation & Spatial AI** — collaborative/multi-robot SLAM, **relative localization**, GPS-denied positioning, shared maps. → `state-estimation-slam`
+- **A10 Middleware / Comms / Real-time + Fleet Safety** *(systems substrate — unusually load-bearing here)* — DDS discovery at scale, mesh/UWB/5G comms, VDA 5050 / Open-RMF interop, fleet-traffic deconfliction. → `robotics-middleware-realtime`, `safety-verification-assurance`
+- **A6 Robot Learning → MARL** — CTDE, QMIX/MAPPO, GNN decentralized policies, emergent coordination. → `reinforcement-learning-control`
+- **A1 Perception** — distributed/**collaborative perception** (air-ground teams), multi-view fusion. → `computer-vision-3d-perception`, `multimodal-sensor-fusion`
+- **A7 Foundation Models** *(emerging "fleet brain," frontier)* — DeepFleet/MAPF-GPT, LLM-orchestrated heterogeneous teams. → `robot-foundation-models-vla`
+
+## 3. Integration & Platform-Specific Skills
+The "integration tax" no single capability owns: **decentralized-algorithm design** (provable consensus/convergence, scalability to 100s–1000s, robustness to dropouts/failures); **communication engineering under constraints** (mesh networking, UWB relative localization, bandwidth-limited & GPS-denied comms, ROS 2 **DDS discovery bottlenecks** at scale); **fleet interoperability** (VDA 5050 JSON/MQTT, Open-RMF fleet adapters, MassRobotics AMR standard, lift/door resource management); **warehouse-scale MAPF** (lifelong MAPF, order-scheduling coupling); **sim-to-real for swarms** (GPU-vectorized MARL); and **collective safety** — deadlock/livelock avoidance and emergent-behavior assurance. The distinctive bar: the **software/distributed-systems skill dominates the mechatronics skill** — atypical among platforms.
+
+## 4. Typical Verticals
+**B2 warehouse/logistics** (largest — AMR/AGV fleets ≈45% of the swarm market; Amazon 1M+ robots) — the commercial anchor. **B6 defense** (drone swarms, loitering munitions) — fastest-scaling, best-funded frontier. **B7 agriculture** (field-robot fleets, precision spray/weed). **B14 mapping/inspection & search-and-rescue** (collaborative coverage, air-ground teams). **Marine/environmental monitoring**. Chosen because each rewards **parallelism, coverage, redundancy, and graceful degradation** — jobs a single robot scales poorly at.
+
+## 5. Eligibility Profile
+The archetypal **"swarm / multi-robot engineer"** bundles **coordination + planning/MAPF + state estimation + distributed-systems/middleware**, increasingly + **MARL**. Uniquely among platforms, **CS (distributed systems / algorithms) is the strongest single fit** — backend/distributed-systems experience partially transfers to fleet orchestration. Also Tier-1: **Aerospace** (multi-vehicle GNC / formation flight — Caltech, Stanford, MIT swarm groups sit in AeroAstro), **EE/ECE** (networked/decentralized control, consensus), **Applied Math** (graph theory, distributed optimization), **Operations Research** (fleet = logistics optimization: assignment, VRP, scheduling). **ME/Mechatronics is the weakest differentiator here** — the value is coordination algorithms, not embodiment. Platform must-haves: **ROS 2 + multi-robot namespacing/DDS + Nav2**, **Open-RMF / VDA-5050** fluency, ≥1 swarm/MAPF/MARL project. Feeder profiles: `multi-robot-swarm`, `motion-planning-navigation`, `state-estimation-slam`, `reinforcement-learning-control`, `robotics-middleware-realtime`. Tiers: **L1** fleet integrator (Open-RMF/VDA5050 deploy) → **L2–L3** coordination software (MAPF/nav/orchestration) → **L4/L5** swarm/MARL/multi-agent-FM research.
+
+## 6. Platform-Specific Hardware & Stack `~`
+**Research swarm robots:** **Kilobot** (Harvard, ~$14, 33 mm — the canonical large-N testbed) · **Crazyflie 2.1 / Bolt / Brushless** (Bitcraze nano-quadrotors — the aerial-swarm default) · **e-puck** (K-Team) · **TurtleBot** · GRITSBot / **Robotarium** (Georgia Tech remote-access swarm) · **Mercator** (2026 modular swarm robot). **Commercial ground fleets:** Amazon (Hercules/Proteus), **Locus Robotics** (Array), Geek+, MiR, Symbotic; **SwarmFarm SwarmBot** (agriculture). **Aerial/defense:** DJI, **Shield AI** V-BAT, **Anduril** Anvil, LUCAS. **Software:** **ROS 2** + DDS + **Nav2**; fleet layer **Open-RMF**, **VDA 5050**, MassRobotics AMR; aerial-swarm **Crazyswarm2 / CrazyChoir / Aerostack2 / Skybrush** (+ PX4); swarm frameworks **ROS2swarm, ARGoS, Buzz/BittyBuzz**; MARL sims **VMAS/BenchMARL** (GPU-vectorized), **POGEMA/GRACE** (MAPF benchmarks); defense autonomy **Shield AI Hivemind**. **Comms/compute:** UWB relative localization, mesh/5G, MQTT; per-robot microcontrollers → NVIDIA Jetson for AMR-class agents.
+
+## 7. Trending & Notable `⏱ as of mid-2026`
+**Multi-agent foundation models — the "fleet brain":** **Amazon DeepFleet** (Jul/Aug 2025; +~10% travel-time across a 1M+-robot fleet), **MAPF-GPT**, MARL-GPT. **LLM/VLA-orchestrated heterogeneous teams:** GenSwarm, RoboOS, EMOS. **Learning-guided MAPF** (Cambridge **Prorok Lab** graph-attention & hypergraph-NN; lifelong warehouse MAPF). **Defense swarm scale-up:** **Shield AI Hivemind** selected for the **LUCAS** kamikaze-drone program (May 2026); **Anduril** raised a $5B Series H → ~$61B valuation (May 2026); L3Harris AMORPHOUS. **Interoperability convergence:** VDA 5050 + Open-RMF as the de-facto mixed-fleet substrate (MiR VDA5050 adapter, 2025). Market ≈$2.2B (2026) → $15.7B (2034), ~28% CAGR; ground AMR/AGV ~45% share. *(Re-verify before publish.)*
+
+## 8. Key Players & Ecosystem
+- **Warehouse/fleet:** Amazon Robotics (DeepFleet) · Locus Robotics · Geek+ · Symbotic · MiR · Berkshire Grey · Zebra/Fetch.
+- **Defense:** Shield AI · Anduril · AeroVironment · Kratos · DJI · L3Harris · Lockheed Martin.
+- **Agriculture:** SwarmFarm Robotics · XAG · Ecorobotix · Agtonomy · Saga Robotics.
+- **Swarm-hardware vendors:** Bitcraze (Crazyflie) · K-Team (e-puck) · Hydromea (underwater swarm).
+- **Academic labs:** Georgia Tech **Robotarium** (Egerstedt lineage) · UPenn **GRASP** (Kumar/Hsieh) · MIT **Distributed Robotics Lab** (Rus) + **Aerospace Controls Lab** (How) · Stanford **MSL** (Schwager) · Caltech **ARCL** (Chung) · ULB **IRIDIA** (Dorigo) · EPFL **DISAL** (Martinoli) · Cambridge **Prorok Lab** · Harvard (Nagpal, Kilobots) · Bristol Robotics Lab (Hauert) · Sheffield (Groß). **MAPF nucleus:** Koenig (UCI) · Jiaoyang Li (CMU) · Hönig (TU Berlin).
+- **Programs/stacks:** Open-RMF (OSRA-governed) · ROS 2 · VMAS/BenchMARL · DARPA (OFFSET/Gremlins heritage).
+
+## 9. Adjacent Platforms & Capabilities
+Adjacent platforms: **C3 AMR/AGV** (the single-agent substrate a fleet orchestrates), **C6 drones** (aerial swarms), **C7 underwater** (marine swarms — Hydromea). Most-central capability profiles: `multi-robot-swarm`, `motion-planning-navigation`, `state-estimation-slam`, `reinforcement-learning-control`, `robotics-middleware-realtime`.
+
+---
+## Sources (2024–2026)
+- Swarm hardware/testbeds: Frontiers "Towards applied swarm robotics" (2025) — https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1607978/full ; Mercator modular swarm robot (HardwareX 2026) — https://www.hardware-x.com/article/S2468-0672(26)00011-8/fulltext ; Bitcraze Crazyflie swarm — https://www.bitcraze.io/tag/swarm/
+- Software stack: Crazyswarm2 — https://imrclab.github.io/crazyswarm2/ ; ROS2swarm (arXiv 2405.02438) — https://arxiv.org/abs/2405.02438 ; modular UAV swarm ROS 2/PX4 (arXiv 2510.27327) — https://arxiv.org/html/2510.27327v1 ; Open-RMF — https://www.open-rmf.org/ ; ROS 2 multi-robot book — https://osrf.github.io/ros2multirobotbook/ ; VDA5050 + Open-RMF explainer — https://www.synaos.com/en/blog/vda-5050-massrobotics-open-rmf
+- Fleet FMs / MAPF: Amazon DeepFleet (arXiv 2508.08574) — https://arxiv.org/abs/2508.08574 ; DeepFleet coverage — https://www.digitalcommerce360.com/2025/07/03/amazon-deepfleet-ai-model-for-robotics/ ; MAPF-GPT (arXiv 2409.00134) — https://arxiv.org/abs/2409.00134 ; GenSwarm (arXiv 2503.23875) — https://arxiv.org/abs/2503.23875 ; Prorok Lab pubs — https://proroklab.org/publications/
+- Warehouse: warehouse-robotics news 2026 (Locus Array) — https://techainewstoday.com/ai_technology/warehouse-robotics-news/
+- Defense: Shield AI → LUCAS (DefenseScoop, May 2026) — https://defensescoop.com/2026/05/20/pentagon-selects-shield-ai-to-plug-swarm-software-into-lucas-drone-company-says/ ; Shield AI release — https://shield.ai/shield-ai-selected-to-bring-ai-powered-swarming-to-lucas-kamikaze-drone-program/ ; Anduril Anvil — https://www.anduril.com/anvil ; swarm-drone market — https://www.intellectualmarketinsights.com/blogs/swarm-drone-market-size-growth-forecast
+- Agriculture: SwarmFarm $30M Series B (Oct 2025) — https://roboticsandautomationnews.com/2025/10/02/swarmfarm-robotics-raises-30-million-to-scale-farm-bot-fleet-and-expand-into-north-america/ ; SwarmFarm — https://www.swarmfarm.com/
+- Market: swarm robotics market (DataM Intelligence) — https://www.datamintelligence.com/research-report/swarm-robotics-market
+- Feeder capability research (this repo): `multi-robot-swarm.creds.md`, `multi-robot-swarm.trending.md` (Robotarium, IRIDIA, DISAL, GRASP, MSL, ARCL labs; VMAS/BenchMARL, POGEMA, MARL-book; VDA5050/Open-RMF/MassRobotics standards).
+
+*Template: `phase-1/platforms/_TEMPLATE-platform.md`. Bundles Axis-A capability profiles in `phase-1/`. Taxonomy: `master-niche-taxonomy.md` C9.*

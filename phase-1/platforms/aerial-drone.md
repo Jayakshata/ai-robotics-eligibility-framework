@@ -1,0 +1,50 @@
+# Platform Track — Aerial / UAV / Drone
+
+> **Platform bundle (Axis C).** Bundles Axis-A capabilities into the "drone / UAV autonomy engineer" archetype — it references the capability profiles rather than restating them, and defers airspace/regulatory detail to the vertical overlay `vertical-aerial-uas-drones.md`. Web-verified mid-2026; sources in `.research/platform-aerial-drone.md`. `✓` grounded · `~` to-verify · `⏱` time-sensitive.
+
+**Platform:** Aerial / UAV / Drone · **Axis C:** C6 · **Frontier:** `[★]` yes — the *GPS-denied learned-autonomy* brain (onboard VIO + RL + mission-VLAs) is live frontier
+**Signature capabilities (Axis A, load-bearing first):** A4 flight control (SE(3)/geometric + control allocation) · A2 state estimation/SLAM (GPS-denied VIO) · A3 planning & navigation (3D, detect-and-avoid) · A1 perception + fusion (sense-and-avoid, photogrammetry) · A5 aerial locomotion & energetics · A9 swarm/fleet · A10 middleware (PX4) + safety/DO-178C · *emerging brain:* A6 RL/sim-to-real + A7 mission-autonomy VLAs · **Typical verticals (B):** B11 aerial · B14 inspection · B5 agriculture · B3 defense/ISR · B2 delivery · mapping/survey · public-safety/SAR
+
+---
+
+## 1. Definition & Scope
+**Uncrewed aircraft** — multirotor (hover/agile, the default), fixed-wing (endurance/range), and VTOL-hybrid — plus FPV/racing and nano/micro sub-forms. What makes it distinct as an engineering target: it is the only common robot form factor that is **inherently unstable and underactuated in free 3D space**, held aloft *only* by continuous high-rate feedback control, under brutal **SWaP-C** (size-weight-power-compute) limits, where **any failure is a falling object in shared national airspace**. Unlike a fixed arm (bounded workspace, deterministic) or a ground robot (statically stable, can simply stop), a drone **cannot pause** — stability and energy are continuously coupled, and it carries minutes of battery. The engineering problem is dominated by *keeping an unstable body localized and aloft under wind/gusts on constrained onboard compute*, then delivering a payload task (sense / map / deliver / effect). Frontier tension: mature **GPS + waypoint autopilots** vs. **GPS-denied learned autonomy** (onboard VIO + RL policies + mission VLAs).
+
+## 2. Signature Capability Stack
+- **A4 Flight Control** *(load-bearing — the form factor exists only because of it)* — geometric/**SE(3)** attitude-position control, cascaded PID/**MPC**, **control allocation/mixing** across rotors, wind/gust rejection on underactuated 6-DOF dynamics. → `control-classical-optimal-mpc`
+- **A2 State Estimation / SLAM** *(co-primary)* — high-rate IMU **EKF**, GNSS-RTK fusion, and the frontier **GPS-denied VIO** (visual-inertial / event-camera / map-matching). → `state-estimation-slam`
+- **A3 Planning & Navigation** — 3D path planning, energy-aware routing, **detect-and-avoid (DAA)**, geofence & C2-link-loss contingency. → `motion-planning-navigation`
+- **A1 Perception + Sensor Fusion** — obstacle sense-and-avoid (stereo/LiDAR/radar/event), aerial **photogrammetry/mapping**, thermal/multispectral analytics. → `computer-vision-3d-perception`, `multimodal-sensor-fusion`
+- **A5 Aerial Locomotion & Energetics** — aerodynamics, propulsion sizing, endurance–range–payload SWaP trades. → `locomotion`
+- **A9 Swarm / Fleet** — decentralized coordination under jamming, delivery-fleet orchestration. → `multi-robot-swarm`
+- **A10 Middleware + Safety** — **PX4/ArduPilot** flight stack, real-time loops, **DO-178C**-grade assurance. → `robotics-middleware-realtime`, `safety-verification-assurance`
+- **Emerging brain** *(A6/A7)* — RL/sim-to-real **agile flight** + onboard **mission-autonomy VLAs**. → `reinforcement-learning-control`, `sim-to-real-transfer`, `robot-foundation-models-vla`
+
+## 3. Integration & Platform-Specific Skills
+The "integration tax" no single capability owns: **flight-control tuning & control-allocation/mixer design**; **SWaP-C budgeting** (weight↔power↔endurance↔payload↔compute trades); **aerodynamics & propulsion sizing** (BLDC+ESC, propeller/blade-element, thrust-to-weight); **airframe / vibration / EMI** engineering; **hard-real-time flight-loop** engineering on constrained MCUs; **sensor calibration** (IMU/mag/accel bias, camera-IMU extrinsics); **failsafe & redundancy** engineering (return-to-launch, geofence, flight-termination/parachute, triple-redundant IMU/GNSS); **airspace integration** (Remote ID, DAA, BVLOS ConOps); and **GNSS jamming/spoofing resilience**. The distinctive bar: **"flies in the demo" is a small fraction of airworthiness approval** — the assurance case scales to SAIL / population-density risk (see vertical overlay).
+
+## 4. Typical Verticals
+**B11 aerial** (native home). **B14 inspection** (energy, powerline, wind-turbine, confined-space, infrastructure). **B5 agriculture** (mapping, precision spraying). **B3 defense/ISR & loitering munitions** — the largest 2026 pull. **B2 delivery/logistics** (last-mile, medical). Also **mapping/survey/photogrammetry** and **public-safety / search-and-rescue** (cross-cutting, no single B-code). All fit because a drone is a **cheap, mobile aerial sensor/effector that reaches places ground robots can't** — from above, fast.
+
+## 5. Eligibility Profile
+The archetypal **"drone / UAV autonomy engineer"** bundles **control + state estimation + planning + perception + (swarm) + flight-software**. Strongest backgrounds: **Aerospace/Aeronautical** rises to first-class alongside **Robotics / EE / CS**; **ME** (aero/propulsion); avionics/systems engineering. Platform-specific must-haves: **PX4/ArduPilot + MAVLink**, **Pixhawk bring-up**, **EKF/VIO**, **control tuning**, and **FAA Part 107**; defense adds **NDAA / Blue-UAS compliance + security clearance**. Feeder capability profiles: `state-estimation-slam`, `control-classical-optimal-mpc`, `motion-planning-navigation`, `multimodal-sensor-fusion`, `multi-robot-swarm`. Tiers: **L1** test-pilot/integrator → **L2–L3** autonomy software (estimation + control + perception) → **L4/L5** GPS-denied-autonomy / agile-flight research. The platform premium: **real BVLOS or GPS-denied flight logs plus a documented safety case.**
+
+## 6. Platform-Specific Hardware & Stack `~`
+**Autopilots/flight controllers:** Pixhawk-class — **Holybro Pixhawk 6X**, **ARK Electronics ARKV6X** (modular Pixhawk + Jetson), CUAV X7+; firmware **PX4 / ArduPilot**; **MAVLink**; **QGroundControl / Mission Planner** GCS; **Auterion Skynode / AuterionOS**; **ModalAI VOXL 2** (Qualcomm). **Onboard compute:** **NVIDIA Jetson Orin** (NX/Nano), Holybro Pixhawk-Jetson baseboard, ModalAI VOXL. **Airframes/products:** **DJI** (Matrice 4/400, Mavic, Agras ag), **Skydio X10 / X10D** (Jetson Orin, 6× nav cams, Autonomy SDK), **Anduril** (Ghost, Bolt, **Fury YFQ-44A** CCA), **Shield AI V-BAT**, **AeroVironment Switchblade** (loitering munition), **Zipline P2**, **Wing**, **Amazon Prime Air MK30**, **Percepto**, **Flyability Elios** (confined-space). **Propulsion/sensors:** BLDC+ESC, props, LiPo/Li-ion/hydrogen; redundant IMU, baro, mag, **GNSS-RTK/PPK**, optical-flow, stereo/LiDAR/radar/event cameras, **ADS-B**, gimbal EO/IR, multispectral. **Software/sim:** PX4/ArduPilot, **ROS 2 + MAVROS**, **NVIDIA Isaac Sim (drone)**, Gazebo, **Flightmare / Aerial Gym** (RL); autonomy stacks **Skydio Autonomy · Shield AI Hivemind · Anduril Lattice · Auterion**.
+
+## 7. Trending & Notable `⏱ as of mid-2026`
+**GPS-denied learned autonomy** — onboard VIO + RL AI-pilots: the **YFQ-44A CCA flew switching between Shield AI Hivemind and Anduril Lattice mid-flight** (Feb–Mar 2026). **Agile/vision-based flight** — UZH **Swift** (RL + onboard vision) beat human racing champions; vision-based MPPI / neural-SDF racing (2026). **Defense mass** — **DoD Replicator 2** pivots to counter-sUAS (first buy Jan 2026); FY2026 **$13.4B autonomy line** ($9.4B UAV, $3.1B C-UAS); Ukraine FPV war (millions of drones/yr) reshaping doctrine. **Delivery scaling** — **Zipline 1M+ deliveries + $600M raise** (Jan 2026); **Wing 350k+**, expanding to 7 US cities; Amazon MK30. **Regulatory** — **FAA Part 108** BVLOS rule finalizing 2026–27 (industry-defining; details in vertical overlay). **Aerial manipulation maturing** — tilting/omnidirectional UAMs for contact inspection, **cooperative vertical-stack manipulation** (Nature 2025), aerial continuum manipulators. **Supply-chain reshoring** — Blue UAS / FCC Covered-List. *(Re-verify before publish.)*
+
+## 8. Key Players & Ecosystem
+- **Delivery/logistics:** Zipline · Wing (Alphabet) · Amazon Prime Air · Matternet · DroneUp.
+- **Enterprise/inspection & ag:** Skydio · DJI Enterprise · Percepto · Flyability · XAG · AgEagle.
+- **Defense/ISR:** Anduril · Shield AI · AeroVironment · General Atomics · Northrop Grumman · Kratos · Red Cat/Teal.
+- **Autopilot/compute/software:** Auterion · Dronecode (**PX4**) · ArduPilot · ModalAI · Holybro · ARK Electronics · NVIDIA.
+- **Academic labs:** UZH **RPG** (Scaramuzza — agile flight, event cameras) · UPenn **GRASP** (Vijay Kumar — aerial swarms) · ETH **ASL** · MIT **ACL/AeroAstro** (Karaman) · Caltech **CAST** · GA Tech · TU Delft.
+- **Programs/standards:** FAA · EASA · DIU **Blue UAS** · AUVSI · NASA (UTM).
+
+## 9. Adjacent Platforms & Capabilities
+Adjacent platforms: **C9 swarm/multi-robot** (drone swarms), **AAM/eVTOL** adjacency (outside C1–C10), **C7 underwater/marine AUV** (shares underactuated 3D estimation/control), and **C2 mobile manipulator** (aerial manipulation bridges toward it). Most-central capability profiles: `control-classical-optimal-mpc`, `state-estimation-slam`, `motion-planning-navigation`, `multimodal-sensor-fusion`, `multi-robot-swarm`, `robotics-middleware-realtime`.
+
+---
+*Template: `phase-1/platforms/_TEMPLATE-platform.md`. Bundles Axis-A capability profiles in `phase-1/`. Taxonomy: `master-niche-taxonomy.md` C6. Vertical overlay: `vertical-aerial-uas-drones.md` (B11).*
