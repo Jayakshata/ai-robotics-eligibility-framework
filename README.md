@@ -2,7 +2,8 @@
 
 A three-axis framework defining **who is eligible to build AI for robotics, and how to train them** — mapped across every technical capability, industry vertical, and robot platform. 49 researched niche profiles plus cross-cutting synthesis, presented as a single navigable website.
 
-**Live site:** https://claude.ai/code/artifact/ad187526-ec80-419b-a7d2-fe61f0d4a71d
+**Live site (GitHub Pages):** https://jayakshata.github.io/ai-robotics-eligibility-framework/
+**Interactive artifact:** https://claude.ai/code/artifact/ad187526-ec80-419b-a7d2-fe61f0d4a71d
 
 ## The model — three orthogonal axes
 
@@ -41,10 +42,11 @@ site/
 The site is generated from the markdown files by a dependency-free Node script:
 
 ```bash
-node site/src/build-site.js
+node site/src/build-site.js      # -> site/ai-robotics-framework.html (for the Claude Artifact)
+node site/src/pages-wrap.js      # -> docs/index.html (standalone doc for GitHub Pages)
 ```
 
-This reads every markdown file, converts it to HTML, and writes `site/ai-robotics-framework.html` (a self-contained single-page app — sidebar navigation, tree map, live filter, light/dark theme, no external dependencies).
+`build-site.js` reads every markdown file, converts it to HTML, and writes `site/ai-robotics-framework.html` (a self-contained single-page app — sidebar navigation, tree map, live filter, light/dark theme, no external dependencies). `pages-wrap.js` then wraps that content in a full HTML document at `docs/index.html`, which GitHub Pages serves. GitHub Pages is configured to publish from the `main` branch `/docs` folder.
 
 ## Reading the profiles — confidence tags
 
