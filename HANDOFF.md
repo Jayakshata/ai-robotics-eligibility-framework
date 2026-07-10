@@ -2,7 +2,31 @@
 
 > A complete context document for resuming this project in a new session/terminal. Read this first, then skim `master-niche-taxonomy.md` and `phase-1/README.md`. **The git repo is the source of truth.**
 
-**Last updated:** 2026-07-09 · **Status:** Complete through **v2** (deployed & live).
+**Last updated:** 2026-07-10 · **Status:** Framework **complete and FROZEN** at 62 profiles. Active work has moved to a presentation (see §0a).
+
+---
+
+## 0a. ⚠ CURRENT MODE — read before touching anything
+
+**The website is finished and frozen. Do not build, expand or refactor it.** It is now *source material*.
+
+Active work is a **boss presentation**: a proposal to BGR Neo's Managing Director to run a government-partnered **Centre of Excellence** for AI-in-robotics training. The framework's synthesis sections (`phase-2/`) supply most of its content — **select and simplify from them; never regenerate them.**
+
+| Thing | Where |
+|---|---|
+| Deck source (Artifact-format fragment) | `presentation/bgr-neo-coe-deck.html` |
+| Deck → standalone document wrapper | `presentation/deck-wrap.js` |
+| Deck served by GitHub Pages (**unlisted**, `noindex`) | [`/coe-deck/`](https://jayakshata.github.io/ai-robotics-eligibility-framework/coe-deck/) |
+| Deck as a Claude Artifact | https://claude.ai/code/artifact/9a3a7ee1-8816-4088-ba99-a259a02b1688 |
+| Exemplar format-review page (applied-AI sign-off) | https://claude.ai/code/artifact/7fb7b128-a4bd-41de-a9c0-24b314b2a1c5 |
+
+**Rebuild everything:** `node site/src/build-site.js && node site/src/pages-wrap.js && node presentation/deck-wrap.js`. All three derive the repo root from their own location, so a fresh `git clone` builds itself anywhere.
+
+**Deck is UNLISTED, not private.** The repo is public, so it is readable by anyone who browses it. `noindex` only keeps it out of search results, and a project page cannot serve an effective `robots.txt`.
+
+**Open item:** a `.pptx` export of the deck (python-pptx is available; there is no LibreOffice here, so a PowerPoint can be verified structurally but not visually).
+
+**Not in this repo** (carry it over by hand): the pivot brief that specifies the deck's strategy, government facts and slide flow. It was supplied as `HANDOFF_pivot_to_presentation.md`.
 
 ---
 
