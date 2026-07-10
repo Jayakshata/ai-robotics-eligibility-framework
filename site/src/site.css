@@ -163,6 +163,8 @@ html{scroll-behavior:smooth}
 
 /* code + tags */
 #content code{font-family:var(--mono);font-size:.85em;background:var(--surface-3);padding:1.5px 5px;border-radius:5px;color:var(--acc-ink);border:1px solid var(--border)}
+#content pre.codeblock{margin:16px 0;padding:14px 16px;background:var(--surface-2);border:1px solid var(--border);border-radius:8px;overflow-x:auto}
+#content pre.codeblock code{display:block;background:none;border:0;padding:0;border-radius:0;color:var(--muted);font-size:12px;line-height:1.45;white-space:pre}
 .ctag{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;line-height:1.5;padding:0 6px;border-radius:5px;border:1px solid var(--border);background:var(--surface-2);color:var(--muted);white-space:nowrap;vertical-align:baseline}
 .t-ok{color:var(--sev-low);border-color:color-mix(in srgb,var(--sev-low) 45%,var(--border));background:color-mix(in srgb,var(--sev-low) 13%,transparent)}
 .t-time{color:var(--sev-high);border-color:color-mix(in srgb,var(--sev-high) 45%,var(--border));background:color-mix(in srgb,var(--sev-high) 13%,transparent)}

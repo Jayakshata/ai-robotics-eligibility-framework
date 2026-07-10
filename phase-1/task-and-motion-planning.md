@@ -103,7 +103,7 @@ Compressible to **~16–18 months at 20 h/wk**; then **+3–9 months employer ra
 ## 8. Hands-On Labs & Projects
 | Level | Project | Teaches / "done" = |
 |-------|---------|--------------------|
-| Foundational | Implement **A* / weighted-A* + RRT/PRM** planners from scratch (grid + C-space) | Search & sampling foundations; optimal path on benchmark maps, RRT solves a bugtrap |
+| Foundational | Implement **A\* / weighted-A\* + RRT/PRM** planners from scratch (grid + C-space) | Search & sampling foundations; optimal path on benchmark maps, RRT solves a bugtrap |
 | Foundational | Model a domain in **PDDL** and solve with **Fast Downward** (Blocksworld → a tabletop/kitchen domain) | Symbolic planning; valid plans for held-out goals, validated by VAL |
 | Applied | **Behavior-tree autonomy** for a mobile robot in **Nav2 + BehaviorTree.CPP** (patrol / fetch-and-deliver + recovery) | Decision architecture + execution; robust behavior under failure/preemption |
 | Applied | **TAMP rearrangement** with **PDDLStream** on a sim arm (symbolic plan + geometric feasibility) | Task↔motion integration; solves a blocked-goal problem needing re-grasp/relocation |

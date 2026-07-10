@@ -30,7 +30,60 @@ const KEYSET = new Set();
 /* ---------------- markdown -> html ---------------- */
 const Z=String.fromCharCode(0);
 const ZRE=new RegExp(Z+'(\\d+)'+Z,'g');
+const Y=String.fromCharCode(1);
+const YRE=new RegExp(Y+'(\\d+)'+Y,'g');
 function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+/* Emphasis via CommonMark's delimiter-stack, incl. the rule-of-three. Regexes
+   cannot do this: they mis-nest "**A *b***" (bold wrapping italic, closing on a
+   3-run) and either drop the bold in "**a*b**" (unpaired literal '*') or, with a
+   lazy ***…*** rule, match from one 3-run to the NEXT and swallow everything
+   between. Call with code spans and escaped \* already sentinel-protected. */
+const PUNCT=/[\p{P}\p{S}]/u;
+function emphasize(s){
+  if(s.indexOf('*')<0) return s;
+  const isSpace=c=>c===undefined||/\s/.test(c);
+  const isPunct=c=>c!==undefined&&PUNCT.test(c);
+  const toks=[];
+  for(let i=0;i<s.length;){
+    if(s[i]==='*'){
+      let j=i;while(s[j]==='*')j++;
+      const p=i>0?s[i-1]:undefined, f=j<s.length?s[j]:undefined;
+      const left=!isSpace(f)&&(!isPunct(f)||isSpace(p)||isPunct(p));
+      const right=!isSpace(p)&&(!isPunct(p)||isSpace(f)||isPunct(f));
+      toks.push({d:true,n:j-i,orig:j-i,open:left,close:right,dead:false,pre:'',post:''});
+      i=j;
+    }else{
+      let j=i;while(j<s.length&&s[j]!=='*')j++;
+      toks.push({d:false,txt:s.slice(i,j)});
+      i=j;
+    }
+  }
+  let ci=0;
+  while(ci<toks.length){
+    const c=toks[ci];
+    if(!c.d||!c.close||c.n===0||c.dead){ci++;continue;}
+    let found=-1;
+    for(let oi=ci-1;oi>=0;oi--){
+      const o=toks[oi];
+      if(!o.d||!o.open||o.n===0||o.dead) continue;
+      // rule of three: if either delimiter can both open and close, the sum of
+      // the ORIGINAL run lengths must not be a multiple of 3 (unless both are).
+      const both=c.open||o.close;
+      const bad=both&&((c.orig+o.orig)%3===0)&&!(c.orig%3===0&&o.orig%3===0);
+      if(!bad){found=oi;break;}
+    }
+    if(found<0){ci++;continue;}
+    const o=toks[found];
+    const use=(c.n>=2&&o.n>=2)?2:1, tag=use===2?'strong':'em';
+    o.n-=use;c.n-=use;
+    o.post='<'+tag+'>'+o.post;   // opener: later (inner) match nests to the right
+    c.pre=c.pre+'</'+tag+'>';    // closer: earlier (inner) match closes first
+    for(let k=found+1;k<ci;k++) if(toks[k].d) toks[k].dead=true; // literal '*' kept
+    if(c.n===0)ci++;
+  }
+  return toks.map(t=>t.d?(t.pre+'*'.repeat(t.n)+t.post):t.txt).join('');
+}
+
 function inline(s){
   const codes=[];
   s=s.replace(/`([^`]+)`/g,function(m,c){codes.push(c);return Z+(codes.length-1)+Z;});
@@ -42,10 +95,11 @@ function inline(s){
     if(KEYSET.has(base)) return '<a class="xref" data-key="'+base+'" href="#'+base+'">'+t+'</a>';
     return '<span class="xref-off">'+t+'</span>';
   });
-  s=s.replace(/\*\*\*(.+?)\*\*\*/g,'<strong><em>$1</em></strong>');
-  s=s.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
-  s=s.replace(/(^|[^*\w])\*([^*\n]+)\*(?=[^*\w]|$)/g,'$1<em>$2</em>');
-  s=s.replace(/\\([*_])/g,'$1');
+  // Pull escaped \* and \_ out first, so "RRT\*" never feeds the emphasis rules.
+  const escq=[];
+  s=s.replace(/\\([*_])/g,function(m,ch){escq.push(ch);return Y+(escq.length-1)+Y;});
+  s=emphasize(s);
+  s=s.replace(YRE,function(m,i){return escq[+i];});
   s=s.replace(ZRE,function(m,i){
     const c=codes[+i],t=c.trim();
     if(t.length<=10 && /^[✓~⏱★🆕◆FS\[\]\s]+$/u.test(t) && (/[✓~⏱★🆕◆]/u.test(t) || /^\[[FS]\]/.test(t))){
@@ -68,6 +122,15 @@ function parseBlocks(md){
   while(i<lines.length){
     let l=lines[i];
     if(/^\s*$/.test(l)){i++;continue;}
+    // fenced code block — without this a ``` fence leaks its backticks as inline code
+    const fence=l.match(/^\s*```+\s*(\S*)\s*$/);
+    if(fence){
+      const buf=[];i++;
+      while(i<lines.length&&!/^\s*```+\s*$/.test(lines[i])){buf.push(lines[i]);i++;}
+      i++; // consume the closing fence
+      out.push('<pre class="codeblock"><code>'+esc(buf.join('\n'))+'</code></pre>');
+      continue;
+    }
     if(/^\s*---+\s*$/.test(l)){out.push('<hr>');i++;continue;}
     let h=l.match(/^(#{1,6})\s+(.*)$/);
     if(h){out.push('<h'+h[1].length+'>'+inline(h[2].trim())+'</h'+h[1].length+'>');i++;continue;}
