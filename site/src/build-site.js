@@ -1,6 +1,9 @@
 'use strict';
 const fs = require('fs');
-const ROOT = '/home/dee/Desktop/AI criterion';
+const path = require('path');
+// Derive the repo root from this file's location (site/src/), so a fresh
+// `git clone` on any machine builds itself rather than a hardcoded path.
+const ROOT = path.resolve(__dirname, '..', '..');
 const OUT = ROOT + '/site/ai-robotics-framework.html';
 const SP = ROOT + '/site/src';
 

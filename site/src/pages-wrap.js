@@ -4,7 +4,9 @@
    document at docs/index.html, for GitHub Pages to serve.
    Run after build-site.js:  node site/src/build-site.js && node site/src/pages-wrap.js */
 const fs = require('fs');
-const ROOT = '/home/dee/Desktop/AI criterion';
+const path = require('path');
+// Repo root derived from this file's location (site/src/) — clone-portable.
+const ROOT = path.resolve(__dirname, '..', '..');
 const content = fs.readFileSync(ROOT + '/site/ai-robotics-framework.html', 'utf8');
 const doc =
   '<!doctype html>\n<html lang="en">\n<head>\n' +

@@ -14,7 +14,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = '/home/dee/Desktop/AI criterion';
+// Repo root derived from this file's location (presentation/) — clone-portable.
+const ROOT = path.resolve(__dirname, '..');
 const SRC = path.join(ROOT, 'presentation/bgr-neo-coe-deck.html');
 const OUTDIR = path.join(ROOT, 'docs/coe-deck');
 const OUT = path.join(OUTDIR, 'index.html');
