@@ -1,6 +1,6 @@
 # Executive Brief — Robotics AI for Manufacturing & Humanoids
 
-*A focused, plain-language view for leaders — it covers only what matters for **factory/manufacturing robotics** and **next-generation humanoids**: roughly a dozen roles, rather than the full 49-niche map (which stays available for the teams who need the detail). No AI background assumed.*
+*The decision view — scoped to **factory/manufacturing robotics** and **next-generation humanoids**: roughly a dozen roles rather than the full 62-niche map, which stays available for the teams who need that depth.*
 
 ## The picture in one paragraph
 
@@ -16,7 +16,7 @@ They sound similar but are **different hires** with different backgrounds:
 
 You need all three, and they're **separate teams**. *(Two more advanced kinds — generative/design AI for your engineering, and AI-governance for compliance — matter later and are covered in the full framework.)*
 
-## The roles that matter for you (plain-language)
+## The roles that matter for you
 
 **The robot's brain (embodied):**
 - **Perception / computer vision** — *the robot's eyes.* Finds parts, locates a weld seam, spots defects. Hire: vision engineers (CS/EE background).

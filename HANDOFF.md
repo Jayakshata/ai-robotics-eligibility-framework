@@ -199,7 +199,9 @@ docs/
 All committed & pushed.
 
 ### Executive Brief (DONE, live on the site)
-`executive-brief.md` — a plain-language **"Manufacturing & Humanoids"** view for a **non-AI-expert leader** (the company's leader is focused on factory robotics + tomorrow's humanoids). Wired into the site as a featured nav item **★ Executive Brief** + a "Start here · for leaders" callout on the overview. Covers three kinds of AI, the roles that matter, a hiring order, what to buy, key partners, the humanoid frontier.
+`executive-brief.md` — the **"Manufacturing & Humanoids"** decision view, scoped to the leadership questions (the company's focus is factory robotics + tomorrow's humanoids). Wired into the site as a featured nav item **★ Executive Brief** + a "Start here" callout on the overview. Covers three kinds of AI, the roles that matter, a hiring order, what to buy, key partners, the humanoid frontier.
+
+**Copy discipline:** this brief and its callout are read *by* the leadership they were written for. Describe the document's **scope** ("a dozen roles instead of sixty-two", "the decision view"), never the reader's knowledge. Phrases like "plain-language", "for leaders" or "no AI background needed" are condescending on screen — they were removed 2026-07-10 and should not come back.
 
 ### The "kinds of AI" model — `applied-ai-taxonomy.md`
 Five kinds of AI, **by what the AI acts on**: (1) **Embodied** → the robot = the 23 Axis-A niches (built) · (2) **Agentic/assistive** → people & workflows → new **Area 1** · (3) **Analytics/predictive** → data → new **Area 2** · (4) **Generative/design** → engineering → folded into Area 1 · (5) **Governance** → the AI itself → folded into Area 1 · (6) Foundation-model research = **out of scope** ("consume, don't build").
