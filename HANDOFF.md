@@ -20,6 +20,8 @@ Active work is a **boss presentation**: a proposal to BGR Neo's Managing Directo
 | Deck as a Claude Artifact | https://claude.ai/code/artifact/9a3a7ee1-8816-4088-ba99-a259a02b1688 |
 | Exemplar format-review page (applied-AI sign-off) | https://claude.ai/code/artifact/7fb7b128-a4bd-41de-a9c0-24b314b2a1c5 |
 
+**On a fresh clone, first:** `.claude/install-memory.sh` — Claude Code keeps project memory outside the repo, so it does not clone. This installs the checked-in snapshot into the local store (backs up anything already there). See `.claude/README.md`.
+
 **Rebuild everything:** `node site/src/build-site.js && node site/src/pages-wrap.js && node presentation/deck-wrap.js`. All three derive the repo root from their own location, so a fresh `git clone` builds itself anywhere.
 
 **Deck is UNLISTED, not private.** The repo is public, so it is readable by anyone who browses it. `noindex` only keeps it out of search results, and a project page cannot serve an effective `robots.txt`.
