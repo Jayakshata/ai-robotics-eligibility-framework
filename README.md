@@ -1,6 +1,6 @@
 # AI for Robotics — Capability & Eligibility Framework
 
-A three-axis framework defining **who is eligible to build AI for robotics, and how to train them** — mapped across every technical capability, industry vertical, and robot platform. 49 researched niche profiles plus cross-cutting synthesis, presented as a single navigable website.
+A framework defining **who is eligible to build AI for robotics, and how to train them** — mapped across every technical capability, industry vertical, and robot platform, plus the applied, non-embodied AI a robotics company also builds. 62 researched niche profiles plus cross-cutting synthesis, presented as a single navigable website.
 
 **Live site (GitHub Pages):** https://jayakshata.github.io/ai-robotics-eligibility-framework/
 **Interactive artifact:** https://claude.ai/code/artifact/ad187526-ec80-419b-a7d2-fe61f0d4a71d
@@ -13,19 +13,31 @@ A three-axis framework defining **who is eligible to build AI for robotics, and 
 
 An engineer is a point in this space: a *capability* operating on a *platform* within a *vertical*. The axes stay orthogonal, so the map never duplicates a curriculum.
 
+## Applied / non-embodied AI — two areas (13)
+
+Axis A is the AI *inside the robot*. A robotics company also builds AI that never touches a motor. These are **areas, not a fourth axis** — different hires, different eligibility, no kinematics. Boundaries in [`applied-ai-taxonomy.md`](applied-ai-taxonomy.md).
+
+- **Area 1 — Agentic & Applied AI** (8): AI acting on *people, engineering, and the AI itself* — agent orchestration, engineering copilots, RAG, ops/ERP agents, conversational HMI, LLMOps, generative design, AI governance. Hires software/LLM engineers.
+- **Area 2 — Analytics / Predictive AI** (5): AI acting on *your data* — predictive maintenance, quality/yield analytics, process optimization, forecasting, anomaly detection. Hires data scientists with a reliability or process domain.
+
+Foundation-model *research* is out of scope throughout: you consume Claude/GPT/Gemini and fine-tune open models; you do not build base models.
+
 ## Repository structure
 
 ```
 master-niche-taxonomy.md          Phase 0 — the full 3-axis taxonomy (source of truth)
 capabilities-only-taxonomy.md     Phase 0 — Axis-A-only edition
-phase-1/                          Phase 1 — 49 niche profiles
+applied-ai-taxonomy.md            the five kinds of AI + the two applied areas
+phase-1/                          Phase 1 — 62 niche profiles
   _TEMPLATE.md                      capability-profile template (v3, 12 sections)
   _grounding-reference.md           shared cited backbone (degrees, subjects, certs, durations)
   <niche>.md                        23 capability profiles (Axis A)
   verticals/                        16 vertical overlays (Axis B) + template
   platforms/                        10 platform bundles (Axis C) + template
+  agentic/                          8 Agentic & Applied AI profiles (Area 1)
+  analytics/                        5 Analytics / Predictive AI profiles (Area 2)
   .research/                        per-niche raw research (provenance)
-  README.md                         index of all 49 profiles
+  README.md                         index of all 62 profiles
 phase-2/                          Phase 2 — 4 cross-cutting synthesis analyses
   eligibility-matrix.md
   common-core-vs-specialization.md
@@ -56,4 +68,4 @@ node site/src/pages-wrap.js      # -> docs/index.html (standalone doc for GitHub
 
 ## How it was built
 
-Phase 0 taxonomy (verified deep-research) → Phase 1's 49 profiles (two multi-agent research→write workflows, 114 agents) → Phase 2's 4 synthesis analyses → Phase 3's site. The palette is deliberately neutral for company rebranding.
+Phase 0 taxonomy (verified deep-research) → Phase 1's 49 embodied profiles (two multi-agent research→write workflows, 114 agents) → Phase 2's 4 synthesis analyses → Phase 3's site → the applied-AI extension (2 hand-built exemplars, then a 44-agent research→write→adversarial-verify workflow for the remaining 11). The palette is deliberately neutral for company rebranding.

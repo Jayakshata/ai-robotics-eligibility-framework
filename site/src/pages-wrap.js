@@ -10,7 +10,7 @@ const doc =
   '<!doctype html>\n<html lang="en">\n<head>\n' +
   '<meta charset="utf-8">\n' +
   '<meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-  '<meta name="description" content="AI for Robotics — engineer eligibility and training framework across 49 niches (capabilities, industry verticals, robot platforms).">\n' +
+  '<meta name="description" content="AI for Robotics — engineer eligibility and training framework across 62 niches (capabilities, industry verticals, robot platforms, plus applied agentic and analytics AI).">\n' +
   '</head>\n<body>\n' + content + '\n</body>\n</html>\n';
 fs.mkdirSync(ROOT + '/docs', { recursive: true });
 fs.writeFileSync(ROOT + '/docs/index.html', doc);

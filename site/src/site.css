@@ -234,6 +234,8 @@ html{scroll-behavior:smooth}
 .tm-aid{flex:none;font-family:var(--mono);font-weight:700;font-size:12px;width:27px;height:27px;border-radius:7px;display:grid;place-items:center;color:#fff;background:var(--acc)}
 .ax-b>.tm-node .tm-aid{background:var(--sev-high)}
 .ax-c>.tm-node .tm-aid{background:var(--acc2)}
+.ax-d>.tm-node .tm-aid{background:var(--amber)}
+.ax-e>.tm-node .tm-aid{background:var(--sev-low)}
 .tm-cid{flex:none;font-family:var(--mono);font-size:10.5px;font-weight:700;color:var(--acc);width:27px;text-align:center}
 .tm-nlabel{font-weight:600;font-size:13.5px}
 .tm-axis>.tm-node,.tm-axis .tm-nlabel{font-size:15px;font-weight:680}

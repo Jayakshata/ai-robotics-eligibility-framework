@@ -24,8 +24,12 @@ const PLATS = [['fixed-manipulator-arm','C1'],['mobile-manipulator','C2'],['amr-
 const SYNTH = [['eligibility-matrix','Eligibility Matrix'],['common-core-vs-specialization','Common Core vs Specialization'],['progression-paths','Progression Paths'],['lab-procurement-and-partnerships','Lab Procurement & Partnerships']];
 const REFS = [['master-niche-taxonomy','Master Taxonomy',ROOT+'/master-niche-taxonomy.md'],['capabilities-only-taxonomy','Capabilities-Only Taxonomy',ROOT+'/capabilities-only-taxonomy.md'],['grounding-reference','Grounding Reference',ROOT+'/phase-1/_grounding-reference.md']];
 
+/* Applied / non-embodied AI — two areas, not axes. See applied-ai-taxonomy.md. */
+const AGENTIC = [['agentic-llm-orchestration','AG1'],['engineering-robotics-copilots','AG2'],['knowledge-rag-systems','AG3'],['operations-erp-ai','AG4'],['conversational-hmi-agents','AG5'],['llmops-ai-platform','AG6'],['generative-ai-design','AG7'],['responsible-ai-governance','AG8']];
+const ANALYTICS = [['predictive-maintenance','AN1'],['quality-yield-defect-analytics','AN2'],['process-production-optimization','AN3'],['forecasting-planning-analytics','AN4'],['anomaly-fault-detection','AN5']];
+
 const KEYSET = new Set();
-[...CAPS.map(x=>x[0]),...VERTS.map(x=>x[0]),...PLATS.map(x=>x[0]),...SYNTH.map(x=>x[0]),...REFS.map(x=>x[0])].forEach(k=>KEYSET.add(k));
+[...CAPS.map(x=>x[0]),...VERTS.map(x=>x[0]),...PLATS.map(x=>x[0]),...SYNTH.map(x=>x[0]),...REFS.map(x=>x[0]),...AGENTIC.map(x=>x[0]),...ANALYTICS.map(x=>x[0])].forEach(k=>KEYSET.add(k));
 
 /* ---------------- markdown -> html ---------------- */
 const Z=String.fromCharCode(0);
@@ -33,6 +37,7 @@ const ZRE=new RegExp(Z+'(\\d+)'+Z,'g');
 const Y=String.fromCharCode(1);
 const YRE=new RegExp(Y+'(\\d+)'+Y,'g');
 function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
 /* Emphasis via CommonMark's delimiter-stack, incl. the rule-of-three. Regexes
    cannot do this: they mis-nest "**A *b***" (bold wrapping italic, closing on a
    3-run) and either drop the bold in "**a*b**" (unpaired literal '*') or, with a
@@ -253,6 +258,8 @@ function add(key,group,path,extra){
 CAPS.forEach(([k,cl],ix)=>add(k,'A',ROOT+'/phase-1/'+k+'.md',{cluster:cl,cid:'A'+(ix+1)}));
 VERTS.forEach(([k,crit])=>add(k,'B',ROOT+'/phase-1/verticals/'+k+'.md',{crit,cid:VAXIS[k]}));
 PLATS.forEach(([k,cid])=>add(k,'C',ROOT+'/phase-1/platforms/'+k+'.md',{cid}));
+AGENTIC.forEach(([k,cid])=>add(k,'D',ROOT+'/phase-1/agentic/'+k+'.md',{cid}));
+ANALYTICS.forEach(([k,cid])=>add(k,'E',ROOT+'/phase-1/analytics/'+k+'.md',{cid}));
 SYNTH.forEach(([k,t])=>add(k,'S',ROOT+'/phase-2/'+k+'.md',{navTitle:t}));
 REFS.forEach(([k,t,p])=>add(k,'R',p,{navTitle:t}));
 add('executive-brief','X',ROOT+'/executive-brief.md',{navTitle:'Executive Brief'});
@@ -272,6 +279,8 @@ clOrder.forEach(cl=>{
 });
 let bBody='';VERTS.forEach(([k,crit])=>{const d=DATA[k];bBody+=item(k,d.cid,d.title,'<span class="critdot '+critClass(crit)+'" title="'+crit+' criticality"></span>');});
 let cBody='';PLATS.forEach(([k,cid])=>{const d=DATA[k];cBody+=item(k,cid,d.title);});
+let dBody='';AGENTIC.forEach(([k,cid])=>{const d=DATA[k];if(d)dBody+=item(k,cid,d.title);});
+let eBody='';ANALYTICS.forEach(([k,cid])=>{const d=DATA[k];if(d)eBody+=item(k,cid,d.title);});
 let sBody='';SYNTH.forEach(([k,t])=>sBody+=item(k,'',t));
 let rBody='';REFS.forEach(([k,t])=>rBody+=item(k,'',t));
 let side='';
@@ -280,6 +289,8 @@ side+='<button class="navitem nav-top nav-feature" data-key="executive-brief"><s
 side+=accGroup('Axis A','Capabilities',23,aBody);
 side+=accGroup('Axis B','Verticals',16,bBody);
 side+=accGroup('Axis C','Platforms',10,cBody);
+side+=accGroup('Area 1','Agentic & Applied AI',AGENTIC.length,dBody);
+side+=accGroup('Area 2','Analytics / Predictive AI',ANALYTICS.length,eBody);
 side+=accGroup('◇','Synthesis',4,sBody);
 side+=accGroup('§','Reference',3,rBody);
 
@@ -287,7 +298,7 @@ side+=accGroup('§','Reference',3,rBody);
 function treeLeaf(key,id,title,critBadge){return '<button class="tm-leaf" data-key="'+key+'">'+(critBadge||'')+(id?'<span class="tm-lid">'+id+'</span>':'')+'<span class="tm-lt">'+esc(title)+'</span></button>';}
 function buildTree(){
   let h='<div class="treemap"><div class="tm-tools"><button class="tm-tool" type="button" data-tmall="1">＋ Expand all</button><button class="tm-tool" type="button" data-tmall="0">－ Collapse all</button></div>';
-  h+='<div class="tm-root"><span class="tm-rootdot">◆</span><span class="tm-rootname">AI for Robotics</span><span class="tm-rootmeta">3 axes · 49 niches</span></div>';
+  h+='<div class="tm-root"><span class="tm-rootdot">◆</span><span class="tm-rootname">AI for Robotics</span><span class="tm-rootmeta">3 axes + 2 applied areas · 62 niches</span></div>';
   h+='<div class="tm-branches">';
   h+='<div class="tm-branch tm-open ax-a"><button class="tm-node tm-axis" type="button" data-tt><span class="tm-caret"></span><span class="tm-aid">A</span><span class="tm-nlabel">Capabilities</span><span class="tm-count">23</span><span class="tm-nsub">the engineering competencies</span></button><div class="tm-children">';
   clOrder.forEach(cl=>{
@@ -303,6 +314,12 @@ function buildTree(){
   h+='<div class="tm-branch tm-open ax-c"><button class="tm-node tm-axis" type="button" data-tt><span class="tm-caret"></span><span class="tm-aid">C</span><span class="tm-nlabel">Platforms</span><span class="tm-count">10</span><span class="tm-nsub">robot form factors</span></button><div class="tm-children tm-leaves">';
   PLATS.forEach(([k,cid])=>{const d=DATA[k];h+=treeLeaf(k,cid,d.title);});
   h+='</div></div>';
+  h+='<div class="tm-branch tm-open ax-d"><button class="tm-node tm-axis" type="button" data-tt><span class="tm-caret"></span><span class="tm-aid">1</span><span class="tm-nlabel">Agentic &amp; Applied AI</span><span class="tm-count">'+AGENTIC.length+'</span><span class="tm-nsub">AI that acts on people &amp; workflows</span></button><div class="tm-children tm-leaves">';
+  AGENTIC.forEach(([k,cid])=>{const d=DATA[k];if(d)h+=treeLeaf(k,cid,d.title);});
+  h+='</div></div>';
+  h+='<div class="tm-branch tm-open ax-e"><button class="tm-node tm-axis" type="button" data-tt><span class="tm-caret"></span><span class="tm-aid">2</span><span class="tm-nlabel">Analytics / Predictive AI</span><span class="tm-count">'+ANALYTICS.length+'</span><span class="tm-nsub">AI that acts on your data</span></button><div class="tm-children tm-leaves">';
+  ANALYTICS.forEach(([k,cid])=>{const d=DATA[k];if(d)h+=treeLeaf(k,cid,d.title);});
+  h+='</div></div>';
   h+='</div></div>';
   return h;
 }
@@ -313,8 +330,8 @@ function synthCard(key,t,b){return '<button class="card" data-key="'+key+'"><div
 let ov='';
 ov+='<div class="hero"><div class="eyebrow">Engineering Eligibility & Training Framework</div>';
 ov+='<h1 class="hero-h">AI for Robotics — the complete capability map</h1>';
-ov+='<p class="hero-sub">Who is eligible to build AI for robotics, and how to train them — mapped across every capability, industry vertical and robot platform. 49 researched profiles, one navigable map.</p>';
-ov+='<div class="metrics">'+metric('49','Niche profiles')+metric('23','Capabilities · A')+metric('16','Verticals · B')+metric('10','Platforms · C')+metric('3','Orthogonal axes')+'</div></div>';
+ov+='<p class="hero-sub">Who is eligible to build AI for robotics, and how to train them — mapped across every capability, industry vertical and robot platform, plus the applied, non-embodied AI a robotics company also builds. 62 researched profiles, one navigable map.</p>';
+ov+='<div class="metrics">'+metric('62','Niche profiles')+metric('23','Capabilities · A')+metric('16','Verticals · B')+metric('10','Platforms · C')+metric('13','Applied AI · 2 areas')+'</div></div>';
 ov+='<button class="execcallout" data-key="executive-brief"><div class="ec-l"><span class="ec-tag">Start here · for leaders</span><div class="ec-t">Executive Brief — Manufacturing &amp; Humanoids</div><div class="ec-b">A plain-language view of the roles, hiring, training and partners that matter for factory robotics and next-generation humanoids — no AI background needed.</div></div><div class="ec-go">Open →</div></button>';
 ov+='<div class="mapsec"><div class="mapsec-head"><h2 class="ov-h">The map</h2><p class="ov-lead">Three orthogonal axes. Expand a branch to see what it contains; click any node to open its profile.</p></div>';
 ov+=buildTree();
@@ -337,9 +354,9 @@ const html=`<title>AI for Robotics — Capability & Eligibility Framework</title
 <div id="app">
   <aside id="sidebar">
     <div class="brand"><div class="brand-mark">◆</div><div class="brand-txt"><div class="brand-t">AI · Robotics</div><div class="brand-s">Capability Framework</div></div></div>
-    <div class="filterwrap"><input id="filter" type="text" placeholder="Filter 49 profiles…" autocomplete="off" spellcheck="false"><span class="fx" id="fx"></span></div>
+    <div class="filterwrap"><input id="filter" type="text" placeholder="Filter 62 profiles…" autocomplete="off" spellcheck="false"><span class="fx" id="fx"></span></div>
     <nav id="nav">${side}</nav>
-    <div class="side-foot">49 profiles · 3 axes · synthesised mid-2026<br><span class="mono">re-verify ⏱ items before publish</span></div>
+    <div class="side-foot">62 profiles · 3 axes + 2 applied areas · synthesised mid-2026<br><span class="mono">re-verify ⏱ items before publish</span></div>
   </aside>
   <div id="scrim"></div>
   <main id="main">

@@ -47,9 +47,11 @@ Industrial data science: statistical/ML modeling on operational, sensor, and bus
 - Same **v3 profile template**, adapted per niche: §3 eligibility tilts to **CS / ML / data-science / software + LLM-agent** experience (not kinematics/hardware); §9 "labs/hardware" → **compute / GPUs / APIs / data / agent-tooling** (not robots); §7 trending → the **agentic + data-science frontier** (agent frameworks, frontier LLMs, RAG advances, evals, MLOps) rather than VLAs.
 - The **A×B×C coordinate model still holds** — these capabilities apply within a **vertical (B)** and can support a **platform (C)**. Especially high-value for the **manufacturing** vertical.
 
-## Build plan (next)
-1. **Exemplars first (two, one per area):** **Engineering & Robot-Programming Copilots** (Area 1 — closest to the welding-assistant example) and **Predictive Maintenance & Reliability** (Area 2 — the manufacturing gap). Validates the adapted template for both the software-AI and data-science domains.
-2. On sign-off, **fan out** the remaining 11 via a research→write workflow (same process as the 49 embodied/vertical/platform profiles).
-3. Wire the two areas into the site as new sidebar groups + tree branches.
+## Build plan — COMPLETE (2026-07-10)
+1. ~~**Exemplars first (two, one per area):**~~ **DONE** — `engineering-robotics-copilots` + `predictive-maintenance`, hand-built and signed off. Validated the adapted template for both the software-AI and data-science domains.
+2. ~~On sign-off, **fan out** the remaining 11~~ **DONE** — a 44-agent research→write→adversarial-verify workflow (2 web-research agents + 1 writer + 1 verifier per niche). All 22 research reports persisted in `phase-1/.research/`. The verify pass caught and removed real fabrications (ungrounded vendor and tool names) and downgraded unverifiable claims to `~`.
+3. ~~Wire the two areas into the site~~ **DONE** — sidebar groups `Area 1` / `Area 2` (ids `AG1–AG8`, `AN1–AN5`) + two tree-map branches. Site now carries **62 profiles**.
 
-*Status: mental model + areas + niche lists defined; profiles not yet built.*
+**The adapted template (signed off):** 8 of the 12 sections carried over from the embodied template untouched. Four were adapted — §3 eligibility (software/LLM or data-science/reliability, never kinematics), §6 duration (Area 1 ~8–10 mo as a software conversion; Area 2 ~9–11 mo), §7 frontier (agent frameworks vs time-series foundation models), and §9, which both areas rename away from "Required Lab Setup / Hardware / Resources" and qualify with "(not robots)".
+
+*Status: all 13 profiles built, verified and live. `⏱` sections stamped mid-2026 — re-research before external publish.*

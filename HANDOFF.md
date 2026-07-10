@@ -213,10 +213,23 @@ Five kinds of AI, **by what the AI acts on**: (1) **Embodied** → the robot = t
 - `phase-1/analytics/predictive-maintenance.md`
 Their **full source research (4 background agents) is preserved** in `phase-1/.research/`: `engineering-robotics-copilots.creds.md`/`.trending.md`, `predictive-maintenance.creds.md`/`.trending.md`. **Nothing the background agents produced is lost.**
 
-### ⏸ WHERE WE STOPPED — RESUME HERE
-Awaiting the user's **sign-off on the two exemplars' adapted format.** On "go":
-1. **Fan out the remaining 11** applied-AI niches (7 in Area 1, 4 in Area 2) via a research→write workflow — using the two exemplars as the gold standard and the `.research/` reports + `applied-ai-taxonomy.md` as grounding (same process that built the 49 profiles).
-2. **Wire both new areas into the site** — in `site/src/build-site.js` add two content-registry blocks + two accordion sidebar groups + two tree-map branches (mirror the Axis A/B/C wiring) and register the profiles; then `node site/src/build-site.js && node site/src/pages-wrap.js`, commit/push (Pages auto-rebuilds), re-publish the Artifact.
+### ✅ COMPLETE (2026-07-10) — format signed off, fan-out shipped
+The user approved the two exemplars' adapted format. Both steps are done.
+
+1. **Fanned out the remaining 11** applied-AI niches via a **44-agent workflow** (per niche: 2 web-research agents → 1 writer → 1 adversarial verifier). 0 errors. All 22 research reports persisted to `phase-1/.research/`. The verifier stage earned its keep — it removed ungrounded vendor/tool names that writers had drifted in from sibling niches (e.g. a "Moonshot" vendor, `Slurm`, `Abaqus`, `CACHE`, a `RAGAS` carried over from the copilots profile) and downgraded unverifiable claims to `~`.
+2. **Wired both areas into the site** — `AGENTIC` / `ANALYTICS` registries in `site/src/build-site.js`, two accordion sidebar groups (`Area 1`, `Area 2`), two tree-map branches (`ax-d`, `ax-e`, coloured via `--amber` / `--sev-low`). Leaf ids `AG1–AG8` and `AN1–AN5`. All counts updated 49 → **62**.
+
+**Independently audited** (not trusting agent self-reports): all 13 profiles pass a mechanical conformance check — H1 form, 12 sections numbered 1–12 in order, exact headings on the 8 unchanged sections, chips on §5/§6/§7, §9 renamed + "(not robots)", two meta lines, footer, tables in §2/§6/§8 with balanced pipes and a `**Total**` row, explicit In-scope/Out-of-scope in §1, balanced backticks, no raw HTML. MECE cross-references verified per niche. Site renders with **zero** stray `**`, zero raw backticks, zero unbalanced tags across all 62 profiles; 62 tree leaves, no dangling xrefs.
+
+### ⚠ Renderer bugs found and fixed while wiring (these affected the ALREADY-PUBLISHED site)
+`site/src/build-site.js`'s `inline()` used regexes for emphasis, and they were wrong in three ways:
+- `/\*\*\*(.+?)\*\*\*/` matched from the **first** `***` run to the **next one on the same line**, swallowing everything between. Any line with two `**bold *italic*** ` constructions was destroyed.
+- Bold wrapping italic (`**DeepLearning.AI *Agentic AI***`) produced **mis-nested** `</strong></em>`.
+- Escaped asterisks (`RRT\*`) leaked into the emphasis rules, rendering as `RRT\<em>`.
+
+Replaced with `emphasize()` — a real **CommonMark delimiter-stack parser including the rule-of-three**, with escaped `\*` / `\_` sentinel-protected before parsing. This **repaired 16 previously mis-rendered profiles** (incl. `motion-planning-navigation`, `soft-robotics`, `control-classical-optimal-mpc`, `micro-nano-bio-robotics`, `eligibility-matrix`). Also added **fenced-code-block support** (`parseBlocks` had none, so the ASCII T-shape diagram in `phase-2/common-core-vs-specialization.md` leaked its ``` backticks) and fixed one genuinely malformed source line (`task-and-motion-planning.md` §8 had unescaped `**A* / weighted-A* + RRT/PRM**`; `llmops-ai-platform.md` §3 had an overlapping bold run).
+
+**If you touch the renderer, keep the parser.** Regexes cannot express nested emphasis.
 
 ### Adapted-template notes for applied-AI profiles (differ from embodied)
 - **§3 eligibility:** Area 1 → CS/SE + applied-LLM (software-first; robotics domain is the *differentiator*, not the entry ticket). Area 2 → data-science/stats core + reliability-domain certs (**CMRP, CRE, ISO 18436-2 vibration**). Neither wants kinematics/control.
