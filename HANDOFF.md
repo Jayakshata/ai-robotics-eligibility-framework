@@ -26,7 +26,7 @@ Active work is a **boss presentation**: a proposal to BGR Neo's Managing Directo
 
 **Open item:** a `.pptx` export of the deck (python-pptx is available; there is no LibreOffice here, so a PowerPoint can be verified structurally but not visually).
 
-**Not in this repo** (carry it over by hand): the pivot brief that specifies the deck's strategy, government facts and slide flow. It was supplied as `HANDOFF_pivot_to_presentation.md`.
+**The deck's spec lives at `presentation/deck-brief.md`** — strategy, the five-model ladder, government facts, the niche, eligibility/programme specs, slide flow, open decisions, do-not list. It is a *sanitised* copy of the original private brief: notes characterising the audience were removed, because this repo is public and the deck is shown to the people those notes described. **Describe the register the deck must hit, never the reader's knowledge.**
 
 ---
 
