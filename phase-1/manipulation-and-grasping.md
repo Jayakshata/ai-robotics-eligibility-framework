@@ -35,7 +35,7 @@ Enabling a robot to **grasp, move, and rearrange objects** — from pick-and-pla
 
 *(Imperial, TU Delft, Oxford = manipulation-by-research, not coursework.)*
 
-**Highly-valued certifications `✓`** — Northwestern **Modern Robotics** (has a dedicated manipulation course — the most relevant MOOC) · **Hugging Face LeRobot** (learning-based manipulation) · DeepLearning.AI ML + Deep Learning · The Construct **ROS 2** (MoveIt) · NVIDIA **Isaac / Jetson AI Specialist** · Penn Robotics MicroMasters (edX). *(No official ROS cert / no NVIDIA robotics exam — see grounding ref.)*
+**Highly-valued certifications `✓`** — Northwestern **Modern Robotics** (Course 5 — "Robot Manipulation *and Wheeled Mobile Robots*"; manipulation is half a course, not a dedicated one) · **Hugging Face LeRobot** (learning-based manipulation) · DeepLearning.AI ML + Deep Learning · The Construct **ROS 2** (MoveIt) · NVIDIA **Isaac / Jetson AI Specialist** · Penn Robotics MicroMasters (edX). *(No official ROS cert / no NVIDIA robotics exam — see grounding ref.)*
 
 **Experience & portfolio** — L1: internship/academic, sim pick-and-place. L2: 2–4 yr, real-arm grasping demo + benchmark numbers, a sim-to-real project. L3: 5–8 yr, ≥1 real deployment led. L4/L5: 8+ yr and/or first-author papers (RSS/CoRL/ICRA/RA-L).
 
@@ -96,8 +96,8 @@ Compressible to **~16–18 months at 20 h/wk**; then **+3–9 months employer ra
 - **Data engines (scale demonstrations):** **UMI (Universal Manipulation Interface)** + ecosystem (DexUMI, 🆕 **YUBI**) — cheap in-the-wild data · **ALOHA / Mobile ALOHA** (bimanual teleop) · **MimicGen / DexMimicGen** (sim demo-multiplication, 60→21K) · egocentric-video scaling (**DexWild**, EgoMimic, EgoDex) · substrate corpora **Open X-Embodiment**, **DROID**, **AgiBot World**.
 - **Tactile / touch foundation models:** **Sparsh** (Meta FAIR — self-supervised touch representation, "the DINO of touch") + **Digit 360/Plexus** hardware · **AnyTouch / 🆕 AnyTouch 2**, T3, UniTouch (cross-sensor) · visuo-tactile policies (3D-ViTac, ManiWAV).
 - **Dexterous & in-hand:** RL sim2real lineage — Dactyl → AnyRotate → **DextrAH-G/RGB** → the 2025 humanoid vision-based dexterity "recipe" (Lin et al.).
-- **Sim, real2sim & data-gen:** **RoboCasa** (+ 🆕 RoboCasa365) generative sim · **Gaussian-splatting real2sim** (RoboGSim, Digital Cousins) · GPU substrate **Isaac Lab / MuJoCo Playground / Genesis / 🆕 Newton** (differentiable engine) · evaluation **RoboArena** (distributed real-world "Chatbot Arena for policies") & SIMPLER.
-- **Grasping foundations:** **AnyGrasp** (generalist 6-DoF) · **GraspGen** (2025 diffusion-transformer + 53M-grasp open dataset) · **DexGraspNet 2.0** · language-guided grasping (DexGraspVLA).
+- **Sim, real2sim & data-gen:** **RoboCasa** (+ 🆕 RoboCasa365) generative sim · **Gaussian-splatting real2sim** (RoboGSim) · **asset-retrieval real2sim** (Digital Cousins — real2sim, but not Gaussian-splatting-based) · GPU substrate **Isaac Lab / MuJoCo Playground / Genesis / 🆕 Newton** (differentiable engine) · evaluation **RoboArena** (distributed real-world "Chatbot Arena for policies") & SIMPLER.
+- **Grasping foundations:** **AnyGrasp** (generalist dense 6/7-DoF grasp perception) · **GraspGen** (2025 diffusion-transformer + 53M-grasp open dataset) · **DexGraspNet 2.0** · language-guided grasping (DexGraspVLA).
 - **Equivariant / geometric methods:** **EquiBot**, Equivariant Diffusion Policy, RiEMann — symmetry for extreme sample efficiency.
 
 *Net trend: converging on continuous chunked action generation (flow matching), foundation-model pretraining on pooled + human-video + sim-multiplied data, touch as a first-class modality, and reproducible real-world eval (RoboArena). Several 2026 items are fresh preprints — treat vendor benchmark claims as vendor-reported.*

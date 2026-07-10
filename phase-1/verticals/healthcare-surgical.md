@@ -22,8 +22,9 @@ Robots that assist or perform clinical interventions and hospital work: **surgic
 Human **anatomy & physiology**; **surgical workflow** and procedure specifics; **tissue mechanics/biomechanics**; **sterilization, biocompatibility & materials**; operating-room integration and clinical human factors; **medical imaging** (CT/MRI/ultrasound) and image-to-patient registration. This is what a generalist roboticist lacks.
 
 ## 4. Regulatory, Standards & Certification Landscape `✓` (the defining differentiator)
-- **FDA** clearance/approval — **510(k)** (substantial equivalence), **De Novo**, or **PMA** (highest-risk); the pathway shapes the whole program.
-- **IEC 60601-1** (+ collateral/particular standards) — safety of medical electrical equipment.
+- **FDA** clearance — in practice **510(k)** (substantial equivalence) or **De Novo**. `✓` Surgical robots are **Class II**: da Vinci clears under 510(k) (product code NAY), and **no general/soft-tissue surgical robot has gone through PMA**. PMA exists in the FDA framework for the highest-risk Class III devices, but reading it as the surgical-robot pathway is wrong. The pathway shapes the whole program.
+- **IEC 60601-1** (+ collateral/particular standards) — safety of medical electrical equipment. The surgical-robot-specific particular standard is **IEC 80601-2-77** (robotically assisted surgical equipment) `✓`.
+- **IEC 62366-1** — usability engineering / human factors, the standard behind "clinical human factors".
 - **IEC 62304** — medical-device **software lifecycle** (surgical robots are typically Class C, the strictest).
 - **ISO 13485** — quality management system for medical devices.
 - **ISO 14971** — risk management (mandatory, pervasive).
@@ -44,10 +45,10 @@ On top of the base capability eligibility (manipulation/control/perception), thi
 - The conversion is "capability engineer + medical-device regulatory/QMS literacy + clinical domain knowledge."
 
 ## 8. Trending & Notable `⏱ as of mid-2026`
-Semi-autonomous surgical subtasks (autonomous suturing — STAR/SRT lineage); **soft & continuum** and endoluminal robots; micro/nano robots for targeted therapy; **AR & surgical navigation**; surgical **data science / AI** and video understanding; competitive landscape broadening beyond Intuitive (**da Vinci 5**) to **Medtronic Hugo**, **CMR Surgical Versius**, **J&J MedTech Ottava/Monarch**, **Stryker Mako** (ortho). *(Re-research before publish.)*
+Semi-autonomous surgical subtasks (autonomous suturing — STAR/SRT lineage); **soft & continuum** and endoluminal robots; micro/nano robots for targeted therapy; **AR & surgical navigation**; surgical **data science / AI** and video understanding; competitive landscape broadening beyond Intuitive (**da Vinci 5**) to **Medtronic Hugo** (FDA-cleared, urology), **CMR Surgical Versius**, **J&J MedTech Monarch** (cleared) — while **J&J Ottava** remains **investigational** `~` (De Novo submitted Jan 2026, under review) — and **Stryker Mako** (ortho). *(Re-research before publish.)*
 
 ## 9. Ecosystem — Employers, Regulators & Partners
-- **Employers:** Intuitive Surgical · Medtronic · CMR Surgical · Johnson & Johnson MedTech · Stryker · Zimmer Biomet · Asensus.
+- **Employers:** Intuitive Surgical · Medtronic · CMR Surgical · Johnson & Johnson MedTech · Stryker · Zimmer Biomet · KARL STORZ (acquired Asensus in 2025; Senhance is being discontinued `~`).
 - **Regulators/standards:** FDA · EU notified bodies · IEC · ISO · AAMI.
 - **Academic labs:** Johns Hopkins (CISST/LCSR) · Imperial Hamlyn Centre · DLR · Stanford CHARM · UCL.
 

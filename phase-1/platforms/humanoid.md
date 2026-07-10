@@ -31,7 +31,7 @@ The archetypal **"humanoid robotics engineer"** bundles **control (whole-body/RL
 Robots: **Tesla Optimus** · **Figure 02/03** · **Boston Dynamics (electric) Atlas** · **Unitree G1/H1** · **Agility Digit** · **1X Neo** · **Apptronik Apollo** · Sanctuary. Stack: high-torque actuators, dexterous hands, on-board GPU (**NVIDIA Jetson Thor**), Isaac Sim/Lab for training, MuJoCo/Newton; humanoid foundation-model stacks (Isaac GR00T).
 
 ## 7. Trending & Notable `⏱ as of mid-2026`
-**Humanoid foundation models** (NVIDIA GR00T N1→N2, Figure **Helix**, Physical Intelligence π) · large-scale **RL sim-to-real for whole-body** (Isaac Lab) · the **teleoperation/data race** for humanoid demonstrations · dexterous-hand advances · **Jetson Thor**-class on-board compute · commercial pilots moving from demo to paid deployment. *(Re-research before publish.)*
+**Humanoid foundation models** (NVIDIA GR00T **N1 → N1.5 → N1.6/N1.7** shipping, **N2** `~` previewed on the DreamZero world-action model; Figure **Helix**, Physical Intelligence π) · large-scale **RL sim-to-real for whole-body** (Isaac Lab) · the **teleoperation/data race** for humanoid demonstrations · dexterous-hand advances · **Jetson Thor**-class on-board compute · commercial pilots moving from demo to paid deployment. *(Re-research before publish.)*
 
 ## 8. Key Players & Ecosystem
 - **Companies:** Tesla · Figure · Boston Dynamics · Unitree · Agility Robotics · 1X · Apptronik · Sanctuary AI · NVIDIA (GR00T/GEAR).
