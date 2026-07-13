@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The AI-for-Robotics Centre of Excellence lab — what each component is, why it is needed, and its value.">
+<meta property="og:title" content="Lab Setup — What, Why & Value">
+<meta property="og:description" content="Every piece of lab equipment explained in plain words: what it is, why it is needed, and its value.">
+<title>Lab Setup — What, Why &amp; Value</title>
+<style>
+  :root{
+    --bg:#F5F7F8;--panel:#FFFFFF;--ink:#182832;--ink2:#48606B;--muted:#7C8F99;
+    --line:#E3E9EC;--line2:#D3DCE0;--shadow:0 1px 2px rgba(24,40,50,.05),0 8px 26px rgba(24,40,50,.07);
+    --radius:16px;--radius-s:11px;--good:#2C7A57;--warn:#B0710D;--high:#AF3A3A;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:clamp(18px,3vw,40px) clamp(14px,3vw,34px) 90px}
+  .mast .kick{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#0E7C7B;font-weight:700}
+  .mast h1{margin:8px 0 8px;font-size:clamp(27px,4.2vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.08}
+  .mast p{margin:0;color:var(--ink2);font-size:clamp(15px,1.7vw,18px);max-width:62ch}
+
+  /* big-picture banner */
+  .frame{background:linear-gradient(180deg,#EAF4F3,#F5FaFa);border:1px solid #CFE7E5;border-radius:var(--radius);
+    padding:20px 22px;margin:22px 0 8px}
+  .frame h2{margin:0 0 10px;font-size:18px;font-weight:800;color:#0B605F}
+  .frame .two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:12px}
+  @media(max-width:700px){.frame .two{grid-template-columns:1fr}}
+  .frame .b{background:#fff;border:1px solid #D5E7E5;border-radius:11px;padding:13px 15px}
+  .frame .b b{display:block;font-size:15px;margin-bottom:3px}
+  .frame .b span{font-size:13.5px;color:var(--ink2)}
+  .rule-line{background:#0E7C7B;color:#fff;border-radius:10px;padding:11px 16px;font-size:15px;font-weight:600}
+  .rule-line b{color:#B8ECEA}
+
+  .hint{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:#fff;color:var(--ink2);
+    border:1px solid var(--line);border-radius:100px;padding:7px 15px;font-size:13.5px;font-weight:600;box-shadow:var(--shadow)}
+
+  /* area */
+  .area{margin-top:34px}
+  .area-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:13px}
+  .a-bar{width:7px;height:28px;border-radius:6px;flex:none}
+  .area-head h2{margin:0;font-size:clamp(19px,2.3vw,23px);font-weight:780}
+  .area-head .a-tag{color:var(--muted);font-size:14.5px}
+  .a-flag{font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#B0710D;background:#F6EBD6;border-radius:100px;padding:4px 11px}
+
+  /* item cards */
+  .items{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:15px}
+  .item{background:var(--panel);border:1px solid var(--line);border-left-width:5px;border-radius:var(--radius-s);
+    padding:15px 16px 13px;box-shadow:var(--shadow);cursor:pointer;transition:transform .13s ease,box-shadow .13s ease}
+  .item:hover{transform:translateY(-3px);box-shadow:0 4px 10px rgba(24,40,50,.08),0 14px 34px rgba(24,40,50,.10)}
+  .item:focus-visible{outline:3px solid #0E7C7B55;outline-offset:2px}
+  .it-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .it-name{font-size:16px;font-weight:750;line-height:1.25;letter-spacing:-.01em}
+  .cost{font-size:10.5px;font-weight:800;letter-spacing:.03em;border-radius:100px;padding:3px 9px;white-space:nowrap;flex:none}
+  .c-low{background:#E1F1EB;color:var(--good)} .c-med{background:#F6EBD6;color:var(--warn)} .c-high{background:#F6E0E0;color:var(--high)}
+  .c-na{background:#EDF1F2;color:var(--muted)}
+  .it-brand{font-size:12.5px;color:var(--muted);margin-top:3px;font-weight:600}
+  .it-what{font-size:13px;color:var(--ink2);margin-top:9px;line-height:1.45;
+    display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .it-cta{margin-top:10px;font-size:12.5px;font-weight:700;color:var(--dot,#0E7C7B)}
+
+  /* drawer */
+  .drawer{position:fixed;inset:0;z-index:50;display:none}
+  .drawer.open{display:block}
+  .drawer-bg{position:absolute;inset:0;background:rgba(20,34,42,.42);backdrop-filter:blur(2px)}
+  .drawer-panel{position:absolute;top:0;right:0;height:100%;width:min(640px,94vw);background:var(--bg);
+    box-shadow:-10px 0 40px rgba(20,34,42,.22);overflow-y:auto;padding:clamp(20px,3vw,36px);
+    transform:translateX(100%);transition:transform .28s cubic-bezier(.22,.61,.36,1)}
+  .drawer.open .drawer-panel{transform:translateX(0)}
+  .close{position:sticky;top:0;float:right;margin:-6px -6px 0 0;width:40px;height:40px;border-radius:50%;
+    border:1px solid var(--line);background:var(--panel);color:var(--ink2);font-size:22px;line-height:1;cursor:pointer;box-shadow:var(--shadow)}
+  .d-chip{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;border-radius:100px;padding:5px 13px;margin-bottom:14px}
+  .d-title{margin:0;font-size:clamp(23px,3vw,30px);font-weight:800;letter-spacing:-.02em;line-height:1.12}
+  .d-meta{margin-top:9px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .d-brand{font-size:14px;color:var(--ink2);font-weight:600}
+  .d-block{margin-top:20px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-s);padding:15px 17px}
+  .d-block .lab{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+  .d-block .txt{font-size:15.5px;line-height:1.55;color:var(--ink)}
+  .d-what .lab{color:#0B605F}.d-why .lab{color:#3F55A0}.d-val .lab{color:#2C7A57}
+  .d-val{background:#EAF5F0;border-color:#CFE7DC}
+
+  /* sell */
+  .sell{margin-top:44px;background:#152730;color:#fff;border-radius:var(--radius);padding:24px 26px}
+  .sell h3{margin:0 0 14px;font-size:18px;font-weight:800;color:#9FE0DC}
+  .sell ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:10px}
+  .sell li{font-size:16px;line-height:1.5}.sell li b{color:#fff}
+  .foot{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <div class="mast">
+    <div class="kick">AI for Robotics · Centre of Excellence</div>
+    <h1>The Lab, Explained — What, Why &amp; Value</h1>
+    <p>Every piece of equipment in plain words: what it is, why it's needed, and whether it's a smart-value choice.</p>
+  </div>
+
+  <div class="frame">
+    <h2>How the lab is organised</h2>
+    <div class="two">
+      <div class="b"><b>1 · Foundation Lab — computers + a few starter robots</b><span>Where everyone learns first, mostly on simulation (a robot on a screen). Cheap, and scales to big classes.</span></div>
+      <div class="b"><b>2 · Specialisation Labs — the real robots &amp; factory gear</b><span>Where small groups go deep on real hardware. The expensive industrial arms — BGR Neo already owns.</span></div>
+    </div>
+    <div class="rule-line">The money rule: <b>software is free, the money goes on computers, and the big robots are already ours.</b></div>
+  </div>
+
+  <div class="hint">👆 Tap any item to see what it is, why we need it, and why it's good value.</div>
+
+  <div id="tree"></div>
+
+  <div class="sell">
+    <h3>The bottom line</h3>
+    <ol>
+      <li><b>Most of it is computers + free software</b> — the everyday learning is on simulation, which is cheap and scales.</li>
+      <li><b>The expensive part — the real industrial robots — we already own</b> and run every day.</li>
+      <li><b>Everything we list is the industry-standard choice</b>, so students train on exactly what employers use — and we'll get quotes to confirm best price before buying.</li>
+    </ol>
+  </div>
+  <div class="foot">Indicative models (mid-2026) — final specifications to be confirmed with vendor quotes.</div>
+</div>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-bg" data-close></div>
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Equipment detail">
+    <button class="close" data-close aria-label="Close">×</button>
+    <div id="dc"></div>
+  </div>
+</div>
+
+<script>
+const AREAS=[
+ {id:'§1',name:'Compute & IT',tag:'The computers everyone learns on',c:'#2E7D9A',s:'#E1EEF3',items:[
+  {n:'GPU Workstation',b:'NVIDIA RTX 4090 / A6000 · qty ~15',cost:'MED',what:'A powerful desktop PC with a strong graphics card. The graphics card (the "GPU") is the part that makes AI and 3D robot-simulation run fast.',why:'Every student codes, runs robot simulations, and trains small AI models on these — the everyday workhorse of the course.',val:'The RTX 4090 is the best bang-for-buck — near-top performance at a fraction of data-centre prices. Shared one-per-two-students to keep costs down.'},
+  {n:'Training Server',b:'NVIDIA A100 / H100 (or cloud) · qty 1',cost:'HIGH',what:'One very powerful shared server for the heavy AI-training jobs that run for hours or days.',why:'Big AI training is too much for a normal workstation, so everyone shares this one machine.',val:'You only need one — or rent it in the cloud by the hour — far cheaper than giving everyone a monster machine.'},
+  {n:'Edge Computer',b:'NVIDIA Jetson Orin · qty ~10',cost:'LOW–MED',what:'A small, low-power computer that sits on the robot itself.',why:'So AI runs on the robot (not tethered to a big PC) — which is how real robots actually work.',val:'NVIDIA Jetson is the industry-standard robot "brain," inexpensive; a shared pool is plenty.'},
+  {n:'Microcontroller Boards',b:'ESP32 / STM32 · qty ~15',cost:'LOW',what:'Tiny, very cheap circuit boards (a few dollars each).',why:'To teach the low-level basics — reading a sensor, driving a motor.',val:'About the cheapest way possible to teach this, and they are the same boards professionals use.'},
+  {n:'Learner PCs / Laptops',b:'standard · qty 30',cost:'NA',what:'Ordinary computers, one per seat.',why:'Everyday classroom work.',val:'TNSDC (the government) provides these — not our cost.'},
+  {n:'Network + Storage',b:'switch · Wi-Fi 6 · NAS · 1 set',cost:'LOW',what:'The lab’s network gear plus a big shared hard-drive box.',why:'Connect everything, and store the large datasets and AI models everyone shares.',val:'Standard, modest-cost IT (Synology/QNAP are the go-to storage brands).'},
+ ]},
+ {id:'§2',name:'Core Robotics Lab',tag:'The shared starter robots',c:'#0E7C7B',s:'#DCEDEC',items:[
+  {n:'Collaborative Robot Arm',b:'Universal Robots UR5e · qty 2',cost:'MED',what:'A friendly robot arm that is safe to work right next to — a "collaborative robot," or cobot.',why:'Students learn to program and control a real arm here, before the heavier industrial work.',val:'Universal Robots is the world’s #1 cobot brand — easiest to learn, biggest support ecosystem, and a free UR Academy. The obvious teaching choice.'},
+  {n:'Gripper + Force Sensor',b:'Robotiq 2F-85 + FT-300 · qty 2',cost:'LOW–MED',what:'The "hand" that bolts onto the arm, plus a sensor that feels how hard it is pushing.',why:'To pick things up and sense touch and force.',val:'Robotiq is the standard, affordable gripper that plugs straight into a UR arm.'},
+  {n:'Mobile Robot',b:'TurtleBot 4 · qty 2',cost:'LOW',what:'A small wheeled robot.',why:'The standard robot for learning how a robot drives around and finds its way (navigation and mapping).',val:'TurtleBot is the budget teaching robot for this — built for exactly this purpose.'},
+  {n:'Depth Camera',b:'Intel RealSense D435/D455 · qty 6',cost:'LOW',what:'A camera that also measures distance — it sees in 3D.',why:'Robots need to see an object and how far away it is.',val:'The cheap, near-universal 3D camera everyone in robotics uses — excellent value.'},
+  {n:'LiDAR (laser scanner)',b:'Slamtec RPLIDAR / Livox · qty 3',cost:'LOW',what:'A spinning laser that measures distance all around and builds a map.',why:'So the robot can sense its surroundings and navigate.',val:'RPLIDAR is the budget standard — cheap and good enough to learn on.'},
+  {n:'Motion Sensor (IMU)',b:'Xsens MTi / 9-DoF · qty 4',cost:'LOW',what:'A small tilt-and-motion sensor, like the one in your phone that knows which way up it is.',why:'Helps a robot sense how it is moving.',val:'Cheap and standard.'},
+ ]},
+ {id:'§3',name:'Manufacturing Lab',tag:'The real factory robots — mostly OWNED',c:'#C6801A',s:'#F6EBD6',flag:true,items:[
+  {n:'Industrial Robot Arm',b:'ABB IRB 1200 / FANUC LR Mate · qty 2 (owned)',cost:'NA',what:'A real, heavy-duty factory robot arm — the kind that builds cars.',why:'The whole flagship is about real factory robots; students program and integrate these.',val:'ABB & FANUC are two of the global "big four" brands — exactly what factories use. And BGR Neo already owns these, so roughly no new cost.'},
+  {n:'Assembly Cobot',b:'Universal Robots UR10e · qty 1',cost:'MED',what:'A bigger collaborative arm for assembly work.',why:'Lighter assembly tasks alongside the industrial arms.',val:'Universal Robots again — proven and easy to learn.'},
+  {n:'Industrial 3D Vision',b:'Zivid / Photoneo · qty 1–2',cost:'MED–HIGH',what:'A high-precision 3D camera built for factories.',why:'For "bin picking" — the robot looks into a bin of jumbled parts and picks the right one.',val:'Zivid/Photoneo lead this category; a cheap camera genuinely can’t do factory-grade picking, so the quality is justified.'},
+  {n:'End-Effectors & Tool-Changer',b:'Schunk / OnRobot / Robotiq / Piab · 1 set',cost:'LOW–MED',what:'The assorted "hands" (grippers, suction) and a device to swap them automatically.',why:'Different jobs need different grips.',val:'The standard, mid-cost brands for this.'},
+  {n:'Factory Control Computer (PLC) + Touchscreen',b:'Siemens S7-1200 / Allen-Bradley · qty 3',cost:'MED',what:'The "factory control computer" (a PLC) that runs machines, plus its touchscreen (an HMI).',why:'Real factories run on PLCs; students must make robots talk to them.',val:'Siemens & Allen-Bradley are the two dominant PLC brands on Earth — learning them makes a student instantly employable.'},
+  {n:'Industrial Network',b:'PROFINET / EtherNet-IP · 1 set',cost:'LOW–MED',what:'The special factory network cabling and switches that link machines together.',why:'Factory equipment communicates over these.',val:'The two standard industrial network types — must-learn, low cost.'},
+  {n:'Safety Kit',b:'SICK scanners + light curtains · 1 set',cost:'MED',what:'Safety sensors that stop the robot the instant a person gets too close.',why:'Legally required and essential when robots work near people.',val:'SICK is the top safety brand; safety is non-negotiable, so we spec the trusted name.'},
+  {n:'Conveyor + Fixtures',b:'belt + part-holders · qty 1–2',cost:'LOW–MED',what:'A moving belt and part-holders.',why:'To make the cell behave like a real production line.',val:'Basic and cheap.'},
+  {n:'Welding Rig (optional)',b:'Fronius / Lincoln · qty 1',cost:'MED',what:'A robotic welding torch.',why:'Only for the welding version of the course.',val:'Optional; top welding brands if we add it.'},
+  {n:'Offline-Programming PC + Software',b:'RoboDK / RobotStudio / ROBOGUIDE · qty 2',cost:'LOW–MED',what:'A powerful PC with software to program and test the robot on-screen first.',why:'You program the robot virtually and safely in advance, then run it — faster, and no crashes.',val:'RoboDK is affordable and works across all robot brands; the maker’s software (RobotStudio/ROBOGUIDE) usually comes bundled with the robot.'},
+ ]},
+ {id:'§4',name:'Perception & Autonomy',tag:'Add-ons for self-driving robots',c:'#3F6CC7',s:'#E4EAF7',items:[
+  {n:'Self-Driving Robot Base',b:'Clearpath Jackal · qty 1',cost:'MED',what:'A rugged self-driving robot base.',why:'For the self-driving / autonomy specialisation.',val:'Clearpath is the research/education standard; AgileX is a cheaper alternative if needed.'},
+  {n:'3D LiDAR (survey-grade)',b:'Ouster OS1 · qty 1',cost:'MED',what:'A higher-end spinning laser for accurate 3D maps.',why:'Serious self-driving needs precise 3D sensing.',val:'A leading brand; the quality is needed for real autonomy.'},
+  {n:'Stereo Camera',b:'Stereolabs ZED 2i · qty 1',cost:'LOW–MED',what:'A two-lens camera that sees in 3D, like eyes.',why:'For visual navigation.',val:'Affordable and popular.'},
+  {n:'Precision GPS',b:'u-blox GNSS-RTK · qty 1',cost:'LOW',what:'A centimetre-accurate GPS.',why:'Outdoor robots need to know exactly where they are.',val:'u-blox is the cheap standard.'},
+ ]},
+ {id:'§5',name:'Robot Learning',tag:'Add-ons for robots that learn — the frontier',c:'#7A5AD0',s:'#ECE6F8',items:[
+  {n:'Learning Robot Arm',b:'Franka Research 3 (budget: SO-101) · qty 1–2',cost:'MED–HIGH',what:'A research robot arm you can teach new skills to.',why:'For the cutting-edge "robots that learn by themselves" track.',val:'Franka is the research standard; the SO-101 is a very cheap alternative if budget is tight.'},
+  {n:'Teleoperation Rig',b:'ALOHA · qty 1',cost:'MED',what:'A setup to remotely puppeteer robot arms to record demonstrations.',why:'One way to teach a robot is to show it — this collects those demonstrations.',val:'The popular open standard (low cost).'},
+  {n:'Robot Dog',b:'Unitree Go2 · qty 1',cost:'MED',what:'A four-legged robot.',why:'To learn AI for legged robots.',val:'Unitree Go2 is the accessible, affordable four-legged robot — best value for teaching this.'},
+  {n:'Humanoid (optional)',b:'Unitree G1 · qty 0–1',cost:'HIGH',what:'A human-shaped robot.',why:'Only if we later go into cutting-edge humanoid AI.',val:'Expensive and optional — not needed to launch.'},
+ ]},
+ {id:'§6',name:'Analytics & Agentic AI',tag:'Software tracks — almost no hardware',c:'#5563A8',s:'#E6E9F5',items:[
+  {n:'Compute',b:'uses the §1 workstations',cost:'NA',what:'These tracks run on the computers from §1.',why:'They are about analysing factory data and building AI assistants — software, not special hardware.',val:'Almost no extra hardware cost.'},
+  {n:'Condition-Monitoring Sensors',b:'vibration/temp + data logger · 1 kit',cost:'LOW',what:'Small vibration and temperature sensors you attach to a machine.',why:'To gather the data for "predict when a machine will break down."',val:'A cheap sensor kit.'},
+  {n:'AI Access',b:'Anthropic Claude API · subscription',cost:'LOW–MED',what:'Paying to use a powerful AI over the internet (like renting ChatGPT).',why:'Students build AI assistants using it.',val:'Pay-as-you-go — cheap for a class, and no big hardware to buy.'},
+ ]},
+ {id:'§7',name:'Software',tag:'Mostly free',c:'#2E8B6F',s:'#E1F1EB',items:[
+  {n:'Open-Source Software',b:'ROS 2 · Isaac Sim · MuJoCo · PyTorch …',cost:'LOW',what:'The robot operating software, the simulators, and the AI libraries.',why:'To do essentially everything in the course.',val:'Free — the whole core stack is open-source. A huge saving to point out.'},
+  {n:'Licensed Software',b:'RoboDK · Siemens/Rockwell · MATLAB',cost:'LOW–MED',what:'A few paid tools — offline-programming and factory-control (PLC) software.',why:'Needed for the industrial specialisation.',val:'Low cost, and mostly come bundled with the hardware.'},
+ ]},
+ {id:'§8',name:'Facilities',tag:'A room, power, network, safety',c:'#6E7F87',s:'#EBEFF1',items:[
+  {n:'Space',b:'classroom + robot bay + fenced cell bay',cost:'LOW–MED',what:'A room for computers, an area for robots, and a fenced bay for the real factory cell.',why:'You need a safe place with room to run all this.',val:'BGR Neo already has the industrial space.'},
+  {n:'Power & Cooling',b:'GPU-grade power + 3-phase',cost:'MED',what:'Heavy-duty electrical power and cooling.',why:'The robots and the AI computers both need proper power.',val:'A standard facility cost.'},
+  {n:'Safety & PPE',b:'fencing · e-stops · protective gear · first-aid',cost:'LOW',what:'Fencing, emergency-stop buttons, and protective equipment.',why:'To keep everyone safe around the robots.',val:'Basic and essential.'},
+ ]},
+];
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const costClass=c=>{c=(c||'').toUpperCase();if(c==='NA'||c==='—')return'c-na';if(c.includes('HIGH')&&!c.includes('MED'))return'c-high';if(c==='HIGH')return'c-high';if(c.includes('MED'))return'c-med';if(c.includes('LOW')||c.includes('FREE'))return'c-low';return'c-na';};
+
+function render(){
+  let html='';
+  AREAS.forEach((a,ai)=>{
+    html+=`<section class="area"><div class="area-head"><span class="a-bar" style="background:${a.c}"></span>`+
+      `<h2>${esc(a.name)}</h2><span class="a-tag">${esc(a.tag)}</span>`+(a.flag?`<span class="a-flag">★ Flagship</span>`:'')+
+      `</div><div class="items">`;
+    a.items.forEach((it,ii)=>{
+      html+=`<div class="item" tabindex="0" data-a="${ai}" data-i="${ii}" style="border-left-color:${a.c};--dot:${a.c}">`+
+        `<div class="it-top"><span class="it-name">${esc(it.n)}</span><span class="cost ${costClass(it.cost)}">${esc(it.cost==='NA'?'owned/free':it.cost)}</span></div>`+
+        `<div class="it-brand">${esc(it.b)}</div>`+
+        `<div class="it-what">${esc(it.what)}</div>`+
+        `<div class="it-cta">What · why · value →</div></div>`;
+    });
+    html+=`</div></section>`;
+  });
+  document.getElementById('tree').innerHTML=html;
+}
+function openDrawer(ai,ii){
+  const a=AREAS[ai], it=a.items[ii]; if(!it)return;
+  document.getElementById('dc').innerHTML=
+    `<div class="d-chip" style="background:${a.s};color:${a.c}">${esc(a.name)}${a.flag?' · ★ Flagship':''}</div>`+
+    `<h2 class="d-title">${esc(it.n)}</h2>`+
+    `<div class="d-meta"><span class="d-brand">${esc(it.b)}</span> <span class="cost ${costClass(it.cost)}">${esc(it.cost==='NA'?'owned / free':it.cost+' cost')}</span></div>`+
+    `<div class="d-block d-what"><div class="lab">What it is</div><div class="txt">${esc(it.what)}</div></div>`+
+    `<div class="d-block d-why"><div class="lab">Why we need it</div><div class="txt">${esc(it.why)}</div></div>`+
+    `<div class="d-block d-val"><div class="lab">Why it’s good value</div><div class="txt">${esc(it.val)}</div></div>`;
+  const dr=document.getElementById('drawer'); dr.classList.add('open'); dr.setAttribute('aria-hidden','false');
+  dr.querySelector('.drawer-panel').scrollTop=0;
+}
+function closeDrawer(){const dr=document.getElementById('drawer');dr.classList.remove('open');dr.setAttribute('aria-hidden','true');}
+render();
+document.getElementById('tree').addEventListener('click',e=>{const el=e.target.closest('.item[data-a]');if(el)openDrawer(+el.dataset.a,+el.dataset.i);});
+document.getElementById('tree').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('item')){e.preventDefault();openDrawer(+e.target.dataset.a,+e.target.dataset.i);}});
+document.getElementById('drawer').addEventListener('click',e=>{if(e.target.hasAttribute('data-close'))closeDrawer();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer();});
+</script>
+
+</body>
+</html>
