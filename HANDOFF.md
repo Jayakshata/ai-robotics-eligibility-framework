@@ -10,15 +10,34 @@
 
 **The website is finished and frozen. Do not build, expand or refactor it.** It is now *source material*.
 
-Active work is a **boss presentation**: a proposal to BGR Neo's Managing Director to run a government-partnered **Centre of Excellence** for AI-in-robotics training. The framework's synthesis sections (`phase-2/`) supply most of its content — **select and simplify from them; never regenerate them.**
+**Active work as of 2026-07-29 is the CoE CURRICULUM, on branch `coe-curriculum`.** The deck (below) is done and superseded in one important respect — its central "wedge" argument was found to be factually wrong and has been rewritten. Do not reuse the deck's §3/§4 claims without reading `curriculum/VALIDATION-REPORT.md` first.
+
+### ▶ Resuming? Start here
+
+1. `git checkout coe-curriculum` — the curriculum is **not on `main`**
+2. Read **`curriculum/NEXT-SESSION-RESEARCH-BRIEF.md`** — current state, all four artifact URLs, and the one outstanding task
+3. Read `curriculum/VALIDATION-REPORT.md` before changing any factual claim about schemes, qualifications or the competitive landscape
+
+**Outstanding task:** verify the placement claim (16 exit role titles, ~18 employer categories) against live job postings. Blocked only because that session hit its 200-web-search cap. The brief in step 2 is written to be pasted straight into a fresh session.
 
 | Thing | Where |
 |---|---|
+| **Curriculum design docs** | `curriculum/syllabus-architecture.md` · `iti-operator-technician-programme.md` · `annexure-syllabus-and-lab.md` |
+| **Validation report** (13 agents, 4 adversarial reviewers, sources) | `curriculum/VALIDATION-REPORT.md` |
+| **Published pages** (light theme, card layout) | `curriculum/pages/*.html` |
+| **Print deliverables** | `curriculum/Annexure-A-Syllabus-and-Lab.pdf` / `.docx` |
+| **Rebuild PDF + DOCX from markdown** | `curriculum/build/build-all.sh` |
 | Deck source (Artifact-format fragment) | `presentation/bgr-neo-coe-deck.html` |
 | Deck → standalone document wrapper | `presentation/deck-wrap.js` |
 | Deck served by GitHub Pages (**unlisted**, `noindex`) | [`/coe-deck/`](https://jayakshata.github.io/ai-robotics-eligibility-framework/coe-deck/) |
 | Deck as a Claude Artifact | https://claude.ai/code/artifact/9a3a7ee1-8816-4088-ba99-a259a02b1688 |
 | Exemplar format-review page (applied-AI sign-off) | https://claude.ai/code/artifact/7fb7b128-a4bd-41de-a9c0-24b314b2a1c5 |
+
+**Three corrections that must never be reintroduced** (each verified at source in the validation report):
+
+- The original wedge — *"almost nobody can put a trainee in front of a real industrial robot"* — is **false**. Tamil Nadu put industrial-robotics labs into **71 government ITIs at ₹2,877 crore**. The defensible claim is **production cell vs training cell**, plus multi-vendor coverage no single-brand OEM centre can offer.
+- **IASC publishes no robotics Qualification Pack**, and its published lists use colliding codes. Name no QP code until it is confirmed in writing by the council.
+- The **TNSDC CoE EOI closed in January 2025** and never covered robotics or manufacturing. It is presented as two doors, not one open one.
 
 **On a fresh clone, first:** `.claude/install-memory.sh` — Claude Code keeps project memory outside the repo, so it does not clone. This installs the checked-in snapshot into the local store (backs up anything already there). See `.claude/README.md`.
 

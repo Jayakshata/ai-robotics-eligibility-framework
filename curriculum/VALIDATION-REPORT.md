@@ -383,7 +383,7 @@ Related: IFR's verified 2024 India composition is **45% automotive** (4,070 unit
 | Whether an AICTE Approval Process Handbook later than 2024-25→2026-27 has been issued and whether Annexure-11's 12-name PG Diploma list has expanded. Today is inside the last year the current handbook covers. | aicte.gov.in |
 | Whether AICTE's Skill Knowledge Provider scheme (the source of Annexure Format-4) is still operationally live and accepting SKP registrations. | AICTE |
 | UGC Professor of Practice eligibility criteria — ugc.gov.in served a maintenance page and the AICTE mirror 404'd. The 15%/10% caps *are* verified; the underlying criteria are not. | The partner university's Registrar |
-| Whether VIT Chennai / SRM / Amrita / Sathyabama would accept a BGR Neo-designed 260 h specialization block inside their M.Tech, and on what commercial terms. Cannot be researched — must be asked. | Two or three of them directly; the published L&T EduTech contact is Dr Anbuthambi B, anbuthambi.b@lntecc.com |
+| Whether VIT Chennai / SRM / Amrita / Sathyabama would accept a BGR Neo-designed 260 h specialization block inside their M.Tech, and on what commercial terms. Cannot be researched — must be asked. | Two or three of them directly; approach L&T EduTech's academic-partnerships team (contact details are on their site; not reproduced here) |
 
 **Data that does not exist publicly — do not fabricate:**
 - **India's robot density.** IFR's density release excludes India; secondary sources vary 5×. Use installations (9,120) and stock (52,570).
