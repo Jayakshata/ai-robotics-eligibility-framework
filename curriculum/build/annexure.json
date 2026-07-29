@@ -1,0 +1,9763 @@
+{
+ "title": "Annexure — Syllabus, Timeline & Lab Requirement",
+ "meta": [
+  "BGR Neo Centre of Excellence · AI for Robotics",
+  "Attachment to the CoE proposal · Revision 2 · 29 July 2026"
+ ],
+ "blocks": [
+  {
+   "type": "hr"
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "How to read this annexure",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "s": "Three programmes, two module libraries.",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " A ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "1-year PG Diploma",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " and a ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "6-month Training Programme",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " are cut from one graduate-tier library. A ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "6-month post-ITI Technician Programme",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " runs on its own library. Hours in Part 1a are shown as ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "Diploma / Training",
+      "b": false,
+      "i": false,
+      "c": true
+     },
+     {
+      "s": ".",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Cohort size for all quantities: 30 students per programme.",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " Working groups: ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "15 pairs",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " for bench work, ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "6 teams of 5",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " for live-cell work.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Greenfield.",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " This assumes ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "BGR Neo holds no robots or lab assets today.",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " Everything required is listed. Anything already owned is netted off at procurement.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "No prices.",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " Each line carries a relative cost signal — ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "LOW · MEDIUM · HIGH",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": ". Costing is finance's to complete.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Revision 2",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " applies the corrections in ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "curriculum/VALIDATION-REPORT.md",
+      "b": false,
+      "i": false,
+      "c": true
+     },
+     {
+      "s": ". The diploma is now ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "1,200 h / 40 credits",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " (UGC's cap for a PG Diploma), a ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "PLC module",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " has been added to both tiers, the specialization block is rebalanced so the station rotation is schedulable, and an ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "assessment cell",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " is ring-fenced.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "hr"
+  },
+  {
+   "type": "h1",
+   "runs": [
+    {
+     "s": "PART 1a — SYLLABUS · GRADUATE TIER",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "Awarding body: Loyola College, Chennai",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " (autonomous, arts & science, University of Madras, UGC-regulated) for the PG Diploma. The 6-month Training Programme carries a ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "BGR Neo CoE certificate plus vendor certificates",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " — ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "not",
+      "b": false,
+      "i": true,
+      "c": false
+     },
+     {
+      "s": " an NSQF/QP certificate, because both candidate Qualification Packs set a minimum job-entry age of 24 and exclude a fresh-graduate cohort.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "1.1 Structure at a glance",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "right",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Block",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Title",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Diploma",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Training",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "F",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Foundations",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "230 h",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "90 h",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "R",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Core Robotics",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "310 h",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "200 h",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "D",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "AI Depth",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "240 h",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "140 h",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "S",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Industrial Specialization",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "(identical in both)",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "260 h",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "260 h",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "C",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Capstone & Employability",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "160 h",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "120 h",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [],
+     [
+      {
+       "s": "TOTAL",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1,200 h",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "810 h",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [],
+     [
+      {
+       "s": "Credits @ 30 notional h",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "40 — a UGC PG Diploma exactly",
+       "b": true,
+       "i": true,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "27",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "1,200 h is ",
+      "b": false,
+      "i": true,
+      "c": false
+     },
+     {
+      "s": "notional learning hours",
+      "b": true,
+      "i": true,
+      "c": false
+     },
+     {
+      "s": " per NCrF — directed contact plus supervised self-study — not contact hours alone.",
+      "b": false,
+      "i": true,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "1.2 Block F — Foundations · 230 h / 90 h",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left",
+    "right",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "#",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Module",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Sub-modules",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Diploma",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Training",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "F1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Engineering Maths for AI",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Linear algebra & transforms · Probability & statistics · Calculus & numerical methods · Optimization basics",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "80",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "F2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Programming",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Python for engineers · Data structures & algorithms · C++ essentials for robotics · Linux, Git & dev workflow",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "90",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "F3",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Classical Machine Learning",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Supervised learning · Unsupervised learning & model evaluation",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "0",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "F4",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Industrial Context, Safety & Standards",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Manufacturing processes & factory layout · ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "ISO 10218-1/-2, ISO/TS 15066, IEC 60204-1, ISO 13855, ISO 13849-1",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " & risk assessment · Shop-floor discipline (LOTO, PPE, 5S, permit-to-work)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "1.3 Block R — Core Robotics · 310 h / 200 h",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left",
+    "right",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "#",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Module",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Sub-modules",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Diploma",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Training",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "R1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Robot Kinematics & Dynamics",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Coordinate frames & homogeneous transforms · Forward & inverse kinematics · Jacobians, singularities & workspace · Dynamics, payload & reach sizing",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "40",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "R2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Industrial Robot Programming",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Teach-pendant programming (jogging, frames, TCP, I/O) · Motion types & production program structure · Offline programming & simulation · ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "Multi-vendor: FANUC / ABB / KUKA / UR",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "R3",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "ROS 2 + MoveIt 2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "ROS 2 core (nodes, topics, services, actions) · URDF, TF2, RViz & launch · MoveIt 2 planning & pick-place · ros2_control",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "R4",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Feedback Control Fundamentals",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Modelling & transfer functions · PID design & tuning · Servo drives, encoders & motion profiles · State-space intro",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "40",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "20",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "R5",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Motion Planning & Mobile Robotics",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Path & trajectory planning · SLAM & localization basics · Nav2 & AMR fleet basics (VDA 5050)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "10",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "R6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Industrial Controls & PLC",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "(new in Rev 2)",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Ladder logic & function blocks · PLC ↔ robot handshaking · Industrial networks (Ethernet/IP, PROFINET, Modbus, OPC-UA) · HMI design · Safety circuits & validation",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "40",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "R6 exists because industrial cells run PLCs and vendor stacks, not ROS 2. Revision 1 buried all controls content inside S3, where 60 h had to cover PLC programming, four fieldbuses, HMI design and safety validation — while the lab bought PLC trainers that no module had hours to use. R3 was reduced to pay for it.",
+      "b": false,
+      "i": true,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "1.4 Block D — AI Depth · 240 h / 140 h",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left",
+    "right",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "#",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Module",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Sub-modules",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Diploma",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Training",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "D1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Deep Learning",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Neural network fundamentals & training · CNNs & image models · Transfer learning & small-data regimes · Deployment & edge inference",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "80",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "50",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "D2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Machine Vision for Manufacturing",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Industrial imaging: optics, lighting & camera selection · Classical vision & metrology · Deep-learning defect detection · 3D vision, point clouds & 6-DoF pose for bin picking · Hand-eye calibration",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "90",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "70",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Elective pool — diploma students choose 2 of 4",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [],
+     [
+      {
+       "s": "70",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "20",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Elective",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Content",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Hours",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "D3",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Reinforcement & imitation learning · sim-to-real & domain randomization",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "35",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "D4",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Industrial data & time series · OPC-UA/MQTT & historians · anomaly detection · dashboards",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "35",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "D5",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Agentic AI & LLM applications for manufacturing — MES/ERP agents, conversational HMI, guardrails",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "35",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "D6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Simulation & digital-twin depth — physics engines, synthetic data, real2sim",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "35",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "The Training Programme takes ",
+      "b": false,
+      "i": true,
+      "c": false
+     },
+     {
+      "s": "D4 only, at 20 h",
+      "b": true,
+      "i": true,
+      "c": false
+     },
+     {
+      "s": ". D3 is tagged droppable and is genuinely dropped from it.",
+      "b": false,
+      "i": true,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "1.5 Block S — Industrial Specialization · 260 h ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "in both programmes",
+     "b": true,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "lines": [
+    [
+     {
+      "s": "Identical in the Diploma and the Training Programme.",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " Delivered on live industrial cells. Rebalanced in Revision 2 to near-equal dwell so six teams can actually round-robin six stations — the previous 50/50/60/40/30/30 split could not.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "#",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Module",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Sub-modules",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Hours",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "S1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Vision-Guided Pick & Place on a Live Cell",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Cell design & cycle-time budgeting · Vision-guided part localization · Gripper/EOAT selection & integration · Build, run & optimize",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "45",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "S2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Welding / Dispensing OLP + Digital Twin",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Process fundamentals · Offline programming & path generation · Digital-twin build & simulation validation · Download, touch-up & production proving",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "45",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "S3",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Cell Integration",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Robot ↔ PLC handshaking · Industrial networks in practice · HMI/SCADA · Safety circuit design, guarding & validation",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "45",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "S4",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Predictive Maintenance & Quality Analytics",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Condition monitoring (vibration, current, thermal) · Failure modes & remaining-useful-life · SPC & quality analytics on live line data",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "40",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "S5",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Operator-Facing AI (MES/ERP + Conversational HMI)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "MES/ERP data flows & production KPIs · AI assistants for SOPs and diagnostics · Guardrails, validation & deployment",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "40",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "S6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Calibration, Commissioning & Handover",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Robot mastering, TCP & payload calibration (ISO 9283) · FAT/SAT protocols · Documentation, as-built drawings & ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "operator training",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "45",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "S6's operator-training component has a real audience — the ITI cohort. See Part 2.4.",
+      "b": false,
+      "i": true,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "1.6 Block C — Capstone & Employability · 160 h / 120 h",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left",
+    "right",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "#",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Module",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Sub-modules",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Diploma",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Training",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "C1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Capstone Project",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Problem definition & scoping · Design, simulation & digital twin · Build & integration on the live cell · Testing, validation & optimization · Defence",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "130",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "90",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "C2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Portfolio & Employability — ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "mapped to DGT/VSQ/N0102",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Technical documentation & drawings · Customer communication & site conduct · Portfolio build & interview preparation",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "hr"
+  },
+  {
+   "type": "h1",
+   "runs": [
+    {
+     "s": "PART 1b — SYLLABUS · TECHNICIAN TIER (post-ITI)",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "Two separately certified NSQF Level 4 awards of 450 h each.",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " Full design, entry bands, certification route and rationale in ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "curriculum/iti-operator-technician-programme.md",
+      "b": false,
+      "i": false,
+      "c": true
+     },
+     {
+      "s": ".",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "1.7 Structure at a glance",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "right",
+    "right",
+    "right",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Award",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Trade hours",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "+ Employability",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Total",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Weeks",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "Pre-gate bridge (Stream A / Stream B)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60 / 120",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2–4",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Tier 1 — Automation Cell Operator",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "420",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "450",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "13",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Tier 2 — Automation Uptime Technician",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "420",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "450",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "13",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [],
+     [
+      {
+       "s": "840",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "900",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "26",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "450 h sits inside the NSQF Level 4 notional band (390–480 h), equals 15 credits exactly, and falls inside PMKVY's 300–600 h Short-Term Training band — so each tier is independently fundable. A single 760 h award, as originally drafted, fitted no band at all.",
+      "b": false,
+      "i": true,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "1.8 Tier 1 — OPERATE · 420 h + 30 h Employability",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "#",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Module",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Sub-modules",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Hours",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "O1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Safety & the Cage",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Shop-floor safety, PPE, LOTO, permit-to-work · Safety circuit: light curtains, scanners, interlocks, E-stop categories, muting · Safe entry, recovery, restart · ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "ISO 10218-1/-2, ISO/TS 15066, IEC 60204-1, ISO 13855, IEC 61496, ISO 13849-1 / IEC 62061",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "O2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Anatomy of an Automated Cell",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "The seven fault domains · Reading a cell: layout, I/O list, sequence of operations · Cycle logic",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "50",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "O3",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Cell Operation & HMI",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Start-up, shutdown, mode selection · HMI navigation · Changeover & first-piece verification · Cycle and quality monitoring",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "O4",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Robot Handling for Technicians",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Robot safety, jogging, frames & TCP · Home/park positions; mid-cycle stop recovery · Program selection, backup, restore, touch-up within authority",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "O5",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Material Handling & Flow",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Conveyors, transfers, jams · Palletizing & depalletizing: layer patterns, slip sheets, wrap, pallet quality · ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "Machine tending",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " · Dock discipline & AGV/AMR interaction",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "50",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "O6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Reading the Machine: Sensors, Signals & Alarms",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Sensor types and what \"no signal\" means · Barcode, RFID, vision pass/fail · Alarm codes",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "O7",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "The Fault Loop — Drills",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "The six-step loop · Seeded-fault drills across all seven domains · Timed recovery assessment",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "40",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "O8",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Measurement & First-Piece Quality",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Gauging, go/no-go, basic metrology · Reading an SPC chart · First-piece and in-process checks",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "20",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "O9",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Environment, Energy & Waste",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "E-waste & electronics disposal · Coolant and oil handling · The cost of a compressed-air leak",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "20",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "ES",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Employability Skills — ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "DGT/VSQ/N0102",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Communication, workplace conduct, digital & financial literacy",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "1.9 Tier 2 — MAINTAIN · 420 h + 30 h Employability",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "#",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Module",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Sub-modules",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Hours",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "M1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Preventive & Autonomous Maintenance — ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "TPM ",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "Jishu Hozen",
+       "b": true,
+       "i": true,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "PM schedules, lubrication, tension, torque · Gripper & vacuum system care · Vision optics care · CMMS: work orders, spares, history",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "M2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Electrical, Pneumatic & ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "Hydraulic",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " First-Line Repair",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Panel layout & safe working; fuses, breakers, contactors, PSUs · Sensor replacement & alignment · Cable and continuity faults · Pneumatics: FRL, valves, cylinders, leaks · ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "Hydraulics: pumps, valves, accumulators, filtration, contamination",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "90",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "M3",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Mechanical First-Line Repair",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Gripper/EOAT change & tool changers · Fixture and guide alignment · Belts, rollers, chains, couplings · Bearing & vibration first checks",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "50",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "M4",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Vision & Quality Subsystem Care",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Why detection rate drops · Re-running calibration within authority · Model problem vs physical problem",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "40",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "M5",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Structured Diagnosis & Escalation",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Fault trees per domain; binary search · 5-Why & root cause · ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "Writing an escalation report an engineer can act on",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " · Spare-parts discipline",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "M6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Condition Monitoring & Working with the AI",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Reading trends: vibration, current, temperature, cycle-time drift · What a predictive alert means and its limits",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "M7",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Handover, Downtime & the Digital Shop Floor",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Shift handover & logbook discipline · Downtime coding, OEE basics · MES / operator-AI assistant",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "M8",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "PLC & Control Logic Literacy — read-only",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "(new in Rev 2)",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Ladder & function-block basics · ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "Programming software in monitor mode",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " · Cross-referencing an alarm to logic · Forced I/O and status bits · Fieldbus diagnostic pages · Robot ↔ PLC handshake signals. ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "Monitor mode only",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "ES",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Employability Skills — ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "DGT/VSQ/N0102",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "(continued)",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "M8 exists because two of the tier's own seven fault domains — BRAIN and NERVES — were previously untaught. The portability promise was 5/7 delivered.",
+      "b": false,
+      "i": true,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "hr"
+  },
+  {
+   "type": "h1",
+   "runs": [
+    {
+     "s": "PART 2 — TIMELINE",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "2.1 PG Diploma — 1 year · 48 teaching weeks + 4 examination/break weeks",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left",
+    "right",
+    "right",
+    "left"
+   ],
+   "header": [
+    [
+     {
+      "s": "Weeks",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Phase",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Blocks",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Hours",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "~h/wk",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Facility",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "1–10",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Foundations",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "F1 · F2 · F3 · F4",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "230",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "23",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Classroom + computer lab",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "11–20",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Core robotics",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "R1 · R2 · R3 · R4 · R5 · R6",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "310",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "31",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Computer lab + robotics bench + controls bench",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "21–30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "AI depth",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "D1 · D2 · 2 electives",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "240",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "24",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Computer lab (GPU)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "31–40",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Specialization",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "S1 · S2 · S3 · S4 · S5 · S6",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "260",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "26",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "LIVE CELLS",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "41–48",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Capstone",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "C1 · C2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "160",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "20",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "LIVE CELLS",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " + classroom",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [],
+     [
+      {
+       "s": "Total",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [],
+     [
+      {
+       "s": "1,200",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [],
+     []
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "Live-cell window: weeks 31–48 (18 weeks).",
+      "b": true,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "2.2 Engineer Training Programme — 6 months · 26 weeks",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left",
+    "right",
+    "right",
+    "left"
+   ],
+   "header": [
+    [
+     {
+      "s": "Weeks",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Phase",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Blocks",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Hours",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "~h/wk",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Facility",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "1–3",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Bridge",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "F1 · F2 (refresher) · F4",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "90",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Classroom",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "4–9",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Core robotics",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "R1 · R2 · R3 · R4 · R5 · R6",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "200",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "33",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Computer lab + benches",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "10–14",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "AI depth",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "D1 · D2 · D4",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "140",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "28",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Computer lab (GPU)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "15–22",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Specialization",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "S1 · S2 · S3 · S4 · S5 · S6",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "260",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "33",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "LIVE CELLS",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "23–26",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Capstone",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "C1 · C2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "120",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "LIVE CELLS",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " + classroom",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [],
+     [
+      {
+       "s": "Total",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [],
+     [
+      {
+       "s": "810",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [],
+     []
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "Live-cell window: weeks 15–26 (12 weeks).",
+      "b": true,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "2.3 Technician Programme (post-ITI) — 6 months · 26 weeks",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left",
+    "right",
+    "right",
+    "left"
+   ],
+   "header": [
+    [
+     {
+      "s": "Weeks",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Phase",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Modules",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Hours",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "~h/wk",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Facility",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "1–2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Safety induction & the cage",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "O1",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "60",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Classroom + safety rig",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "3–7",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Operate: cell fundamentals",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "O2 · O3 · O4",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "170",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "34",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Trainer cells",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "8–10",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Operate: flow & signals",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "O5 · O6",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "110",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "37",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Palletizing rig + trainer cells",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "11–12",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Fault drills, measurement, environment",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "O7 · O8 · O9",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "80",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "40",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "LIVE CELLS",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " + fault-injection rig",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "13",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Employability + ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "Tier 1 assessment",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "ES",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "LIVE CELLS",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "14–17",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Maintain: preventive & first-line repair",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "M1 · M2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "150",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "37",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Benches + trainer cells",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "18–20",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Maintain: control logic & mechanical",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "M8 · M3",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "110",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "37",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "LIVE CELLS",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "21–23",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Maintain: vision & structured diagnosis",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "M4 · M5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "100",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "33",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "LIVE CELLS",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "24–26",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Condition monitoring, handover + ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "final assessment",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "M6 · M7 · ES",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "90",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "LIVE CELLS",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [],
+     [
+      {
+       "s": "Total",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [],
+     [
+      {
+       "s": "900",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [],
+     []
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "Live-cell window: weeks 11–13 and 18–26 (12 weeks).",
+      "b": true,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "2.4 The combined calendar — three cohorts, one cell hall",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "Start all three programmes in the ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "same week",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " and live-cell demand sequences rather than collides.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left"
+   ],
+   "header": [
+    [
+     {
+      "s": "Weeks",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "On the live cells",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Notes",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "1–10",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "(none)",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "All three cohorts on classroom, sim and trainer cells",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "11–13",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "ITI only",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Fault drills + Tier 1 assessment",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "14",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "(none)",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ],
+     []
+    ],
+    [
+     [
+      {
+       "s": "15–17",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Engineer training only",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Specialization begins",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "18–26",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Both — the Handover Model window",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Engineers build and commission; technicians operate and maintain",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "27–30",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "(none)",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Both 6-month cohorts have graduated",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "31–48",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Diploma only",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Specialization + capstone",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "33 of 52 weeks carry live-cell demand; only 9 are contended.",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " Book cell access in ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "2-week blocks per team",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": ", not continuously — real integration work is bursty, and block booking raises effective capacity roughly 3–4×.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "The Handover Model (weeks 18–26)",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " is ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "milestone-gated",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " — handovers occur at FAT, SAT and production-ramp boundaries, roughly 6–8 per cohort, plus daily shift-log handovers inside the ITI cohort's own shifts. It runs on a ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "ring-fenced training cell",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": ", never on a customer-acceptance cell, and every milestone carries a staffed ISO 10218 / ISO-TS 15066 safety re-validation step.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "2.5 Annual cohort capacity",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "right",
+    "right",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Programme",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Cohorts / yr",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Students / yr",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Live-cell weeks",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "PG Diploma",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "18",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Engineer Training",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "12",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Technician (post-ITI)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "12",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Total",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "3",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "90",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "33 of 52 weeks",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "(9 contended)",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "A second cohort of either 6-month programme requires an additional cell or shift-based access.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "2.6 The station rotation — how 30 students share the hardware",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "Block S is delivered as a ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "six-station rotation",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": ": six teams of five rotate through six stations, so the Centre needs ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "one of each station, not six of everything.",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " Revision 2's rebalancing (45/45/45/40/40/45 h) makes the dwell near-equal, which is what makes a round-robin actually schedulable.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left"
+   ],
+   "header": [
+    [
+     {
+      "s": "Station",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Serves",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Facility",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "1",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "S1 — Vision-guided pick & place",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Live Cell 1",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "S2 — Welding / dispensing + OLP",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Live Cell 2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "3",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "S3 — Cell integration",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Integration bench",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "4",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "S4 — Predictive maintenance",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Condition-monitoring rig",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "S5 — Operator-facing AI",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "MES/AI workstation cluster",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "6",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "S6 — Calibration & commissioning",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Calibration bench",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "hr"
+  },
+  {
+   "type": "h1",
+   "runs": [
+    {
+     "s": "PART 3 — LAB & EQUIPMENT REQUIREMENT",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "Sized for 30 students per programme, three programmes. Greenfield.",
+      "b": true,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "quote",
+   "lines": [
+    [
+     {
+      "s": "The capex logic depends on siting — and it may invert.",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " The published TNSDC CoE EOI §12(1) states that TNSDC provides the physical space \"in any of the government institutions or building,\" along with furniture, workstation PCs and connectivity, while the partner supplies the specialist equipment. ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "If the CoE is sited that way, \"BGR Neo is mostly buying computers, not robots\" reverses exactly",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " — Groups A and J shrink and Group C becomes the whole spend. Both scenarios must be costed before the money slide is written.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "3.1 Group A — Compute, network & edge · ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "MEDIUM",
+     "b": true,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "Serves the graduate tier. The technician tier needs almost none of it.",
+      "b": false,
+      "i": true,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Purpose",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Ratio",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "GPU student workstation (RTX-class, ≥64 GB RAM)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Isaac Sim, deep learning, ROS 2, OLP",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 1",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Spare student workstations",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Failure cover",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Instructor workstation + dual display",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Demonstration & authoring",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Shared training server (multi-GPU node)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Model training, batch jobs",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 30",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "NAS / storage server (~100 TB usable)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Datasets, projects, backups",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 30",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "NVIDIA Jetson Orin Nano / NX edge kit",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "On-robot inference labs",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "15",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "NVIDIA Jetson AGX Orin",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Cell-side vision deployment",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "shared",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "3",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "MCU dev kits (STM32 / ESP32)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Embedded & micro-ROS labs",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "15",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Rugged laptops",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Shop-floor commissioning",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Basic PCs (technician tier)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "CMMS, HMI, documentation",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 3",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "10",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Network: managed switches, rack, firewall, 10 GbE, UPS",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Infrastructure",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 set",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Classroom AV (display, camera, audio)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "3 rooms",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "3 sets",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "3.2 Group B — Learning-tier robotics (bench) · ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "LOW–MEDIUM",
+     "b": true,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Purpose",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Ratio",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "Desktop 6-axis educational arm + gripper",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "R1, R3, O2–O4",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Collaborative robot (UR5e/UR10e-class) on mobile bench, gripper",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "R2, R3, S1, O3–O4",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 10",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "3",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Educational AMR (TurtleBot 4-class)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "R5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Simulation seats (Isaac Sim, Gazebo, MuJoCo)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "All sim work",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 1",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "free / open-source",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "3.3 Group C — Live industrial cells · ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "HIGH",
+     "b": true,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "h3",
+   "runs": [
+    {
+     "s": "Cell 1 — Vision-guided pick & place / machine tending",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "Serves S1, C1 (graduate tier) and O5, M3 (technician tier) — the technician tier's machine-tending requirement is satisfied here rather than by a separate cell.",
+      "b": false,
+      "i": true,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "Industrial 6-axis robot, ~10–20 kg payload (FANUC / ABB / KUKA / Yaskawa class), controller & pendant",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Industrial 3D vision system (structured-light / bin-picking class)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "2D machine-vision cameras + lenses",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Machine-vision lighting (bar, ring, dome, backlight)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 set",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Servo gripper + vacuum EOAT + quick-change tool changer",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 set",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Conveyor, part presentation fixtures, bins; machine-tool interface",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 set",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Safety PLC + standard PLC + HMI panel",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 set",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Perimeter fencing, interlocked gate, safety scanner, E-stops",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 set",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "h3",
+   "runs": [
+    {
+     "s": "Cell 2 — Welding / dispensing",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "Industrial arc-welding robot (6-axis, welding package)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Welding power source + torch + wire feeder",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "2-axis positioner / turntable",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Laser seam-tracking sensor",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Fume extraction, weld screens, fire-rated enclosure",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 set",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Safety circuit: fencing, interlocks, E-stops",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 set",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "quote",
+   "lines": [
+    [
+     {
+      "s": "Option:",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " if welding capex or facility services constrain the launch, substitute a ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "sealant/adhesive dispensing cell",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " — same offline-programming and digital-twin outcomes, materially lower cost signal, no fume or fire services.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h3",
+   "runs": [
+    {
+     "s": "Cells 3 & 4 — Flexible capstone cells",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "Collaborative robot (UR10e / FANUC CRX class), flexible table, quick-change tooling",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Safety-rated laser scanner per cell",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Reconfigurable fixturing / bench",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2 sets",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "h3",
+   "runs": [
+    {
+     "s": "Cell 5 — ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "Assessment cell (ring-fenced)",
+     "b": true,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": " · ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "new in Rev 2",
+     "b": false,
+     "i": true,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "Cobot or light industrial robot with vision, PLC, safety circuit and reconfigurable tooling",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "No cohort trains on this cell.",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " The technician Tier 2 examination is an ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "unseen",
+      "b": false,
+      "i": true,
+      "c": false
+     },
+     {
+      "s": " cell with three seeded faults, and the graduate capstone requires an uncommitted cell — neither works if every cell is consumed by teaching. ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "Fallback if capex is tight:",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " run the assessment on a ring-fenced ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "configuration",
+      "b": false,
+      "i": true,
+      "c": false
+     },
+     {
+      "s": " — a different part, tooling, layout and fault set on Cell 3 or 4, locked during assessment windows (weeks 13, 24–26, 41–48). Weaker, but defensible; permanently sharing a trained-on cell is not.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h3",
+   "runs": [
+    {
+     "s": "Phase 2 (optional, year 2)",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "Mobile manipulator — AMR with mounted cobot arm (C2 platform track)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Industrial AMR for fleet / VDA 5050 labs",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "3.4 Group D — Vision & sensing (teaching stock) · ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "LOW–MEDIUM",
+     "b": true,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Ratio",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "Depth camera (Intel RealSense D435/D455-class)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "15",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Industrial machine-vision camera + lens (Basler / FLIR-class)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "bench",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "8",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Machine-vision lighting kits (bench)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 8",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "4",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "2D LiDAR (RPLIDAR-class)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "with AMRs",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "3D LiDAR (Livox Mid-360-class)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "shared",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "IMU / encoder / sensor kits",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Thermal imaging camera",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "shared",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "3.5 Group E — End effectors & tooling · ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "MEDIUM",
+     "b": true,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "2-finger servo gripper (Robotiq-class)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "4",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Vacuum / suction EOAT + venturi generator",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "3",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "6-axis force–torque sensor (ATI / Bota-class)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Quick-change tool changers",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "3",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Custom fixture & jig fabrication allowance",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 lot",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "3.6 Group F — Industrial controls & integration · ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "MEDIUM",
+     "b": true,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "Sized for two concurrent cohorts",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " — the graduate tier's R6 and the technician tier's M8 both land in the controls bench, and the single-cohort sizing in Revision 1 became binding once M8 was added.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Ratio",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "PLC trainer kit with digital/analog I/O (Siemens S7-1200 / AB CompactLogix class)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5 × 2 cohorts",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "12",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "PLC monitor-mode software seats",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "(new in Rev 2 — for M8)",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "15",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Safety PLC / safety relay trainer",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 10 × 2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "HMI panel",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5 × 2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "12",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "VFD + motor + encoder trainer",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Industrial network kit (Ethernet/IP, PROFINET, Modbus, OPC-UA gateway, managed switch)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5 × 2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "12",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Pneumatics trainer (valves, cylinders, FRL)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 10",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "3",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Hydraulic trainer boards",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "(new in Rev 2 — for M2)",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Electrical panel build kit (DIN rail, contactors, terminals, wiring)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Electrical fault-finding trainer boards",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Pneumatic fault trainer boards",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "3.7 Group G — Safety infrastructure · ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "MEDIUM",
+     "b": true,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": " ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "(non-negotiable)",
+     "b": false,
+     "i": true,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "Safety-rated laser scanner (SICK microScan3-class, Type 3 / PL d)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "5",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Light curtain pair",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Safety relay / E-stop station / interlocked gate switch sets",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "5",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Perimeter guarding panels (2 fenced cells)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2 sets",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "PPE sets — safety shoes, glasses, gloves, hi-vis",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "70",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Welding PPE — helmets, aprons, gauntlets",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "10",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Lockout–tagout (LOTO) kits",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "12",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Fire extinguishers, first-aid stations, eyewash",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "per facility code",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "3.8 Group H — Predictive maintenance & condition monitoring · ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "LOW–MEDIUM",
+     "b": true,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "Machinery fault simulator (rotating rig with seeded bearing / misalignment / imbalance faults)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Triaxial accelerometer + vibration DAQ set",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Handheld vibration pen or analyser",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "3",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Current / power monitoring clamps & energy meters",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Ultrasonic leak detector",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "IIoT gateway + data historian",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 set",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "3.9 Group I — Software · ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "LOW",
+     "b": true,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": " ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "(open-source dominates)",
+     "b": false,
+     "i": true,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Licence",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Seats",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "ROS 2, Nav2, MoveIt 2, Gazebo, MuJoCo, OpenCV, PCL, PyTorch, LeRobot",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Free",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "NVIDIA Isaac Sim / Isaac Lab / Isaac ROS",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Free",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Offline programming (RoboDK, or vendor: RobotStudio / ROBOGUIDE / KUKA.Sim)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Licensed",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "15",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "PLC / HMI programming suite (TIA Portal / Studio 5000)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Licensed",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "12",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "CMMS / maintenance-management software",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Licensed",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 site",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Machine-vision suite (Halcon / VisionPro / Keyence) — ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "optional",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Licensed",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "4",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "MATLAB / Simulink (academic) — ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "optional",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Licensed",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "30",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "MLOps & experiment tracking (MLflow / W&B)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Free tier",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 team",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "LMS + assessment & attendance platform",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Licensed",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "3.10 Group J — Facility · ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "MEDIUM–HIGH",
+     "b": true,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Space / service",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Indicative area",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "Classroom, 30 seats, power & data at every desk",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "~60–75 m²",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Computer lab, 30 GPU workstations",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "~75–90 m²",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Robotics bench lab (Groups B, D, E)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "~100 m²",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Controls & maintenance workshop bay",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " (Groups F, H)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "~120 m²",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Live cell hall — 3-phase power, compressed air, floor loading, hoist access",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "~250–300 m²",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Server & network room with cooling",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "~15 m²",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Store room, tool cribs, lockers",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "~50 m²",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Compressed-air compressor + dryer + reticulation",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 set",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "3-phase power distribution, earthing & panel",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 set",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "HVAC + lighting (≥500 lux at benches)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "facility",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Washroom, pantry, first-aid room",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "facility",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "3.11 Group K — Technician-tier specific · ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "MEDIUM",
+     "b": true,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left",
+    "right"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Purpose",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Ratio",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "Fault-injection trainer cell",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " — instructor-switchable faults (sensor disconnect, low air, jam, gripper misalignment, dirty optics, comms drop)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "O7, M5 — the core teaching instrument",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 15",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Palletizing / depalletizing rig",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " — robot, pallet stations, case conveyor, layer tooling",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "O5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Semi-automatic stretch wrapper + pallets, slip sheets, cases",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "O5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " + consumables",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Sensor alignment & replacement bench kits",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "M2, O6",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Hand-tool sets + tool trolleys",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "M2, M3",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Torque wrenches, dial indicators, alignment tools",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "M3",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Basic metrology kit",
+       "b": true,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": " — gauges, go/no-go, calipers, height gauge",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "O8",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 5",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "6",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Multimeters / clamp meters / insulation testers",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "M2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "15",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Tablets — CMMS and SOP retrieval on the floor",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "M1, M7",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 : 2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "15",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "~~Truck loading/unloading mock-up~~",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Deleted in Rev 2",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "Why the truck-loading mock-up was deleted:",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " India's dock automation installed base is telescopic conveyors, not robots. Robotic trailer unloading is a 2025–26 global product category with no evidenced Tamil Nadu installations to place graduates against. Dock discipline is taught within O5 on the palletizing rig instead.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "3.12 Group L — Consumables & spares (annual) · ",
+     "b": false,
+     "i": false,
+     "c": false
+    },
+    {
+     "s": "LOW",
+     "b": true,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left"
+   ],
+   "header": [
+    [
+     {
+      "s": "Item",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Qty",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "Welding wire, shielding gas, test coupons",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "consumable lot",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Sample workpieces / parts for pick-place & inspection labs",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "500+ parts",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Cable, connectors, DIN rail, terminals, wiring consumables",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "consumable lot",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Consumable spares pool — sensors, cables, vacuum cups, seals, filters, fuses (consumed in training)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 annual lot",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "3D printers + filament (fixtures, jigs, gripper fingers)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "2 printers",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Calibration artefacts (ISO 9283 test rig, checkerboards, reference spheres)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "1 set",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "Spares pool — grippers, cameras, cables, drives",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "~10% of hardware value",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "hr"
+  },
+  {
+   "type": "h2",
+   "runs": [
+    {
+     "s": "3.13 Capital summary by group",
+     "b": false,
+     "i": false,
+     "c": false
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "align": [
+    "left",
+    "left",
+    "left",
+    "left"
+   ],
+   "header": [
+    [
+     {
+      "s": "Group",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Description",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Cost signal",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Phase",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ],
+   "rows": [
+    [
+     [
+      {
+       "s": "A",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Compute, network & edge",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "MEDIUM",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Launch",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "B",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Learning-tier robotics (bench)",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "LOW–MEDIUM",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Launch",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "C",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Live industrial cells (5, incl. assessment cell)",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "HIGH",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Launch",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "D",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Vision & sensing stock",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "LOW–MEDIUM",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Launch",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "E",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "End effectors & tooling",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "MEDIUM",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Launch",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "F",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Industrial controls & integration ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "(2 cohorts)",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "MEDIUM",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Launch",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "G",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Safety infrastructure",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "MEDIUM",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Launch ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "(non-negotiable)",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "H",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Predictive maintenance & condition monitoring",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "LOW–MEDIUM",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Launch",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "I",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Software",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "LOW",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Launch",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "J",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Facility",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "MEDIUM–HIGH",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Launch ",
+       "b": false,
+       "i": false,
+       "c": false
+      },
+      {
+       "s": "(or supplied by TNSDC — see the siting note)",
+       "b": false,
+       "i": true,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "K",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Technician-tier specific",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "MEDIUM",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Launch",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "L",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Consumables & spares",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "LOW",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Recurring",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ],
+    [
+     [
+      {
+       "s": "—",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Mobile manipulator + industrial AMR",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "MEDIUM–HIGH",
+       "b": true,
+       "i": false,
+       "c": false
+      }
+     ],
+     [
+      {
+       "s": "Year 2",
+       "b": false,
+       "i": false,
+       "c": false
+      }
+     ]
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "Four observations for the capital plan:",
+      "b": true,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "ol",
+   "items": [
+    [
+     {
+      "s": "The graduate tier needs no robots for its first half.",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " Weeks 1–30 (Diploma) and 1–14 (Training) run on Group A compute and open-source simulation. Group C can be staged.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "The technician tier cannot be staged the same way.",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " It needs trainer cells from week 3 and live cells from week 11 — but what it needs early is the cheap kit (Groups B and K), not the industrial cells.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "The two tiers are complementary in capex, not competing.",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " The graduate tier is compute-heavy and hands-light; the technician tier is the reverse and needs ",
+      "b": false,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": "no GPU workstations at all",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": ".",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ],
+    [
+     {
+      "s": "Group G is not optional and not deferrable,",
+      "b": true,
+      "i": false,
+      "c": false
+     },
+     {
+      "s": " and Cell 5 is not a luxury — without a ring-fenced assessment cell, the technician tier's headline examination cannot be run as specified.",
+      "b": false,
+      "i": false,
+      "c": false
+     }
+    ]
+   ]
+  },
+  {
+   "type": "hr"
+  },
+  {
+   "type": "p",
+   "lines": [
+    [
+     {
+      "s": "Sources: ",
+      "b": false,
+      "i": true,
+      "c": false
+     },
+     {
+      "s": "curriculum/syllabus-architecture.md",
+      "b": false,
+      "i": true,
+      "c": true
+     },
+     {
+      "s": " · ",
+      "b": false,
+      "i": true,
+      "c": false
+     },
+     {
+      "s": "curriculum/iti-operator-technician-programme.md",
+      "b": false,
+      "i": true,
+      "c": true
+     },
+     {
+      "s": " · ",
+      "b": false,
+      "i": true,
+      "c": false
+     },
+     {
+      "s": "curriculum/VALIDATION-REPORT.md",
+      "b": false,
+      "i": true,
+      "c": true
+     },
+     {
+      "s": " · ",
+      "b": false,
+      "i": true,
+      "c": false
+     },
+     {
+      "s": "phase-2/lab-procurement-and-partnerships.md",
+      "b": false,
+      "i": true,
+      "c": true
+     },
+     {
+      "s": " · ",
+      "b": false,
+      "i": true,
+      "c": false
+     },
+     {
+      "s": "phase-1/_grounding-reference.md",
+      "b": false,
+      "i": true,
+      "c": true
+     },
+     {
+      "s": " §D · ",
+      "b": false,
+      "i": true,
+      "c": false
+     },
+     {
+      "s": "presentation/deck-brief.md",
+      "b": false,
+      "i": true,
+      "c": true
+     },
+     {
+      "s": " §5–§7. Hour allocations are planning estimates. Named vendors are indicative product classes, not procurement recommendations — confirm current models, availability and pricing at source before any tender. Standards editions (notably ISO 10218) must be verified before printing. Quantities assume zero existing assets; net off anything BGR Neo already holds.",
+      "b": false,
+      "i": true,
+      "c": false
+     }
+    ]
+   ]
+  }
+ ]
+}

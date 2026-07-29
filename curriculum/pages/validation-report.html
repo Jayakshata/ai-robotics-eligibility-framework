@@ -1,0 +1,453 @@
+<title>BGR Neo CoE — Validation Report</title>
+<style>
+:root{
+  --ground:#F1F4F8; --surface:#FFFFFF; --surface-2:#F6F9FC; --surface-3:#E9EEF5;
+  --ink:#131A24; --muted:#586274; --faint:#8892A4;
+  --border:#DBE1EB; --border-strong:#C6CFDD;
+  --acc:#0E7490; --acc-ink:#0A5567; --acc-soft:#E3F1F5;
+  --sev-3:#7E2C18; --sev-2:#C0670F; --sev-1:#E5A857;
+  --sev-3-soft:#F6E7E2; --sev-2-soft:#F8ECDD; --sev-1-soft:#FAF2E2;
+  --ok:#10774B; --ok-soft:#E2F0E8;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --serif:ui-serif,Georgia,"Iowan Old Style","Palatino Linotype",Palatino,serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Code","JetBrains Mono",Menlo,Consolas,monospace;
+  --shadow:0 1px 2px rgba(19,26,36,.05),0 8px 24px rgba(19,26,36,.05);
+}
+@media (prefers-color-scheme:dark){:root{
+  --ground:#0B1119; --surface:#131B25; --surface-2:#19222E; --surface-3:#202B39;
+  --ink:#E6ECF3; --muted:#96A3B6; --faint:#66727F;
+  --border:#232E3C; --border-strong:#344356;
+  --acc:#3FB6CE; --acc-ink:#7BD6E5; --acc-soft:#0F2A33;
+  --sev-3:#E8836B; --sev-2:#C4762A; --sev-1:#7F5620;
+  --sev-3-soft:#2B1712; --sev-2-soft:#26190D; --sev-1-soft:#1F1A0E;
+  --ok:#4FC48E; --ok-soft:#0F2820;
+  --shadow:0 1px 2px rgba(0,0,0,.35),0 10px 28px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --ground:#0B1119; --surface:#131B25; --surface-2:#19222E; --surface-3:#202B39;
+  --ink:#E6ECF3; --muted:#96A3B6; --faint:#66727F;
+  --border:#232E3C; --border-strong:#344356;
+  --acc:#3FB6CE; --acc-ink:#7BD6E5; --acc-soft:#0F2A33;
+  --sev-3:#E8836B; --sev-2:#C4762A; --sev-1:#7F5620;
+  --sev-3-soft:#2B1712; --sev-2-soft:#26190D; --sev-1-soft:#1F1A0E;
+  --ok:#4FC48E; --ok-soft:#0F2820;
+  --shadow:0 1px 2px rgba(0,0,0,.35),0 10px 28px rgba(0,0,0,.3);
+}
+:root[data-theme="light"]{
+  --ground:#F1F4F8; --surface:#FFFFFF; --surface-2:#F6F9FC; --surface-3:#E9EEF5;
+  --ink:#131A24; --muted:#586274; --faint:#8892A4;
+  --border:#DBE1EB; --border-strong:#C6CFDD;
+  --acc:#0E7490; --acc-ink:#0A5567; --acc-soft:#E3F1F5;
+  --sev-3:#7E2C18; --sev-2:#C0670F; --sev-1:#E5A857;
+  --sev-3-soft:#F6E7E2; --sev-2-soft:#F8ECDD; --sev-1-soft:#FAF2E2;
+  --ok:#10774B; --ok-soft:#E2F0E8;
+  --shadow:0 1px 2px rgba(19,26,36,.05),0 8px 24px rgba(19,26,36,.05);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 clamp(16px,4vw,32px) 90px}
+
+.mast{border-top:3px solid var(--sev-3);padding:26px 0 22px;margin-bottom:26px;
+  display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:flex-start}
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--sev-3);font-weight:700}
+.mast h1{margin:6px 0 0;font-size:clamp(26px,3.6vw,40px);line-height:1.08;letter-spacing:-.026em;
+  font-weight:680;text-wrap:balance;max-width:15ch}
+.mast .meta{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);text-align:right;line-height:2}
+.themebtn{border:1px solid var(--border);background:var(--surface);color:var(--muted);
+  border-radius:5px;width:32px;height:32px;cursor:pointer;font-size:13px;display:grid;place-items:center}
+.themebtn:hover{color:var(--ink);border-color:var(--border-strong)}
+
+section{margin-bottom:44px;scroll-margin-top:20px}
+h2{font-size:clamp(18px,2.1vw,22px);letter-spacing:-.02em;font-weight:670;margin:0 0 14px;
+  padding-bottom:9px;border-bottom:1px solid var(--border);text-wrap:balance}
+h2 .n{font-family:var(--mono);font-size:11px;letter-spacing:.13em;color:var(--faint);
+  display:block;margin-bottom:5px;font-weight:700;text-transform:uppercase}
+h3{font-size:14.5px;font-weight:660;margin:26px 0 10px;color:var(--acc-ink)}
+p{margin:0 0 12px;max-width:70ch}
+.lead{font-family:var(--serif);font-size:clamp(16.5px,1.7vw,19px);line-height:1.55;
+  max-width:60ch;margin-bottom:18px;color:var(--ink)}
+.lead b{font-weight:600}
+strong{font-weight:650}
+ul{margin:0 0 14px;padding-left:20px;max-width:70ch}
+li{margin-bottom:7px}
+li::marker{color:var(--acc)}
+code{font-family:var(--mono);font-size:.85em;background:var(--surface-2);border:1px solid var(--border);
+  border-radius:3px;padding:1px 4px;color:var(--acc-ink)}
+.sub{color:var(--muted);font-size:13px}
+
+/* ---- verdict board ---- */
+.board{display:grid;gap:10px;grid-template-columns:1fr;margin-bottom:14px}
+@media (min-width:640px){.board{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:900px){.board{grid-template-columns:repeat(4,1fr)}}
+.vt{background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--sev-2);
+  border-radius:7px;padding:14px 14px 15px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:7px}
+.vt .vk{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--faint);font-weight:700}
+.vt .vv{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:-.005em;color:var(--sev-2);
+  line-height:1.2}
+.vt .vd{font-size:12.5px;color:var(--muted);line-height:1.45}
+
+.counts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.cnt{display:flex;align-items:baseline;gap:7px;background:var(--surface);border:1px solid var(--border);
+  border-radius:6px;padding:8px 12px;box-shadow:var(--shadow)}
+.cnt b{font-family:var(--mono);font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;
+  letter-spacing:-.02em;line-height:1}
+.cnt span{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--muted);font-weight:700}
+.cnt.c3 b{color:var(--sev-3)} .cnt.c2 b{color:var(--sev-2)} .cnt.c1 b{color:var(--sev-1)}
+.cnt.ok b{color:var(--ok)}
+
+/* ---- severity chips ---- */
+.sev{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;
+  text-transform:uppercase;font-weight:700;padding:3px 7px;border-radius:3px;white-space:nowrap;
+  line-height:1.4;border:1px solid transparent}
+.sev.s3{background:var(--sev-3-soft);color:var(--sev-3);border-color:var(--sev-3)}
+.sev.s2{background:var(--sev-2-soft);color:var(--sev-2);border-color:var(--sev-2)}
+.sev.s1{background:var(--sev-1-soft);color:var(--sev-1);border-color:var(--sev-1)}
+.sev.ok{background:var(--ok-soft);color:var(--ok);border-color:var(--ok)}
+.sev.un{background:transparent;color:var(--muted);border:1px dashed var(--border-strong)}
+
+/* ---- finding cards ---- */
+.find{background:var(--surface);border:1px solid var(--border);border-radius:8px;
+  box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden;display:grid;
+  grid-template-columns:4px 1fr}
+.find.s3{border-left:0} .find.s3 .stripe{background:var(--sev-3)}
+.find.s2 .stripe{background:var(--sev-2)}
+.find.s1 .stripe{background:var(--sev-1)}
+.stripe{grid-row:1/-1}
+.fbody{padding:15px 17px 17px;min-width:0}
+.fhead{display:flex;flex-wrap:wrap;gap:9px;align-items:baseline;margin-bottom:10px}
+.fhead h4{margin:0;font-size:15.5px;font-weight:665;letter-spacing:-.013em;line-height:1.3;
+  text-wrap:balance;flex:1 1 260px}
+.frow{display:grid;grid-template-columns:auto 1fr;gap:5px 13px;font-size:13.5px;margin-bottom:3px}
+.frow dt{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--faint);font-weight:700;padding-top:4px;white-space:nowrap}
+.frow dd{margin:0;color:var(--muted);line-height:1.5}
+.frow dd b,.frow dd strong{color:var(--ink);font-weight:640}
+.frow dd.was{text-decoration:line-through;text-decoration-color:var(--sev-3);
+  text-decoration-thickness:1px;opacity:.75}
+
+/* ---- tables ---- */
+.tw{overflow-x:auto;border:1px solid var(--border);border-radius:7px;background:var(--surface);
+  box-shadow:var(--shadow);margin-bottom:16px}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:520px}
+th{background:var(--surface-3);text-align:left;font-weight:660;font-size:10.5px;letter-spacing:.055em;
+  text-transform:uppercase;color:var(--muted);padding:9px 12px;border-bottom:1.5px solid var(--acc);white-space:nowrap}
+td{padding:9px 12px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.45}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even) td{background:var(--surface-2)}
+
+.note{background:var(--surface-2);border:1px solid var(--border);border-left:3px solid var(--acc);
+  border-radius:0 6px 6px 0;padding:13px 16px;margin:16px 0;font-size:13.5px}
+.note p{margin:0 0 8px;max-width:66ch}
+.note p:last-child{margin:0}
+.note .nk{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--acc-ink);font-weight:700;display:block;margin-bottom:6px}
+
+.pull{font-family:var(--serif);font-size:clamp(17px,2.1vw,21px);line-height:1.42;color:var(--ink);
+  border-left:3px solid var(--sev-3);padding:6px 0 6px 19px;margin:22px 0;max-width:54ch;text-wrap:balance}
+.pull span{color:var(--muted);display:block;font-family:var(--sans);font-size:13px;line-height:1.55;
+  margin-top:10px}
+
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--border);
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--faint);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+  <header class="mast">
+    <div>
+      <div class="eyebrow">BGR Neo Centre of Excellence · Independent validation</div>
+      <h1>What the research found</h1>
+    </div>
+    <div style="display:flex;gap:16px;align-items:flex-start">
+      <div class="meta">
+        29 July 2026<br>
+        8 research passes · 4 adversarial reviews<br>
+        118 findings · 85 contradictions
+      </div>
+      <button class="themebtn" id="tb" type="button" aria-label="Toggle colour theme">◐</button>
+    </div>
+  </header>
+
+  <section id="bottom-line">
+    <p class="lead">The programme survives. The documents describing it did not.
+      The underlying proposition — a post-ITI qualification in uptime and recovery, delivered on cells
+      running paying customer work — is <b>real and unduplicated in any curriculum we could check</b>.
+      Almost everything wrapped around it was wrong in ways a selection committee could verify on a phone.</p>
+
+    <div class="board">
+      <article class="vt">
+        <div class="vk">Is it redundant?</div>
+        <div class="vv">NEEDS CHANGE</div>
+        <div class="vd">The content is genuinely unduplicated. The <em>claim of exclusivity</em> is not.</div>
+      </article>
+      <article class="vt">
+        <div class="vk">Certification &amp; funding</div>
+        <div class="vv">NEEDS CHANGE</div>
+        <div class="vd">The named qualification route does not exist. The named funding vehicle is closed.</div>
+      </article>
+      <article class="vt">
+        <div class="vk">Curriculum scope</div>
+        <div class="vv">NEEDS CHANGE</div>
+        <div class="vd">Hour totals fit no framework band, and two taught fault domains were untaught.</div>
+      </article>
+      <article class="vt">
+        <div class="vk">Strategy &amp; demand</div>
+        <div class="vv">NEEDS CHANGE</div>
+        <div class="vd">Macro demand holds. The volume argument and the delivery model did not.</div>
+      </article>
+    </div>
+
+    <div class="counts">
+      <div class="cnt c3"><b>3</b><span>Critical</span></div>
+      <div class="cnt c2"><b>5</b><span>High</span></div>
+      <div class="cnt c1"><b>7</b><span>Medium &amp; below</span></div>
+      <div class="cnt ok"><b>12</b><span>Claims confirmed</span></div>
+    </div>
+    <p class="sub">All fifteen corrections have been applied to the programme design. This page records
+      what was found and what remains unconfirmed.</p>
+
+    <div class="pull">Rewrite the wedge from “real robot versus no robot” to “production cell versus training cell.”
+      <span>Tamil Nadu has already spent ₹2,877 crore putting an Industrial Robotics and Digital Manufacturing
+      Lab into 71 government ITIs — and the people who will read the application are the government that
+      paid for it. Everything else in the pitch hangs off that one sentence being defensible.</span></div>
+  </section>
+
+  <section id="holds">
+    <h2><span class="n">Section 1</span>What held</h2>
+    <p>Honestly summarised: <strong>the arithmetic, the architecture and the content differentiator
+      survive. The positioning, the certification route and the funding route did not.</strong></p>
+    <div class="tw"><table>
+      <thead><tr><th>Claim</th><th>Status</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr><td>Credits: 30 notional hours = 1 credit; 40 credits = 1,200 h = one year</td><td><span class="sev ok">Verified</span></td><td class="sub">Three independent primary sources — the national credit framework operating procedure and two ministry guideline documents</td></tr>
+        <tr><td>BGR Neo cannot award a PG Diploma itself</td><td><span class="sev ok">Verified</span></td><td class="sub">The promoter clause restricts technical institutions to a society, trust, Section 8 company or government — and unaffiliated standalone institutions exclude Engineering &amp; Technology entirely</td></tr>
+        <tr><td>A two-tier stackable award with an employable exit halfway</td><td><span class="sev ok">Verified</span></td><td class="sub">It is the international default for this occupation. In Germany the two-year machine-operator exam <em>legally counts as</em> part one of the full trade exam</td></tr>
+        <tr><td><strong>The uptime content is genuinely unduplicated</strong></td><td><span class="sev ok">Verified</span></td><td class="sub">Both overlapping national trade curricula were extracted and searched: <strong>zero occurrences</strong> of diagnosis, LOTO, CMMS, condition monitoring, OEE, downtime, handover, root cause, escalation or machine vision. The robotics trade's entire troubleshooting content is 29 hours of consumable and leak housekeeping</td></tr>
+        <tr><td>No existing six-month post-ITI automation route exists in the Indian system</td><td><span class="sev ok">Verified</span></td><td class="sub">Short modular upskilling targets serving workers; the instructor scheme trains trainers; the advanced diploma is two years</td></tr>
+        <tr><td>Macro demand absorbs 60–90 technicians a year</td><td><span class="sev ok">Verified</span></td><td class="sub">9,120 robot installations in India in 2024, operational stock 52,570; Tamil Nadu holds roughly 15% of India's factories</td></tr>
+        <tr><td>The pre-gate bridge is justified, not generosity</td><td><span class="sev ok">Verified</span></td><td class="sub">A national sector report states the workforce "is not adequately prepared to handle a higher degree of automation… compounded with a lesser threshold of English language capability"</td></tr>
+        <tr><td>Mixed government, employer and fee funding is permitted — and scored</td><td><span class="sev ok">Verified</span></td><td class="sub">One live state instrument sets a target of ≥30% non-government revenue</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="note">
+      <span class="nk">Where the research was weak — say so</span>
+      <p><strong>The founding premise is unverified.</strong> No published study establishes that Tamil Nadu
+        has a technician shortage rather than an engineer shortage. The only supporting evidence is
+        qualitative. This is an assertion, not a finding — and BGR Neo's own installed-base data is the
+        only way to convert it.</p>
+      <p><strong>India's robot density must not be quoted.</strong> The international federation's density
+        release excludes India and public secondary sources disagree by a factor of five. Use installations
+        and stock instead. <strong>No technician-to-engineer staffing ratio exists</strong> in any credible
+        source — the maintenance profession benchmarks headcount against asset value, not against engineers.
+        Do not put a sourced-looking ratio on a slide.</p>
+    </div>
+  </section>
+
+  <section id="changes">
+    <h2><span class="n">Section 2</span>What had to change</h2>
+    <p>Ranked by severity. Each records what the plan said, what is actually true, and what was done.
+      All fifteen are now applied.</p>
+
+    <article class="find s3"><div class="stripe"></div><div class="fbody">
+      <div class="fhead"><h4>The wedge was factually false in Tamil Nadu</h4><span class="sev s3">Critical</span></div>
+      <dl class="frow">
+        <dt>Said</dt><dd class="was">"Almost nobody can put a fresh graduate in front of a real industrial robot and a real factory integration project."</dd>
+        <dt>True</dt><dd>The state converted <strong>71 government ITIs into Industry 4.0 Technology Centres at ₹2,877 crore</strong>, each with an Industrial Robotics and Digital Manufacturing Lab. Add a state-partnered robotics CoE inaugurated in March 2026 whose own marketing says it "closely replicates live industrial environments", an OEM centre at a Chennai engineering college, a simulation centre at Tidel Park, and a university CoE the state skill corporation <strong>itself co-funded</strong>.</dd>
+        <dt>Done</dt><dd>Replaced with <strong>production cell versus training cell</strong> — those labs have no customer, no order book, no acceptance test and no consequence for downtime. Added the second claim an OEM structurally cannot make: <strong>multi-vendor cells</strong> and cross-stack integration no single robot maker owns.</dd>
+      </dl>
+    </div></article>
+
+    <article class="find s3"><div class="stripe"></div><div class="fbody">
+      <div class="fhead"><h4>The certification route named in the plan does not exist</h4><span class="sev s3">Critical</span></div>
+      <dl class="frow">
+        <dt>Said</dt><dd class="was">Certification via the instrumentation-and-automation sector skill council, which "covers industrial robotics", mapping to levels 5–8.</dd>
+        <dt>True</dt><dd>That council's entire published catalogue is <strong>16 qualifications with no robot operator, technician or programmer role</strong>. Its only robotics artefact is a standalone occupational standard, which is not a certifiable job role. Its <strong>highest published qualifications are level 5</strong>, so "5–8" was wrong. The capital-goods council is not the alternative either — all 24 of its future-skills qualifications sit at level 5.5–6.0 with degree entry, and one sets a <strong>minimum job-entry age of 24</strong>. The choice the plan posed was a false one.</dd>
+        <dt>Done</dt><dd>Rebuilt as an honest composite — an automation-technician qualification as the assessed spine <em>with its limits stated</em>, a robotics occupational standard bolted on, the compulsory employability standard, and a CoE certificate carrying everything a qualification cannot. Plus a standing rule: <strong>name no qualification code until the council confirms version and validity in writing</strong> — their published lists use colliding codes and at least two show review dates that lapsed in mid-2025.</dd>
+      </dl>
+    </div></article>
+
+    <article class="find s3"><div class="stripe"></div><div class="fbody">
+      <div class="fhead"><h4>The technician syllabus did not teach PLC — so two of its own seven fault domains were untaught</h4><span class="sev s3">Critical</span></div>
+      <dl class="frow">
+        <dt>Said</dt><dd>Every cell is the same seven things; domain 4 is the <strong>Brain</strong> (PLC, controller, HMI) and domain 5 the <strong>Nerves</strong> (I/O, fieldbus); the technician is portable because they know all seven.</dd>
+        <dt>True</dt><dd>"PLC" appeared three times in the whole document — in the fault-domain table, the portability table, and the forbidden-actions list. <strong>No module taught a trainee to read a rung, open the software in monitor mode, cross-reference an alarm to logic, or read a fieldbus diagnostic page.</strong> The result was a technician told "never alter PLC logic" who was never taught to read one. The portability promise was 5/7 delivered.</dd>
+        <dt>Done</dt><dd>Added <strong>M8 — PLC &amp; Control Logic Literacy, 60 h, read-only</strong>. Monitor mode only, which reinforces the authority boundary rather than weakening it. A parallel <strong>R6</strong> was added to the graduate tier for the same reason: industrial cells run PLCs, not ROS 2.</dd>
+      </dl>
+    </div></article>
+
+    <article class="find s2"><div class="stripe"></div><div class="fbody">
+      <div class="fhead"><h4>The hour totals fitted no qualification band at all</h4><span class="sev s2">High</span></div>
+      <dl class="frow">
+        <dt>Said</dt><dd class="was">Tier 1 at 380 h ≈ level 4; Tier 2 at 380 h ≈ level 5; a combined 760-hour award.</dd>
+        <dt>True</dt><dd>The level 4 notional band is <strong>390–480 hours</strong> — so 380 was ten hours below the floor. Level 5 requires three years' experience, or a higher school exit, so it was <strong>structurally barred</strong> for the declared flagship audience. And 760 h <strong>exceeded every short-term band</strong> from level 4 to 6.5 while sitting far below the long-term norm. The framework also wants hours in multiples of 30. It was homeless.</dd>
+        <dt>Done</dt><dd>Restructured as <strong>two separately certified level 4 awards of 450 h</strong> — on the band, 15 credits exactly, and inside the 300–600 h national funding window, so each tier is independently fundable. Repositioned honestly as <em>"same level, scarcer competence"</em>, because a fresh two-year-trade passout already holds level 4.</dd>
+      </dl>
+    </div></article>
+
+    <article class="find s2"><div class="stripe"></div><div class="fbody">
+      <div class="fhead"><h4>The vehicle is closed, and never covered this sector</h4><span class="sev s2">High</span></div>
+      <dl class="frow">
+        <dt>Said</dt><dd class="was">Recommended because "it is winnable via a mechanism that already exists."</dd>
+        <dt>True</dt><dd>The only published state CoE call covered <strong>IT/ITES, animation and electronics — no robotics, no manufacturing</strong> — and <strong>closed in January 2025</strong>. The one robotics CoE the state does have was awarded by <strong>direct memorandum with CSR funding</strong>, not competition. Three further terms the plan had not absorbed: the state provides the <em>space in a government building</em>, per-trainee rates are decided case by case with no published card, and at least <strong>70% placement</strong> is required and reviewed quarterly.</dd>
+        <dt>Done</dt><dd>Replaced the single recommendation with a two-door plan — near-term empanelment under an existing live scheme, and a direct memorandum on the template that actually worked. Added a national skilling mission absent from the plan entirely, and the knowledge-partner slot as the way to bring the university into the same bid.</dd>
+      </dl>
+    </div></article>
+
+    <article class="find s2"><div class="stripe"></div><div class="fbody">
+      <div class="fhead"><h4>The Handover Model did not survive its own timeline</h4><span class="sev s2">High</span></div>
+      <dl class="frow">
+        <dt>Said</dt><dd class="was">Two shifts on the same cell for twelve weeks; shift handover becomes "something they do 120 times."</dd>
+        <dt>True</dt><dd>The document carried <strong>three contradictory live-cell windows</strong>. 120 daily handovers is 24 working weeks — arithmetically impossible against a 12-week window. A cell under active integration <em>cannot</em> be handed to production every evening, yet the model required it be left "run-able at every handover". Safety re-validation after modification was uncosted against one shared safety officer. And it consumed the only cell available for the flagship unseen-cell examination.</dd>
+        <dt>Done</dt><dd>Kept the pedagogy, changed the mechanics: <strong>milestone-gated handovers</strong> at acceptance-test and production-ramp boundaries (6–8 per cohort), on a <strong>ring-fenced training cell</strong>, with a dedicated safety officer, a staffed re-validation step, and <strong>a separate assessment cell no cohort trains on</strong>. Windows resolved to one number.</dd>
+      </dl>
+    </div></article>
+
+    <article class="find s2"><div class="stripe"></div><div class="fbody">
+      <div class="fhead"><h4>The PG Diploma was over-sized — and the discipline question was never asked</h4><span class="sev s2">High</span></div>
+      <dl class="frow">
+        <dt>Said</dt><dd class="was">PG Diploma, one year, 1,400 hours, ~46 credits.</dd>
+        <dt>True</dt><dd>A postgraduate diploma is fixed at <strong>40 credits — 1,200 hours</strong>. The plan was 17% over on both. Separately, the two-year rule that first appeared to block a one-year diploma turned out to apply <strong>only to Engineering &amp; Technology under the technical regulator</strong> — not to an autonomous arts &amp; science college under the higher-education regulator, where a one-year 40-credit diploma is ordinary business.</dd>
+        <dt>Done</dt><dd>Reduced to <strong>1,200 h / 40 credits</strong> and routed through <strong>Loyola College</strong>, whose autonomous Academic Council approves its own curriculum. Sequencing reversed: sign the partner <em>before or alongside</em> filing, not after, and put them into the bid through the knowledge-partner slot.</dd>
+      </dl>
+    </div></article>
+
+    <article class="find s2"><div class="stripe"></div><div class="fbody">
+      <div class="fhead"><h4>A compulsory standard was missing, and named safety standards were absent</h4><span class="sev s2">High</span></div>
+      <dl class="frow">
+        <dt>True</dt><dd>The spine qualification carries <strong>60 hours of Employability Skills as one of only four compulsory standards</strong>; national trade curricula allocate 120 hours of it to every trade. Any certificate pursued will mandate it. Separately, the technician tier's 60-hour protected safety module <strong>cited no standard at all</strong>, while the graduate tier's equivalent cited two.</dd>
+        <dt>Done</dt><dd>Added 60 h of employability skills <em>outside</em> the trade hours, 30 per tier, mapped to the national standard — and mapped the graduate tier's portfolio module to the same. Named six standards in the safety module covering emergency-stop categories, light-curtain minimum distance and functional safety. Added the benchmark nobody was using: <strong>Japan legally mandates 10 hours of robot special education for teaching work; this module is 60 — six times the statutory floor.</strong></dd>
+      </dl>
+    </div></article>
+
+    <article class="find s2"><div class="stripe"></div><div class="fbody">
+      <div class="fhead"><h4>The entry-trade list named a trade that does not exist in Tamil Nadu</h4><span class="sev s2">High</span></div>
+      <dl class="frow">
+        <dt>Said</dt><dd class="was">Direct fit includes Millwright.</dd>
+        <dt>True</dt><dd><strong>No Millwright trade exists in Tamil Nadu.</strong> Worse, the list demoted the state's best feeder and promoted its rarest: Machine Tool Maintenance runs at <strong>3 ITIs</strong>, Mechatronics at 10 — while <strong>Manufacturing Process Control &amp; Automation runs at 44</strong> and owns the exact two fault domains that were untaught. The realistic intake is Electrician and Fitter across 574 ITIs, <strong>neither of which teaches PLC, sensors, robots or automation</strong> — so the 60-hour bridge was under-scoped for the people who will actually enrol.</dd>
+        <dt>Done</dt><dd>Deleted Millwright, promoted the automation trade to priority feeder, demoted the rare ones, split entry bands by school exit (the only route to level 5), and replaced the single bridge with <strong>two streams — 60 h for prepared entrants, 120 h with an automation primer for Electrician and Fitter passouts.</strong></dd>
+      </dl>
+    </div></article>
+
+    <article class="find s1"><div class="stripe"></div><div class="fbody">
+      <div class="fhead"><h4>Seven further corrections</h4><span class="sev s1">Medium &amp; below</span></div>
+      <ul style="margin-top:2px">
+        <li><strong>Both tiers claimed to be "the volume play."</strong> Both cannot be — and against the state's own baseline, 90 a year is a rounding error. Reframed around the real opening: the state publishes <em>intake</em> for its 71 centres and <strong>no placement outcomes whatsoever.</strong> Compete on audited outcomes.</li>
+        <li><strong>Two "open decisions" were already closed by evidence.</strong> Entry-level automation wages make a six-month course impossible to trainee-fund; and the apprenticeship scheme provides <em>no training-cost reimbursement at all</em> — it is an employment wrapper, not funding.</li>
+        <li><strong>Missing content:</strong> hydraulics (zero occurrences, yet machine tending is a named target role), metrology (the tier is measured on first-pass yield but nothing taught gauging), and environmental handling. All three added.</li>
+        <li><strong>Graduate-tier defects:</strong> an elective tagged droppable was retained anyway; the "all types of AI" breadth claim rested on two modules with no cards; and the six-station rotation was <em>unschedulable</em> because station dwell times were unequal. All fixed.</li>
+        <li><strong>An age gate nobody had checked:</strong> both candidate qualifications for the six-month graduate product set a minimum job-entry age of 24. A cohort finishing at 22–23 cannot be certified against either. The claim was withdrawn.</li>
+        <li><strong>A capex line that would be challenged:</strong> India's dock automation is telescopic conveyors, not robots, with no evidenced state installed base. The truck-loading mock-up was deleted and taught within palletizing instead. Showcase applications reweighted toward machine tending and automotive, where 45% of India's robots actually go.</li>
+        <li><strong>Naming and market visibility:</strong> the programme title read as a robotics course and invited the duplication question on page one, while being commercially invisible — job boards carry roughly twenty times more postings for "PLC / automation maintenance" than for anything labelled robotics. Renamed around uptime, with a market-facing title alongside it on the certificate.</li>
+      </ul>
+    </div></article>
+  </section>
+
+  <section id="landscape">
+    <h2><span class="n">Section 3</span>The competitive landscape</h2>
+    <p><strong>The space is crowded, and it is crowded specifically in Tamil Nadu.</strong> Say this plainly
+      in the deck — showing you know the state's portfolio reads far better than appearing unaware of it.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Who</th><th>What they run</th><th>How we differ</th></tr></thead>
+      <tbody>
+        <tr><td><strong>The state training directorate</strong> + an industrial technology partner</td><td>71 ITIs converted to Industry 4.0 centres, ₹2,877 cr, robotics labs in each</td><td class="sub">Training cells with no customer. <strong>They publish intake and no placement figures at all</strong></td></tr>
+        <tr><td>National robotics trade curriculum</td><td>1,200 h + 150 h on-job, mandating two 6-axis robots and a fenced cell — <strong>running at 0 Tamil Nadu ITIs today</strong></td><td class="sub">Duplicates ~170 of our hours, but contains no diagnosis, maintenance-management or escalation content whatsoever</td></tr>
+        <tr><td>A state-partnered robotics &amp; PLC CoE</td><td>Inaugurated March 2026, CSR-funded by direct memorandum. 120 h and 272 h programmes, 70% placement assurance</td><td class="sub">The named CoE slot is occupied — and those are the durations the state actually buys</td></tr>
+        <tr><td>OEM centres at Chennai colleges; a simulation centre at Tidel Park</td><td>Robot-maker academies and a digital-twin facility</td><td class="sub">Single-vendor by construction. The simulation centre is a <strong>knowledge partner, not a rival</strong></td></tr>
+        <tr><td>Two system integrators in Pune</td><td>Robotics academies that already accept ITI graduates</td><td class="sub">Neither in Tamil Nadu, neither government-partnered — and both <strong>programming-led, not uptime-led</strong></td></tr>
+        <tr><td>A national electronics institute qualification</td><td>"Robotic Programming and Maintenance Technician", level 4, 450 h</td><td class="sub"><strong>219 hours of programming against 17 of maintenance</strong> — a programming qualification wearing a maintenance label</td></tr>
+        <tr><td>A large national skilling foundation</td><td>Routes ITI graduates to welding, CNC and EV; reserves robotics for engineering graduates</td><td class="sub">The best evidence the fresh-ITI-to-automation path is genuinely thin — and the counter to prepare for, since they may be right</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="note">
+      <span class="nk">Delete from the deck</span>
+      <p>"Real robots" as a differentiator · "first-mover access" — every centre listed above predates any
+        application · "the only kind of organisation that can do this" — falsified by a peer state skill
+        corporation that authored a robot-operator qualification for ITI passouts <em>without being an
+        integrator</em> · and "certified operators included" as <em>bundling</em>, since operator
+        familiarisation at handover is already standard after-sales practice. The differentiator is the word
+        <strong>certified</strong>, not <em>included</em>.</p>
+    </div>
+  </section>
+
+  <section id="unverified">
+    <h2><span class="n">Section 4</span>Do not put these in an application yet</h2>
+    <p>Everything below remains unconfirmed. Each needs a named person or office, not another search.
+      Several gate delivery rather than filing.</p>
+
+    <div class="tw"><table>
+      <thead><tr><th>Question</th><th>Class</th><th>Who must be asked</th></tr></thead>
+      <tbody>
+        <tr><td>Trainee status and liability on a live production cell — factory-worker definition, insurance, and written customer consent under a commissioning acceptance test. <strong>Not researched at all.</strong></td><td><span class="sev un">Legal</span></td><td class="sub">Counsel and the insurer; the customer whose cell it is</td></tr>
+        <tr><td>Whether state electrical licensing constrains an unlicensed graduate performing panel work</td><td><span class="sev un">Legal</span></td><td class="sub">The state electrical licensing board</td></tr>
+        <tr><td>Current edition of the robot safety standard — whether a 2025 revision superseded the editions cited</td><td><span class="sev un">Standards</span></td><td class="sub">The standards body directly</td></tr>
+        <tr><td>Whether the colour-vision entry requirement is permissible under disability law and inclusion norms</td><td><span class="sev un">Legal</span></td><td class="sub">The skill corporation; disability-law counsel</td></tr>
+        <tr><td>Current version, code and validity of <em>every</em> qualification we would name — one council lists colliding codes and lapsed review dates</td><td><span class="sev un">Certification</span></td><td class="sub">Each sector skill council, <strong>in writing</strong></td></tr>
+        <tr><td>Whether the state would sponsor a <em>new</em> qualification through the national committee, as a peer state did in 2022. <strong>The single highest-value unknown.</strong></td><td><span class="sev un">Certification</span></td><td class="sub">The regulator; the skill corporation's managing director</td></tr>
+        <tr><td><strong>Placement outcomes of the 71 Industry 4.0 ITI centres.</strong> Only intake is published. If they place well, the state believes the pipeline is solved; if badly, that failure <em>is</em> the pitch.</td><td><span class="sev un">Blocking</span></td><td class="sub">The state training directorate</td></tr>
+        <tr><td>The names of the five long-term trades notified across those 71 centres in 2024 — <strong>one of them may already be this qualification</strong></td><td><span class="sev un">Blocking</span></td><td class="sub">The state training directorate</td></tr>
+        <tr><td>Whether the skill corporation would permit a CoE sited on <em>private industrial premises</em>. This single answer determines whether the wedge and the delivery model survive.</td><td><span class="sev un">Blocking</span></td><td class="sub">The skill corporation; and the agency that implemented the existing robotics CoE</td></tr>
+        <tr><td>What the state actually pays per trainee for a 700+ hour hardware-intensive course. Rates are "decided case by case"; nobody publishes them.</td><td><span class="sev un">Money</span></td><td class="sub">A pre-bid meeting — and peer-to-peer with the existing CoE's operator, which is likelier to yield it</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Only BGR Neo can answer these — and they are the differentiated evidence</h3>
+    <ul>
+      <li><strong>Technician-to-cell ratio</strong> from the installed base — operators and maintenance heads per delivered cell per shift.</li>
+      <li><strong>Post-handover support calls per cell per year</strong>, and what share a trained on-site technician could have cleared.</li>
+      <li><strong>Audited turnover and net worth</strong> against the thresholds that decide which doors open — and whether the group parent would sign a financial-support undertaking.</li>
+      <li><strong>Signed employer demand letters</strong> from named plants. This is the evidence a selection committee actually weights, and the one deliverable BGR Neo is uniquely positioned to produce.</li>
+    </ul>
+  </section>
+
+  <section id="method">
+    <h2><span class="n">Section 5</span>How this was checked</h2>
+    <p>Eight parallel research passes — national trade curricula, sector skill council catalogues, the state
+      skilling ecosystem, industry and OEM training precedents, international models, demand evidence,
+      funding mechanics, and the academic route. Each was required to mark every finding
+      <span class="sev ok">Verified</span> with a source, <em>Likely</em>, or
+      <span class="sev un">Unverified</span> — and told that "I could not confirm this" was an acceptable
+      answer while a confident wrong number was not.</p>
+    <p>Four <strong>adversarial reviews</strong> then attempted to refute the plan rather than confirm it,
+      with their own source access, and were told that findings marked unverified carried no weight.
+      All four returned <em>needs change</em>. That stage is what produced most of what is on this page;
+      the research alone would have been too generous.</p>
+    <div class="note">
+      <span class="nk">One caveat on this document</span>
+      <p>This is machine-assisted research with primary sources attached, and the adversarial pass caught
+        real errors in the first round of findings. But <strong>before anything is filed, a person should
+        open the source links on the highest-stakes claims</strong> — particularly the qualification codes,
+        the funding rates, and the status of the state's own programmes. The full report with every URL and
+        confidence level is held alongside the programme design.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>BGR Neo · Centre of Excellence</span>
+    <span>Validation Report</span>
+    <span>29 July 2026</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('tb');
+  function cur(){
+    var s=document.documentElement.getAttribute('data-theme');
+    if(s) return s;
+    return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+  }
+  b.addEventListener('click',function(){
+    document.documentElement.setAttribute('data-theme', cur()==='dark'?'light':'dark');
+  });
+})();
+</script>

@@ -1,0 +1,392 @@
+<title>PG Diploma in Applied AI for Industrial Robotics — Syllabus</title>
+<style>
+:root{
+  --bg:#F5F7F8; --panel:#FFFFFF; --panel2:#F8FAFB; --panel3:#EEF3F4;
+  --ink:#182832; --ink2:#48606B; --muted:#7C8F99;
+  --line:#E3E9EC; --line2:#D3DCE0;
+  --teal:#0E7C7B; --teal-d:#0B605F; --teal-soft:#EAF4F3; --teal-line:#CFE7E5;
+  --amber:#B0710D; --amber-soft:#F6EBD6; --amber-line:#E8D3AE;
+  --violet:#5B4C8A; --violet-soft:#EDEAF5;
+  --blue:#33628F; --blue-soft:#E7EFF6;
+  --green:#2E7351; --green-soft:#E4F0EA;
+  --red:#9A3324; --red-soft:#F7E9E5; --red-line:#E8CFC8;
+  --slate:#5E7280;
+  --shadow:0 1px 2px rgba(24,40,50,.05),0 6px 20px rgba(24,40,50,.06);
+  --radius:12px;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:clamp(18px,3vw,40px) clamp(14px,3vw,34px) 90px}
+.kick{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:700}
+h1{margin:8px 0 10px;font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.022em;line-height:1.08;max-width:21ch}
+.mast p{margin:0;color:var(--ink2);font-size:clamp(15px,1.6vw,17.5px);max-width:70ch}
+
+.time{margin-top:24px;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--teal);
+  border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.time-h{padding:15px 20px 4px;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.time-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:1px;background:var(--line)}
+.tcell{background:var(--panel);padding:14px 20px 16px}
+.tcell .tl{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.tcell .tv{font-size:26px;font-weight:800;letter-spacing:-.03em;margin-top:2px;line-height:1.1;font-variant-numeric:tabular-nums}
+.tcell .tv small{font-size:12.5px;font-weight:600;color:var(--ink2);letter-spacing:0;display:block;margin-top:2px}
+.tcell.hi{background:var(--teal-soft)} .tcell.hi .tv{color:var(--teal-d)}
+.time-n{padding:13px 20px;background:var(--panel2);border-top:1px solid var(--line);font-size:13px;color:var(--ink2);line-height:1.5}
+.time-n b{color:var(--ink);font-weight:660}
+
+h2{font-size:clamp(19px,2.4vw,25px);font-weight:800;letter-spacing:-.018em;margin:46px 0 4px}
+.h2sub{color:var(--ink2);font-size:14.5px;margin:0 0 14px;max-width:82ch}
+.h2sub em{color:var(--muted);font-style:normal}
+
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);
+  box-shadow:var(--shadow);margin-bottom:18px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
+th{background:var(--panel3);text-align:left;font-weight:700;font-size:10.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);padding:9px 13px;border-bottom:2px solid var(--tint,var(--teal));white-space:nowrap}
+td{padding:9px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+.num{text-align:right;font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cd{font-weight:800;letter-spacing:.03em;color:var(--tint,var(--teal));white-space:nowrap;font-size:12.5px}
+.tot td{font-weight:800;background:var(--panel3)!important;border-top:2px solid var(--tint,var(--teal))}
+.small{font-size:12.5px;color:var(--muted)}
+
+.mod{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--tint,var(--teal));
+  border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden}
+.mh{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;padding:14px 18px 0}
+.mh .mc{font-size:13.5px;font-weight:800;letter-spacing:.03em;color:var(--tint,var(--teal))}
+.mh .mn{font-size:17px;font-weight:750;letter-spacing:-.012em;line-height:1.25;flex:1 1 250px}
+.mh .mw{font-family:var(--mono);font-size:11.5px;color:var(--muted);font-weight:600;white-space:nowrap}
+.mh .mhrs{font-size:14px;font-weight:800;white-space:nowrap;font-variant-numeric:tabular-nums}
+.plain{margin:7px 18px 0;font-size:13.5px;color:var(--ink2);line-height:1.45;max-width:84ch}
+.plain b{color:var(--ink);font-weight:640}
+.subs{margin:12px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.subs li{display:grid;grid-template-columns:44px 1fr auto;gap:12px;padding:8px 18px;
+  border-bottom:1px solid var(--line);font-size:13.5px;align-items:baseline}
+.subs li:last-child{border-bottom:none}
+.subs .sn{font-family:var(--mono);font-size:11.5px;color:var(--muted);font-weight:700}
+.subs .sh{font-family:var(--mono);font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.assess{padding:11px 18px;background:var(--panel2);border-top:1px solid var(--line);font-size:13px;color:var(--ink2)}
+.assess b{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:800;display:block;margin-bottom:3px}
+.tag{font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;border-radius:100px;padding:3px 9px;white-space:nowrap}
+.tag.cell{color:var(--amber);background:var(--amber-soft)}
+.tag.el{color:var(--violet);background:var(--violet-soft)}
+.tag.brand{color:var(--teal-d);background:var(--teal-soft)}
+
+/* pathways */
+.paths{display:grid;gap:13px;grid-template-columns:1fr}
+@media(min-width:760px){.paths{grid-template-columns:1fr 1fr}}
+.path{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--pt,var(--teal));
+  border-radius:var(--radius);box-shadow:var(--shadow);padding:15px 17px 16px}
+.path .pe{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--pt,var(--teal));letter-spacing:.05em}
+.path h3{margin:5px 0 6px;font-size:16px;font-weight:780;letter-spacing:-.012em;line-height:1.25}
+.path .pd{font-size:13px;color:var(--ink2);line-height:1.45;margin-bottom:9px}
+.path .pl{font-size:10.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.path ul{margin:0;padding-left:17px;font-size:13px;color:var(--ink2)}
+.path li{margin-bottom:3px}
+.path li::marker{color:var(--pt,var(--teal))}
+
+/* employers */
+.emp{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);
+  margin-bottom:13px;overflow:hidden;border-left:5px solid var(--et,var(--blue))}
+.emp-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 17px;background:var(--panel2);border-bottom:1px solid var(--line)}
+.emp-h .en{font-size:15px;font-weight:780;letter-spacing:-.01em}
+.emp-h .ec{font-family:var(--mono);font-size:11px;color:var(--muted);font-weight:700;white-space:nowrap}
+.emp-b{padding:12px 17px 14px;font-size:13.5px;color:var(--ink2);line-height:1.55}
+.emp-b .roles{color:var(--ink);font-weight:640;margin-bottom:6px;display:block}
+.vflag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;
+  border-radius:100px;padding:2px 8px;background:var(--green-soft);color:var(--green);margin-left:6px}
+.vflag.un{background:var(--panel3);color:var(--muted);border:1px dashed var(--line2)}
+
+.warn{margin:16px 0 22px;background:var(--red-soft);border:1px solid var(--red-line);border-left:5px solid var(--red);
+  border-radius:var(--radius);padding:14px 17px}
+.warn .cl{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--red);margin-bottom:4px}
+.warn p{margin:0 0 7px;font-size:13.5px;line-height:1.5;max-width:82ch}
+.warn p:last-child{margin:0}
+
+.foot{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);
+  font-size:12.5px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <div class="kick">BGR Neo Centre of Excellence · awarded by Loyola College, Chennai</div>
+    <h1>PG Diploma in Applied AI for Industrial Robotics</h1>
+    <p>One year, full time, for engineering and science graduates. A shared foundation everyone builds,
+      two electives that shade the direction, then ten weeks designing and commissioning on
+      <b>live industrial cells doing real customer work</b>.</p>
+
+    <div class="time">
+      <div class="time-h">Time required</div>
+      <div class="time-g">
+        <div class="tcell hi"><div class="tl">Total study</div><div class="tv">1,200<small>notional hours</small></div></div>
+        <div class="tcell hi"><div class="tl">Calendar</div><div class="tv">48<small>teaching weeks + 4 exam</small></div></div>
+        <div class="tcell"><div class="tl">Credits</div><div class="tv">40<small>at 30 notional h each</small></div></div>
+        <div class="tcell"><div class="tl">Weekly</div><div class="tv">25<small>hours, averaged</small></div></div>
+        <div class="tcell"><div class="tl">Modules</div><div class="tv">20<small>+ 2 of 4 electives</small></div></div>
+        <div class="tcell"><div class="tl">On live cells</div><div class="tv">420<small>hours · weeks 31–48</small></div></div>
+      </div>
+      <div class="time-n">
+        <b>Why exactly 1,200 hours.</b> Unlike the technician programme, this figure is not free to choose.
+        A Postgraduate Diploma is fixed at <b>40 credits</b>, and the national credit framework sets
+        1 credit = 30 notional learning hours. 40 × 30 = 1,200. Notional hours include directed teaching
+        <em>and</em> supervised self-study, so contact time is lower than the headline number.
+      </div>
+    </div>
+  </header>
+
+  <div id="out"></div>
+
+  <section>
+    <h2>Where a graduate goes — the seven exit roles</h2>
+    <p class="h2sub">The core does most of the employment work; the two electives shade the title.
+      Said plainly: <b>nobody hires a fresh diploma holder as a "reinforcement learning engineer."</b>
+      They hire a robotics application or controls engineer who also understands learning-based methods.
+      The pairings below are the honest version.</p>
+    <div class="paths" id="paths"></div>
+  </section>
+
+  <section>
+    <h2>Employers this qualifies a graduate for</h2>
+    <div class="warn">
+      <div class="cl">Read this before using the list</div>
+      <p><b>The categories are sound. The named companies are not yet verified against live job postings.</b>
+        This list is assembled from sector knowledge and from the centre's own research pass, not from a
+        systematic scrape of current vacancies and their stated requirements.</p>
+      <p>Before this goes into a prospectus or a placement promise, each role title needs to be checked against
+        real advertisements — required qualifications, years of experience demanded, and whether a PG Diploma
+        is accepted where a B.E. is asked for. Entries marked <span class="vflag">Verified</span> were confirmed
+        during the research pass; entries marked <span class="vflag un">To verify</span> were not.</p>
+    </div>
+    <div id="emp"></div>
+  </section>
+
+  <div class="foot">
+    <span>BGR Neo Centre of Excellence · PG Diploma syllabus</span>
+    <span>Revision 3 · 29 July 2026</span>
+  </div>
+</div>
+
+<script>
+const BLOCKS=[
+ {id:"F",tint:"#33628F",name:"Block F — Foundation",hrs:"230 hours",wk:"Weeks 1–10",
+  sub:"The mathematics, code and shop-floor rules everything else stands on. No prior robotics or AI assumed."},
+ {id:"R",tint:"#0E7C7B",name:"Block R — Core Robotics and Controls",hrs:"310 hours",wk:"Weeks 11–20",
+  sub:"Making a machine move on purpose, and making a robot, a PLC, a camera and a safety circuit behave as one system."},
+ {id:"D",tint:"#5B4C8A",name:"Block D — AI Depth",hrs:"240 hours",wk:"Weeks 21–30",
+  sub:"Deep learning and factory machine vision as the core, plus two electives chosen from four."},
+ {id:"S",tint:"#B0710D",name:"Block S — Industrial Specialisation",hrs:"260 hours",wk:"Weeks 31–40",
+  sub:"Every hour on live industrial cells running real customer work. Identical to the specialisation block in the six-month engineer programme."},
+ {id:"C",tint:"#2E7351",name:"Block C — Capstone and Professional Practice",hrs:"160 hours",wk:"Weeks 41–48",
+  sub:"One project of the student's own, taken from specification to a commissioned, documented, handed-over cell."}
+];
+
+const M=[
+/* ---- F ---- */
+{c:"F1",t:"F",h:80,w:"Weeks 1–4",n:"Engineering Mathematics for Automation and AI",
+ p:"The four areas of mathematics that everything later actually uses, taught with code beside every idea.",
+ a:"Written examination plus a computational assignment implementing the methods from scratch.",
+ s:[["1.1","Linear algebra, transforms and coordinate geometry",26],["1.2","Probability, statistics and measurement uncertainty",20],["1.3","Calculus, differential equations and numerical methods",18],["1.4","Optimization and gradient methods",16]]},
+{c:"F2",t:"F",h:90,w:"Weeks 4–8",n:"Programming for Engineering Applications",
+ p:"Python properly, enough C++ to work on a controller, and the tooling professional teams use to keep code working.",
+ a:"A tested, version-controlled package with a compiled C++ component, reviewed as code.",
+ s:[["2.1","Python for engineering — data handling, numerical computing, visualisation",30],["2.2","Data structures, algorithms and computational complexity",20],["2.3","C++ for real-time and controller-side code",24],["2.4","Linux, version control, testing and build workflow",16]]},
+{c:"F3",t:"F",h:30,w:"Weeks 8–9",n:"Applied Machine Learning Foundations",
+ p:"The models that solve most factory problems before any neural network is needed — and the discipline of knowing whether a model is any good.",
+ a:"Train and honestly evaluate a model on a real tabular process dataset.",
+ s:[["3.1","Supervised learning — regression, trees, ensembles, support vector machines",14],["3.2","Unsupervised learning and dimensionality reduction",8],["3.3","Model evaluation, validation and data leakage",8]]},
+{c:"F4",t:"F",h:30,w:"Weeks 9–10",n:"Industrial Safety, Standards and Shop-Floor Practice",
+ p:"The licence to stand next to a moving robot. Never shortened in any version of this programme.",
+ a:"<b>Must pass.</b> A completed risk assessment for a real cell, plus a practical safety clearance.",
+ s:[["4.1","Manufacturing processes, cell types and factory layout",8],["4.2","Robot and machinery safety standards — ISO 10218, ISO/TS 15066, IEC 60204-1, ISO 13855, ISO 13849-1",12],["4.3","Risk assessment and safety function specification",6],["4.4","Lockout–tagout, permit-to-work and shop-floor discipline",4]]},
+
+/* ---- R ---- */
+{c:"R1",t:"R",h:60,w:"Weeks 11–13",n:"Robot Kinematics, Dynamics and Cell Geometry",
+ p:"How a robot knows where its hand is, and how to tell it where to put it. The geometry under every motion.",
+ a:"Implement a forward and inverse kinematics solver and validate it against the real robot's readout.",
+ s:[["1.1","Frames, homogeneous transforms, tool centre point and work objects",16],["1.2","Forward and inverse kinematics",18],["1.3","Jacobians, singularities and workspace analysis",14],["1.4","Rigid-body dynamics, payload and reach sizing",12]]},
+{c:"R2",t:"R",h:60,w:"Weeks 13–15",n:"Industrial Robot Programming — Multi-Vendor",brand:true,
+ p:"<b>All four controller families are covered — two to programming competence and all four to operating competence.</b> The graduate's employer will use one of them; being able to read the other three is what makes them portable. (The technician programme takes all four to full operating depth over 140 hours.)",
+ a:"Write and prove a production program on two controller families; demonstrate safe operation on all four.",
+ s:[["2.1","Controller families and pendant operation — FANUC, ABB, KUKA, Universal Robots",20],["2.2","Motion types, zones, blending and program structure",14],["2.3","Offline programming, CAD-to-path generation and post-processing",18],["2.4","Backup, mastering, program deployment and touch-up",8]]},
+{c:"R3",t:"R",h:60,w:"Weeks 15–17",n:"ROS 2 and Robot Software Architecture",
+ p:"The open framework that lets a camera, an arm, a gripper and a planner from four different makers behave as one system.",
+ a:"Build a perception-to-grasp application in simulation and deploy it to a real cobot.",
+ s:[["3.1","ROS 2 core — nodes, topics, services, actions, parameters, launch",18],["3.2","URDF, TF2, RViz and robot description",14],["3.3","MoveIt 2 — planning scenes, collision checking, grasp pipelines",18],["3.4","ros2_control and hardware interfaces",10]]},
+{c:"R4",t:"R",h:40,w:"Weeks 17–18",n:"Feedback Control and Servo Systems",
+ p:"Why a machine told to go somewhere overshoots, oscillates or drifts — and how to fix it with numbers.",
+ a:"Tune an untuned servo axis to a specified settling time without overshoot, evidenced by measurement.",
+ s:[["4.1","System modelling, transfer functions and stability",10],["4.2","PID design and tuning on real hardware",12],["4.3","Servo drives, encoders and motion profiles",10],["4.4","State-space and introduction to optimal control",8]]},
+{c:"R5",t:"R",h:30,w:"Week 19",n:"Motion Planning and Mobile Robotics",
+ p:"Getting a machine from A to B when the route is not obvious — for arms in clutter and vehicles in a plant.",
+ a:"Deploy autonomous navigation on a mobile robot in an unmapped, human-populated area.",
+ s:[["5.1","Path and trajectory planning — search, sampling and optimisation methods",12],["5.2","Localisation, mapping and SLAM fundamentals",10],["5.3","Navigation stacks and fleet interoperability",8]]},
+{c:"R6",t:"R",h:60,w:"Weeks 19–20",n:"Industrial Controls, PLC and HMI Engineering",
+ p:"Industrial cells run on PLCs and vendor stacks, not on ROS. This is the controller that actually sequences a factory cell.",
+ a:"Design, build and validate a cell controller sequencing a robot, a conveyor, a sensor set and a safety circuit.",
+ s:[["6.1","PLC architecture, ladder logic and structured programming",18],["6.2","Robot–PLC handshaking and cell sequencing",14],["6.3","Industrial networks — Ethernet/IP, PROFINET, Modbus, IO-Link, OPC-UA",14],["6.4","HMI and SCADA design; safety circuit specification and validation",14]]},
+
+/* ---- D ---- */
+{c:"D1",t:"D",h:80,w:"Weeks 21–24",n:"Deep Learning and Neural Networks",
+ p:"From first principles to a model running inside a cycle time on a camera at the edge of a production line.",
+ a:"Deploy a trained model to edge hardware meeting a stated accuracy and a stated inference time.",
+ s:[["1.1","Neural network fundamentals, backpropagation and training practice",24],["1.2","Convolutional networks for detection, classification and segmentation",24],["1.3","Transfer learning, augmentation and small-data regimes",16],["1.4","Model optimisation and edge deployment",16]]},
+{c:"D2",t:"D",h:90,w:"Weeks 24–28",n:"Machine Vision for Manufacturing",
+ p:"The highest-value AI skill in a factory. Optics and lighting first, because most vision failures are physical rather than algorithmic.",
+ a:"Specify, calibrate and deliver a complete inspection station measuring and judging a real part.",
+ s:[["2.1","Industrial imaging — sensors, optics, lighting and camera selection",18],["2.2","Classical vision and dimensional metrology",18],["2.3","Deep-learning defect detection and inspection",22],["2.4","3D vision, point clouds and 6-DoF pose estimation",20],["2.5","Hand-eye calibration and vision-robot integration",12]]},
+{c:"D3",t:"D",h:35,w:"Weeks 28–30",n:"Robot Learning — Reinforcement, Imitation and Sim-to-Real",el:true,
+ p:"For tasks too contact-rich to program by hand. The most research-facing elective, and the one with the narrowest direct job market in India today.",
+ a:"Train a policy in simulation and transfer it to a real arm for a contact-rich task.",
+ s:[["3.1","Policy optimisation and reinforcement learning",14],["3.2","Imitation learning and demonstration data",11],["3.3","Sim-to-real transfer and domain randomisation",10]]},
+{c:"D4",t:"D",h:35,w:"Weeks 28–30",n:"Industrial Data Science and Predictive Maintenance",el:true,
+ p:"Getting data off machines and turning it into something a plant manager acts on. The highest-volume elective by job count.",
+ a:"Deliver a live dashboard that flags an abnormal condition before it becomes a stoppage.",
+ s:[["4.1","Data acquisition — OPC-UA, MQTT and historians",12],["4.2","Time-series features, anomaly detection and remaining-useful-life modelling",14],["4.3","Dashboards, alerting and decision support",9]]},
+{c:"D5",t:"D",h:35,w:"Weeks 28–30",n:"Applied Generative and Agentic AI for Manufacturing",el:true,
+ p:"Language models put to work on the shop floor — retrieving procedures, drafting reports, answering an operator at the machine.",
+ a:"Build an operator assistant grounded in the plant's own documents, with a working refusal path.",
+ s:[["5.1","Language models, prompting and retrieval grounding",12],["5.2","Agents connected to MES, ERP and maintenance systems",13],["5.3","Guardrails, evaluation and shop-floor deployment",10]]},
+{c:"D6",t:"D",h:35,w:"Weeks 28–30",n:"Digital Twin and Advanced Simulation",el:true,
+ p:"A working model of a cell — for programming it before it exists, and for generating training data when real defects are scarce.",
+ a:"Build a twin accurate enough that a program written in it runs on the physical cell with minor touch-up.",
+ s:[["6.1","Physics simulation and cell modelling",12],["6.2","Synthetic data generation for vision",12],["6.3","Twin synchronisation and virtual commissioning",11]]},
+
+/* ---- S ---- */
+{c:"S1",t:"S",h:45,w:"Weeks 31–32",n:"Vision-Guided Handling and Bin Picking",cell:true,
+ p:"The first time the student's code moves a machine somebody is paying for.",
+ a:"Commission a cell meeting a stated cycle time and pick success rate.",
+ s:[["1.1","Cell design and cycle-time budgeting",10],["1.2","Vision-guided localisation on production parts",14],["1.3","Gripper and end-of-arm tooling selection and integration",10],["1.4","Build, commission and optimise on the live cell",11]]},
+{c:"S2",t:"S",h:45,w:"Weeks 33–34",n:"Welding and Dispensing — Process and Offline Programming",cell:true,
+ p:"A process cell where the robot's path is the product. Programmed offline in a twin, then proved on the machine.",
+ a:"Produce an accepted part from a program generated offline, inspected against a quality standard.",
+ s:[["2.1","Process parameters and weld or bead defect analysis",12],["2.2","Offline path generation from CAD geometry",14],["2.3","Simulation validation and cycle-time proving",11],["2.4","Download, touch-up and production proving",8]]},
+{c:"S3",t:"S",h:45,w:"Weeks 35–36",n:"Cell Integration and Commissioning",cell:true,
+ p:"Making separate machines behave as one. The day job of a system integrator, and the hardest thing in the programme.",
+ a:"Commission a fully integrated cell — robot, PLC, vision, safety and operator interface — as one interlocked system.",
+ s:[["3.1","Robot–PLC–vision integration on a live cell",14],["3.2","Industrial network commissioning and diagnostics",11],["3.3","HMI and SCADA build for the cell",10],["3.4","Safety circuit design, wiring and validation",10]]},
+{c:"S4",t:"S",h:40,w:"Weeks 36–37",n:"Predictive Maintenance and Quality Analytics",cell:true,
+ p:"Turning what a running cell produces into a warning before something stops — on real signals, not a tutorial dataset.",
+ a:"Deploy monitoring that detects a seeded fault condition before it causes a stoppage.",
+ s:[["4.1","Instrumenting a live cell — vibration, current, thermal",14],["4.2","Failure modes and remaining-useful-life modelling",14],["4.3","Statistical process control on live line data",12]]},
+{c:"S5",t:"S",h:40,w:"Weeks 38–39",n:"Operator-Facing AI and MES Integration",cell:true,
+ p:"The AI that helps the person rather than the robot — production reporting, and an assistant that answers at the machine.",
+ a:"Deploy an operator assistant connected to the cell's own production data and work instructions.",
+ s:[["5.1","MES and ERP data flows and production KPIs",14],["5.2","AI assistants for procedures, diagnostics and work instructions",16],["5.3","Guardrails, validation and deployment to the floor",10]]},
+{c:"S6",t:"S",h:45,w:"Weeks 39–40",n:"Calibration, Acceptance Testing and Handover",cell:true,
+ p:"The part of a project that decides whether it is still running in a year. Students train the centre's own technician trainees as their operators.",
+ a:"Deliver a complete handover pack and a trained operator who can run the cell unaided.",
+ s:[["6.1","Robot mastering, TCP and payload calibration; ISO 9283 accuracy and repeatability",15],["6.2","Factory and site acceptance test protocol design and execution",15],["6.3","As-built documentation and operator training delivery",15]]},
+
+/* ---- C ---- */
+{c:"C1",t:"C",h:130,w:"Weeks 41–47",n:"Industry Capstone Project",cell:true,
+ p:"One problem, the student's own, taken from a blank page to a working cell — scoped against a real operational need and defended before practising engineers.",
+ a:"Demonstrated performance against the specification the student wrote, plus a technical defence.",
+ s:[["1.1","Problem definition, specification and acceptance criteria",20],["1.2","Design, simulation and virtual commissioning",30],["1.3","Build and integration on the live cell",45],["1.4","Testing, validation and optimisation",25],["1.5","Technical defence",10]]},
+{c:"C2",t:"C",h:30,w:"Weeks 47–48",n:"Professional Practice and Portfolio",
+ p:"The difference between having done the work and being able to evidence it. Mapped to the national employability standard.",
+ a:"Portfolio review and a technical interview conducted by industry assessors.",
+ s:[["2.1","Technical documentation, drawings and revision control",12],["2.2","Customer communication and site conduct",8],["2.3","Portfolio, evidence and interview preparation",10]]}
+];
+
+const PATHS=[
+ {pt:"#0E7C7B",el:"Core-weighted · any elective pair",n:"Robotics Application Engineer",
+  d:"The highest-volume destination. Programs, simulates and commissions robot cells for an integrator or an OEM.",
+  k:["R2 multi-vendor programming","S1 vision-guided handling","S2 offline programming","D6 digital twin (useful)"]},
+ {pt:"#0E7C7B",el:"Core-weighted · any elective pair",n:"Controls / Automation Engineer",
+  d:"PLC, networks, drives and safety. The title with the most live vacancies in Indian manufacturing.",
+  k:["R6 PLC and HMI engineering","R4 servo systems","S3 cell integration"]},
+ {pt:"#5B4C8A",el:"Core D2 heavy",n:"Machine Vision Engineer",
+  d:"Inspection, metrology and bin picking. Scarce skill, strong premium, and the AI role with the clearest factory demand.",
+  k:["D2 machine vision (90 h)","D1 deep learning","S1 bin picking","D6 synthetic data"]},
+ {pt:"#B0710D",el:"D4 + D5",n:"Manufacturing Data / Predictive Maintenance Engineer",
+  d:"Condition monitoring, analytics and the MES layer. The broadest of the AI-flavoured doors.",
+  k:["D4 industrial data science","D5 agentic AI","S4 predictive maintenance","S5 MES integration"]},
+ {pt:"#5B4C8A",el:"D5 + D4",n:"Applied AI Engineer (Manufacturing)",
+  d:"Operator assistants, document intelligence and copilots grounded in plant data. Newest role, growing fastest.",
+  k:["D5 generative and agentic AI","D1 deep learning","S5 operator-facing AI"]},
+ {pt:"#33628F",el:"D6 + D3 or D6 + D4",n:"Simulation / Digital Twin Engineer",
+  d:"Virtual commissioning, line simulation and synthetic data. Strong in automotive and in OEM pre-sales.",
+  k:["D6 digital twin","R3 ROS 2","S2 offline programming","D3 sim-to-real"]},
+ {pt:"#2E7351",el:"Core-weighted · S-block heavy",n:"Systems Integration / Commissioning Engineer",
+  d:"Owning a whole cell from specification to signed acceptance. Travels to customer sites; the closest role to BGR Neo's own work.",
+  k:["S3 cell integration","S6 acceptance and handover","R6 controls","C1 capstone"]},
+ {pt:"#33628F",el:"Core-weighted",n:"Robot Service Engineer (OEM)",
+  d:"Field service and applications support for a robot manufacturer. Multi-vendor literacy is unusual and valued here.",
+  k:["R2 multi-vendor programming","R1 kinematics","S6 calibration and acceptance"]}
+];
+
+const EMP=[
+ {et:"#33628F",n:"Robot manufacturers — applications and service",c:"Global, with Indian operations",v:true,
+  roles:"Robotics Application Engineer · Robot Service Engineer · Pre-sales Applications Engineer",
+  b:"FANUC India (academy centres at Chennai, Coimbatore, Bengaluru, Pune, Manesar, Ahmedabad, Rajkot) · Yaskawa India (Chennai, Pune, Bengaluru, Gurugram, Gujarat) · ABB · KUKA · Universal Robots · Omron · Mitsubishi Electric · Nachi-Fujikoshi · Kawasaki · Epson · Techman · Doosan Robotics · Hyundai Robotics · Staubli · Comau."},
+ {et:"#0E7C7B",n:"System integrators and automation houses",c:"India, incl. Tamil Nadu",v:true,
+  roles:"Application Engineer · Commissioning Engineer · Systems Integration Engineer",
+  b:"BGR Neo (own pipeline) · Kaustya Robotics, Pune · IRATI / WO Group, Pune · RL Robotics · Difacto Robotics · Systemantics · Sastra Robotics · Addverb · Armstrong · Titan Engineering · plus the long tail of regional integrators around Chennai, Coimbatore and Hosur."},
+ {et:"#B0710D",n:"Automotive OEMs and tier-1 suppliers",c:"45% of India's robot installations",v:true,
+  roles:"Manufacturing Engineer · Automation Engineer · Maintenance Engineer · Process Engineer",
+  b:"Tamil Nadu is India's largest automotive cluster. Typical employers: Hyundai · TVS · Ashok Leyland · Royal Enfield · Renault-Nissan · Daimler · Bosch · Continental · ZF · Valeo · Sundaram Clayton · Rane · Brakes India · Lucas-TVS · Schwing Stetter. <i>Individual company hiring must be confirmed.</i>"},
+ {et:"#5B4C8A",n:"Electronics and semiconductor manufacturing",c:"Fastest-growing TN segment",v:false,
+  roles:"Automation Engineer · Vision Engineer · Equipment Engineer · Process Engineer",
+  b:"Contract manufacturers and OEM plants across the Chennai–Sriperumbudur corridor. High vision and SMT-automation content, and generally the strongest demand for machine-vision skills."},
+ {et:"#2E7351",n:"Machine vision and sensing vendors",c:"Global",v:false,
+  roles:"Vision Applications Engineer · Field Applications Engineer · Solutions Engineer",
+  b:"Cognex · Keyence · SICK · Basler · Omron Microscan · Datalogic · Zebra · Teledyne · IDS · LMI Technologies. These firms hire specifically for the D2 skill set and are an under-used destination for Indian graduates."},
+ {et:"#33628F",n:"Industrial automation and digital-twin platform vendors",c:"Global",v:true,
+  roles:"Automation Engineer · Simulation Engineer · Digital Twin Consultant · Technical Consultant",
+  b:"Siemens (verified present in Tamil Nadu through TANSAM and the t-SDI network) · Rockwell Automation · Schneider Electric · Emerson · Honeywell · Delta Electronics (verified — runs a TNSDC robotics CoE) · Festo · SMC · Dassault Systèmes · Visual Components · RoboDK."},
+ {et:"#B0710D",n:"Warehouse and logistics automation",c:"India and global",v:false,
+  roles:"Automation Engineer · Robotics Deployment Engineer · Solutions Engineer",
+  b:"Addverb · GreyOrange · Falcon Autotech · Armstrong · plus the automation teams of large operators — Amazon, Flipkart, Reliance, DHL, Delhivery. Palletising, sortation and AMR content maps directly."},
+ {et:"#5B4C8A",n:"Industrial AI and analytics companies",c:"India and global",v:false,
+  roles:"Applied AI Engineer · Data Scientist (Manufacturing) · Solutions Engineer",
+  b:"A young Indian segment: Ripik.ai · Detect Technologies · Intangles · Flutura · UptimeAI · Fractal, alongside the manufacturing-analytics practices of the large IT services firms. Best fit for the D4 and D5 electives."},
+ {et:"#2E7351",n:"Global capability centres in India",c:"Bengaluru, Chennai, Pune, Hyderabad",v:false,
+  roles:"Automation Engineer · Controls Engineer · Simulation Engineer · R&D Engineer",
+  b:"Engineering centres of Bosch, Continental, ZF, Daimler, Caterpillar, Cummins, Rockwell, Emerson, Honeywell, ABB and Ford. Usually the highest-paying destination, and usually the most degree-sensitive — this is where a PG Diploma versus a B.E. needs checking hardest."},
+ {et:"#0E7C7B",n:"Heavy engineering, process and FMCG plants",c:"Pan-India",v:false,
+  roles:"Maintenance Engineer · Automation Engineer · Project Engineer",
+  b:"L&T · BHEL · Tata Steel · JSW · Godrej · Nestlé · Unilever · ITC · Britannia · Coca-Cola · PepsiCo. End-of-line palletising and packaging automation is the common entry point."}
+];
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function render(){
+  document.getElementById('out').innerHTML = BLOCKS.map(B=>{
+    const mods=M.filter(m=>m.t===B.id);
+    const core=mods.filter(m=>!m.el), els=mods.filter(m=>m.el);
+    const total=core.reduce((a,m)=>a+m.h,0) + (els.length?els[0].h*2:0);
+    const summary='<div class="tw" style="--tint:'+B.tint+'"><table>'
+      +'<thead><tr><th>Code</th><th>Module</th><th class="num">Hours</th><th>When</th><th class="num">Sub-modules</th></tr></thead><tbody>'
+      +mods.map(m=>'<tr><td class="cd" style="--tint:'+B.tint+'">'+m.c+'</td><td>'+esc(m.n)+(m.el?' <span class="small">(elective)</span>':'')+'</td>'
+        +'<td class="num">'+m.h+'</td><td>'+esc(m.w)+'</td><td class="num">'+m.s.length+'</td></tr>').join('')
+      +'<tr class="tot" style="--tint:'+B.tint+'"><td></td><td>Block total'+(els.length?' — core plus 2 electives':'')+'</td>'
+      +'<td class="num">'+total+'</td><td></td><td class="num">'+mods.reduce((a,m)=>a+m.s.length,0)+'</td></tr>'
+      +'</tbody></table></div>';
+    const cards=mods.map(m=>
+      '<article class="mod" style="--tint:'+B.tint+'">'
+      +'<div class="mh"><span class="mc">'+m.c+'</span><span class="mn">'+esc(m.n)
+        +(m.brand?' <span class="tag brand">4 robot brands</span>':'')
+        +(m.el?' <span class="tag el">Elective</span>':'')
+        +(m.cell?' <span class="tag cell">Live cell</span>':'')
+        +'</span><span class="mw">'+esc(m.w)+'</span><span class="mhrs">'+m.h+' h</span></div>'
+      +'<p class="plain">'+m.p+'</p>'
+      +'<ul class="subs">'+m.s.map(x=>'<li><span class="sn">'+x[0]+'</span><span>'+esc(x[1])+'</span><span class="sh">'+x[2]+' h</span></li>').join('')+'</ul>'
+      +'<div class="assess"><b>Assessment</b>'+m.a+'</div></article>').join('');
+    return '<section><h2>'+esc(B.name)+' · '+esc(B.hrs)+'</h2>'
+      +'<p class="h2sub">'+esc(B.wk)+'. '+esc(B.sub)+'</p>'+summary+cards+'</section>';
+  }).join('');
+
+  document.getElementById('paths').innerHTML = PATHS.map(p=>
+    '<article class="path" style="--pt:'+p.pt+'"><div class="pe">'+esc(p.el)+'</div>'
+    +'<h3>'+esc(p.n)+'</h3><div class="pd">'+esc(p.d)+'</div>'
+    +'<div class="pl">Carried by</div><ul>'+p.k.map(k=>'<li>'+esc(k)+'</li>').join('')+'</ul></article>').join('');
+
+  document.getElementById('emp').innerHTML = EMP.map(e=>
+    '<article class="emp" style="--et:'+e.et+'"><div class="emp-h">'
+    +'<span class="en">'+esc(e.n)+'<span class="vflag'+(e.v?'':' un')+'">'+(e.v?'Verified':'To verify')+'</span></span>'
+    +'<span class="ec">'+esc(e.c)+'</span></div>'
+    +'<div class="emp-b"><span class="roles">'+esc(e.roles)+'</span>'+e.b+'</div></article>').join('');
+}
+render();
+</script>

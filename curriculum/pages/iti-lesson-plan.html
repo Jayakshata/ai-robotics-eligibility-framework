@@ -1,0 +1,564 @@
+<title>Automation Uptime Technician (post-ITI) — Syllabus</title>
+<style>
+:root{
+  --bg:#F5F7F8; --panel:#FFFFFF; --panel2:#F8FAFB; --panel3:#EEF3F4;
+  --ink:#182832; --ink2:#48606B; --muted:#7C8F99;
+  --line:#E3E9EC; --line2:#D3DCE0;
+  --teal:#0E7C7B; --teal-d:#0B605F; --teal-soft:#EAF4F3; --teal-line:#CFE7E5;
+  --amber:#B0710D; --amber-soft:#F6EBD6; --amber-line:#E8D3AE;
+  --red:#9A3324; --red-soft:#F7E9E5; --red-line:#E8CFC8;
+  --slate:#5E7280; --slate-soft:#EDF1F3;
+  --shadow:0 1px 2px rgba(24,40,50,.05),0 6px 20px rgba(24,40,50,.06);
+  --radius:12px;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:clamp(18px,3vw,40px) clamp(14px,3vw,34px) 90px}
+
+.kick{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:700}
+h1{margin:8px 0 10px;font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.022em;line-height:1.08;max-width:19ch}
+.mast p{margin:0;color:var(--ink2);font-size:clamp(15px,1.6vw,17.5px);max-width:70ch}
+
+/* time banner */
+.time{margin-top:24px;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--teal);
+  border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.time-h{padding:15px 20px 4px;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.time-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:1px;background:var(--line)}
+.tcell{background:var(--panel);padding:14px 20px 16px}
+.tcell .tl{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.tcell .tv{font-size:26px;font-weight:800;letter-spacing:-.03em;margin-top:2px;line-height:1.1;font-variant-numeric:tabular-nums}
+.tcell .tv small{font-size:12.5px;font-weight:600;color:var(--ink2);letter-spacing:0;display:block;margin-top:2px}
+.tcell.hi{background:var(--teal-soft)} .tcell.hi .tv{color:var(--teal-d)}
+.time-n{padding:13px 20px;background:var(--panel2);border-top:1px solid var(--line);font-size:13px;color:var(--ink2);line-height:1.5}
+.time-n b{color:var(--ink);font-weight:660}
+
+.callout{margin-top:18px;background:var(--red-soft);border:1px solid var(--red-line);border-left:5px solid var(--red);
+  border-radius:var(--radius);padding:14px 17px}
+.callout .cl{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--red);margin-bottom:4px}
+.callout p{margin:0;font-size:14px;line-height:1.5;max-width:80ch}
+
+h2{font-size:clamp(19px,2.4vw,25px);font-weight:800;letter-spacing:-.018em;margin:46px 0 4px}
+.h2sub{color:var(--ink2);font-size:14.5px;margin:0 0 14px;max-width:82ch}
+.h2sub em{color:var(--muted);font-style:normal}
+
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);
+  box-shadow:var(--shadow);margin-bottom:18px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
+th{background:var(--panel3);text-align:left;font-weight:700;font-size:10.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);padding:9px 13px;border-bottom:2px solid var(--tint,var(--teal));white-space:nowrap}
+td{padding:9px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+.num{text-align:right;font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cd{font-weight:800;letter-spacing:.03em;color:var(--tint,var(--teal));white-space:nowrap;font-size:12.5px}
+.tot td{font-weight:800;background:var(--panel3)!important;border-top:2px solid var(--tint,var(--teal))}
+.small{font-size:12.5px;color:var(--muted)}
+
+/* module cards */
+.mod{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--tint,var(--teal));
+  border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden}
+.mh{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;padding:14px 18px 0}
+.mh .mc{font-size:13.5px;font-weight:800;letter-spacing:.03em;color:var(--tint,var(--teal))}
+.mh .mn{font-size:17px;font-weight:750;letter-spacing:-.012em;line-height:1.25;flex:1 1 250px}
+.mh .mw{font-family:var(--mono);font-size:11.5px;color:var(--muted);font-weight:600;white-space:nowrap}
+.mh .mhrs{font-size:14px;font-weight:800;white-space:nowrap;font-variant-numeric:tabular-nums}
+.plain{margin:7px 18px 0;font-size:13.5px;color:var(--ink2);line-height:1.45;max-width:84ch}
+.plain b{color:var(--ink);font-weight:640}
+.subs{margin:12px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.subs li{display:grid;grid-template-columns:44px 1fr auto;gap:12px;padding:8px 18px;
+  border-bottom:1px solid var(--line);font-size:13.5px;align-items:baseline}
+.subs li:last-child{border-bottom:none}
+.subs .sn{font-family:var(--mono);font-size:11.5px;color:var(--muted);font-weight:700}
+.subs .sh{font-family:var(--mono);font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.assess{padding:11px 18px;background:var(--panel2);border-top:1px solid var(--line);font-size:13px;color:var(--ink2)}
+.assess b{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:800;display:block;margin-bottom:3px}
+.tag{font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;border-radius:100px;padding:3px 9px;white-space:nowrap}
+.tag.must{color:var(--red);background:var(--red-soft)}
+.tag.cell{color:var(--amber);background:var(--amber-soft)}
+.tag.brand{color:var(--teal-d);background:var(--teal-soft)}
+
+/* coverage */
+.cov{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:780px){.cov{grid-template-columns:1fr 1fr}}
+.covbox{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:15px 18px 17px}
+.covbox h3{margin:0 0 3px;font-size:15px;font-weight:750}
+.covbox .cs{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+.covbox ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.covbox li{font-size:13.5px;display:flex;justify-content:space-between;gap:12px;
+  padding-bottom:6px;border-bottom:1px dashed var(--line);line-height:1.35}
+.covbox li:last-child{border-bottom:none;padding-bottom:0}
+.covbox li span{font-family:var(--mono);font-size:11px;color:var(--teal-d);font-weight:700;white-space:nowrap}
+
+/* fault library */
+.fl{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);
+  overflow:hidden;margin-bottom:14px;border-left:5px solid var(--amber)}
+.fl-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 18px;
+  background:var(--amber-soft);border-bottom:1px solid var(--amber-line)}
+.fl-h .fn{font-size:14.5px;font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:var(--amber)}
+.fl-h .fc{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--amber)}
+.fl ol{margin:0;padding:8px 18px 12px 40px;columns:2;column-gap:32px}
+@media(max-width:720px){.fl ol{columns:1}}
+.fl li{font-size:13.5px;line-height:1.4;margin-bottom:5px;break-inside:avoid;color:var(--ink2)}
+
+
+/* roles + employers */
+.paths{display:grid;gap:13px;grid-template-columns:1fr}
+@media(min-width:760px){.paths{grid-template-columns:1fr 1fr}}
+.path{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--pt,var(--teal));
+  border-radius:var(--radius);box-shadow:var(--shadow);padding:15px 17px 16px}
+.path .pe{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--pt,var(--teal));letter-spacing:.05em}
+.path h3{margin:5px 0 6px;font-size:16px;font-weight:780;letter-spacing:-.012em;line-height:1.25}
+.path .pd{font-size:13px;color:var(--ink2);line-height:1.45;margin-bottom:9px}
+.path .pl{font-size:10.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.path ul{margin:0;padding-left:17px;font-size:13px;color:var(--ink2)}
+.path li{margin-bottom:3px}
+.path li::marker{color:var(--pt,var(--teal))}
+.emp{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);
+  margin-bottom:13px;overflow:hidden;border-left:5px solid var(--et,var(--teal))}
+.emp-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 17px;background:var(--panel2);border-bottom:1px solid var(--line)}
+.emp-h .en{font-size:15px;font-weight:780;letter-spacing:-.01em}
+.emp-h .ec{font-family:var(--mono);font-size:11px;color:var(--muted);font-weight:700;white-space:nowrap}
+.emp-b{padding:12px 17px 14px;font-size:13.5px;color:var(--ink2);line-height:1.55}
+.emp-b .roles{color:var(--ink);font-weight:640;margin-bottom:6px;display:block}
+.vflag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;
+  border-radius:100px;padding:2px 8px;background:#E4F0EA;color:#2E7351;margin-left:6px}
+.vflag.un{background:var(--panel3);color:var(--muted);border:1px dashed var(--line2)}
+.warn{margin:16px 0 22px;background:var(--red-soft);border:1px solid var(--red-line);border-left:5px solid var(--red);
+  border-radius:var(--radius);padding:14px 17px}
+.warn .cl{font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--red);margin-bottom:4px}
+.warn p{margin:0 0 7px;font-size:13.5px;line-height:1.5;max-width:82ch}
+.warn p:last-child{margin:0}
+.foot{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);
+  font-size:12.5px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <div class="kick">BGR Neo Centre of Excellence · post-ITI trade programme</div>
+    <h1>Automation Uptime Technician</h1>
+    <p>A full trade programme for ITI passouts. It puts a technician on <b>any cell, any robot brand,
+      any corner of the factory</b> — and it is sized honestly for what that actually takes.</p>
+
+    <div class="time">
+      <div class="time-h">Time required</div>
+      <div class="time-g">
+        <div class="tcell hi"><div class="tl">Total taught</div><div class="tv">1,215<small>hours</small></div></div>
+        <div class="tcell hi"><div class="tl">Calendar</div><div class="tv">32<small>weeks · about 8 months</small></div></div>
+        <div class="tcell"><div class="tl">Weekly pace</div><div class="tv">38<small>hours a week, full time</small></div></div>
+        <div class="tcell"><div class="tl">Tier 1 · Operate</div><div class="tv">615<small>hours · weeks 1–16</small></div></div>
+        <div class="tcell"><div class="tl">Tier 2 · Maintain</div><div class="tv">600<small>hours · weeks 17–32</small></div></div>
+        <div class="tcell"><div class="tl">Bridge, before week 1</div><div class="tv">60 / 150<small>hours · 2 or 4 weeks</small></div></div>
+      </div>
+      <div class="time-n">
+        <b>Why 1,215 hours.</b> It is not a target — it is what the content costs. Four teach-pendant families
+        take 140 hours on their own; the 48-scenario fault library takes 90; the two application rotations take 150;
+        and PLC reading takes 80 because most entrants have never seen one. For reference, a national one-year ITI
+        trade is 1,200 taught hours — <b>so this is one trade-year of content, delivered in eight months.</b>
+        With the bridge, a Stream B entrant is in the centre for about <b>36 weeks</b>.
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="cl">Non-negotiable</div>
+      <p>Bypassing, defeating or jumpering a safety device is an <b>automatic fail</b> in every assessment, at
+        either tier. Module T1-01 defines the three authority levels — do it · do it and report it · never do it —
+        and the trainee carries that card for the whole programme.</p>
+    </div>
+  </header>
+
+  <section>
+    <h2>Who walks in the door</h2>
+    <p class="h2sub">The intake is not one kind of person. It is five kinds, missing five different things —
+      which is why there are two bridge streams rather than one. <em>ITI counts are Tamil Nadu, from the state
+      training directorate's published trade list.</em></p>
+    <div class="tw" style="--tint:var(--slate)"><table>
+      <thead><tr><th>Entry trade</th><th class="num">ITIs</th><th>Already has</th><th>Missing</th><th>Bridge</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Electrician</strong></td><td class="num">303</td><td>Wiring, motors, switchgear, electrical safety</td><td>PLC, sensors, robots, pneumatics</td><td><strong>Stream B</strong></td></tr>
+        <tr><td><strong>Fitter</strong></td><td class="num">271</td><td>Bench work, assembly, measurement, hand tools</td><td>Everything electrical and control</td><td><strong>Stream B</strong></td></tr>
+        <tr><td>Welder</td><td class="num">150</td><td>Welding processes and weld defects</td><td>Everything else</td><td><strong>Stream B</strong></td></tr>
+        <tr><td>Machinist &amp; Turner</td><td class="num">79</td><td>Machine tools, drawings, metrology</td><td>Electrical and control</td><td><strong>Stream B</strong></td></tr>
+        <tr><td>COPA</td><td class="num">54</td><td>Computers, basic programming</td><td>Everything physical</td><td><strong>Stream B</strong></td></tr>
+        <tr><td>Electronics Mechanic</td><td class="num">29</td><td>Circuits, components, test instruments</td><td>Mechanical, robots</td><td>Stream A</td></tr>
+        <tr><td>Instrument Mechanic</td><td class="num">12</td><td>Process instruments, calibration, loops</td><td>Robots, discrete automation</td><td>Stream A</td></tr>
+        <tr><td>Technician Mechatronics</td><td class="num">10</td><td>Mixed mechanical, electrical and control</td><td>Robot brands, vision, uptime</td><td>Stream A</td></tr>
+        <tr><td><strong>Mfg. Process Control &amp; Automation</strong><br><span class="small">the best feeder in the state</span></td><td class="num">44</td><td>PLC, HMI, SCADA, VFD, panel wiring</td><td>Robot, vision, gripper — <em>verified absent from that trade's syllabus</em></td><td>Stream A</td></tr>
+      </tbody>
+    </table></div>
+    <p class="h2sub"><strong>574 ITIs run Electrician and Fitter, and neither teaches any automation at all.</strong>
+      That is who you will mostly get. The 150-hour Stream B bridge exists for them, and it is not remedial —
+      it is the content their trade never contained.</p>
+  </section>
+
+  <section>
+    <h2>What "any cell, any corner" means</h2>
+    <p class="h2sub">The claim is only true if the trainee has physically handled each of these. Every line below
+      maps to a module that delivers it.</p>
+    <div class="cov">
+      <div class="covbox">
+        <h3>Machines they will have operated</h3>
+        <div class="cs">Seven families, four controller brands</div>
+        <ul>
+          <li>6-axis articulated — FANUC, ABB, KUKA, Yaskawa <span>T1-03 · T1-07</span></li>
+          <li>Collaborative — UR, FANUC CRX <span>T1-01 · T1-03</span></li>
+          <li>SCARA <span>T1-03 · T1-08</span></li>
+          <li>Delta / parallel <span>T1-03 · T1-08</span></li>
+          <li>Cartesian / gantry <span>T1-03</span></li>
+          <li>AMR / AGV <span>T1-08</span></li>
+          <li>CNC and special-purpose machines <span>T1-07</span></li>
+        </ul>
+      </div>
+      <div class="covbox">
+        <h3>Jobs they will have run</h3>
+        <div class="cs">Nine application families</div>
+        <ul>
+          <li>Machine tending — CNC, press, moulding <span>T1-07</span></li>
+          <li>Arc and spot welding <span>T1-07</span></li>
+          <li>Assembly, screwdriving, insertion <span>T1-07</span></li>
+          <li>Dispensing, sealing, gluing <span>T1-07</span></li>
+          <li>Pick and place, sortation <span>T1-08</span></li>
+          <li>Palletising and depalletising <span>T1-08</span></li>
+          <li>Packaging, cartoning, labelling <span>T1-08</span></li>
+          <li>Vision inspection and quality gate <span>T1-05 · T2-07</span></li>
+          <li>Material transport <span>T1-08</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div id="out"></div>
+
+
+  <section>
+    <h2>The jobs this qualifies a technician for</h2>
+    <p class="h2sub">Tier 1 alone is employable. Tier 2 is where the pay step is, because first-line repair
+      is what plants are short of.</p>
+    <div class="paths" id="paths"></div>
+  </section>
+
+  <section>
+    <h2>Employers</h2>
+    <div class="warn">
+      <div class="cl">Read this before using the list</div>
+      <p><b>The categories are sound. The named companies are not yet verified against live job postings.</b>
+        This is assembled from sector knowledge and the centre's research pass, not from a systematic check of
+        current vacancies and their stated requirements.</p>
+      <p>Before it goes into a prospectus or a placement promise, each role title needs checking against real
+        advertisements. Entries marked <span class="vflag">Verified</span> were confirmed during the research
+        pass; entries marked <span class="vflag un">To verify</span> were not.</p>
+    </div>
+    <div id="emp"></div>
+  </section>
+
+  <div class="foot">
+    <span>BGR Neo Centre of Excellence · Automation Uptime Technician</span>
+    <span>Syllabus · Revision 4 · 29 July 2026</span>
+  </div>
+</div>
+
+<script>
+const TIERS=[
+ {id:"B",tint:"#5E7280",name:"Pre-course bridge",hrs:"60 h (Stream A) · 150 h (Stream B)",wk:"2 or 4 weeks, before week 1",
+  sub:"Free, and only as much as the entry test says is needed. Stream A for entrants who already hold controls or instrumentation. Stream B for Electrician, Fitter, Welder, Turner, Machinist and COPA passouts, whose trades contain no automation content whatsoever.",
+  note:"Not certified. Outside the 1,215 taught hours."},
+ {id:"O",tint:"#0E7C7B",name:"Tier 1 — Operate",hrs:"615 hours",wk:"Weeks 1–16",
+  sub:"Award: Automation Cell Operator. Competency — run any machine family, in any application family, safely; read what the cell is reporting; and localise a fault to one of its seven domains.",
+  note:"585 h trade content + 30 h employability skills."},
+ {id:"M",tint:"#B0710D",name:"Tier 2 — Maintain",hrs:"600 hours",wk:"Weeks 17–32",
+  sub:"Award: Automation Uptime Technician. Competency — carry out preventive and first-line corrective maintenance across every subsystem, work the 48-scenario fault library, and escalate what lies outside the authority boundary.",
+  note:"570 h trade content + 30 h employability skills."}
+];
+
+const M=[
+/* ---------------- BRIDGE ---------------- */
+{c:"B1",t:"B",h:25,w:"Both streams",n:"Technical English for Industrial Equipment",
+ p:"Every HMI screen, alarm code and manual on the equipment is in English. This removes that as a barrier before it becomes one.",
+ a:"Oral — read an alarm screen and state its meaning. No written paper.",
+ s:[["1.1","Equipment and control vocabulary",9],["1.2","Reading manuals, work instructions and procedures",8],["1.3","Verbal and written fault reporting",8]]},
+{c:"B2",t:"B",h:35,w:"Both streams",n:"Digital Literacy and Workshop Mathematics",
+ p:"The computer and calculation skills the rest of the programme assumes from day one.",
+ a:"Practical tasks on PC and tablet, plus a workshop mathematics paper.",
+ s:[["2.1","PC and tablet operation, file handling, workplace applications",12],["2.2","Units, conversion, ratio, percentage, area and volume",14],["2.3","Reading engineering drawings, symbols and tables",9]]},
+{c:"B3",t:"B",h:90,w:"Stream B only",n:"Automation Fundamentals Primer",
+ p:"For Electrician, Fitter, Welder, Turner, Machinist and COPA passouts. <b>This is not remedial teaching — it is content their trade never contained.</b>",
+ a:"Wire and demonstrate a working sensor-and-actuator circuit from a drawing.",
+ s:[["3.1","Sensor types, wiring and signal interpretation",22],["3.2","Pneumatic actuators, directional valves and air preparation",22],["3.3","Electrical safety, isolation and proving dead",20],["3.4","Control system fundamentals — input, logic, output, scan cycle",26]]},
+
+/* ---------------- TIER 1 ---------------- */
+{c:"T1-01",t:"O",h:60,w:"Weeks 1–2",n:"Occupational Safety, Health and Machine Guarding",must:true,
+ p:"Two full weeks before any machine is touched. Standards taught by name: ISO 10218-1/-2, ISO/TS 15066, IEC 60204-1, ISO 13855, IEC 61496, ISO 13849-1.",
+ a:"<b>Must pass.</b> Written paper and practical, no compensation from other modules. Any safety bypass at any point in the programme is an automatic fail.",
+ s:[["1.1","Occupational safety, health, PPE and workshop practice",10],
+    ["1.2","Lockout–tagout and stored-energy isolation — electrical, pneumatic, hydraulic, gravity, spring",12],
+    ["1.3","Machine guarding — fences, interlocks, light curtains, scanners, mats, two-hand control",14],
+    ["1.4","E-stop categories, safety relays and safety-rated stop functions",10],
+    ["1.5","Collaborative robot safety — power and force limiting, speed and separation monitoring",8],
+    ["1.6","Safe entry, cell recovery, restart, permit-to-work and authority levels",6]]},
+{c:"T1-02",t:"O",h:45,w:"Week 3",n:"Cell Architecture and Documentation",
+ p:"The seven subsystems every automated cell is built from, and the four documents that describe any of them. A Fitter or Welder entrant has never read an electrical schematic.",
+ a:"Identify all seven subsystems on an unfamiliar cell and trace one circuit from schematic to device.",
+ s:[["2.1","Cell subsystems — mover, gripper, sensing, controller, services, guarding, material",10],
+    ["2.2","Layout drawings, electrical schematics and pneumatic circuit diagrams",14],
+    ["2.3","I/O schedules, sequence of operations and cycle logic",12],
+    ["2.4","Utilities — compressed air, power quality, cooling, extraction",9]]},
+{c:"T1-03",t:"O",h:140,w:"Weeks 4–7",n:"Robot Families and Teach-Pendant Operation",brand:true,
+ p:"<b>The differentiator, and the largest module in Tier 1.</b> Four controller families taught to operating competence, not demonstrated. No OEM training centre can do this — they teach their own brand only.",
+ a:"Jog, recover and restart a robot on <b>each of the four controller families</b>, plus a timed recovery on a brand the trainee is told is unfamiliar.",
+ s:[["3.1","Robot morphologies — articulated, SCARA, delta, cartesian/gantry, collaborative",14],
+    ["3.2","Universal concepts — frames, tool centre point, work object, payload, singularities",20],
+    ["3.3","FANUC — iPendant operation, jogging, positions, program selection",22],
+    ["3.4","ABB — FlexPendant operation, jogging, targets, program selection",22],
+    ["3.5","KUKA — smartPAD operation, jogging, points, program selection",22],
+    ["3.6","Universal Robots — PolyScope operation, freedrive, waypoints",16],
+    ["3.7","Backup, restore and mastering across all four controller families",16],
+    ["3.8","Collision recovery, mid-cycle stop recovery and return to home",8]]},
+{c:"T1-04",t:"O",h:50,w:"Week 8",n:"Cell Operation, Modes and Changeover",
+ p:"Starting, running, changing over and shutting down a cell from its own operator interface.",
+ a:"Run an unfamiliar cell through cold start, changeover, first-piece check and shutdown, unaided.",
+ s:[["4.1","Cold start, power-on sequence, cell health verification and homing",10],
+    ["4.2","Operating modes — manual, teach, automatic; mode-dependent protection",10],
+    ["4.3","HMI navigation, production screens, recipe and part-number selection",10],
+    ["4.4","Product changeover, tooling change and first-piece verification",14],
+    ["4.5","Cycle-time, throughput and reject monitoring",6]]},
+{c:"T1-05",t:"O",h:60,w:"Weeks 9–10",n:"Sensing, Signals and Alarm Interpretation",
+ p:"Reading what the cell is reporting — at the sensor, at the I/O table and at the alarm screen.",
+ a:"Given an alarm code on an unfamiliar cell, trace it to the physical device that raised it.",
+ s:[["5.1","Discrete sensors — inductive, capacitive, photoelectric, magnetic, limit",16],
+    ["5.2","Process and safety sensing — pressure, vacuum, flow, temperature, safety-rated devices",12],
+    ["5.3","Identification systems — barcode, 2D code, RFID, OCR",10],
+    ["5.4","Machine-vision pass/fail signalling and reject handling",10],
+    ["5.5","Alarm codes, alarm history and live I/O status monitoring",12]]},
+{c:"T1-06",t:"O",h:50,w:"Week 11",n:"Material Handling and Conveying Systems",
+ p:"How product moves into, through and out of a cell — and every way it stops moving.",
+ a:"Clear a seeded jam safely and restart flow without product damage.",
+ s:[["6.1","Belt, roller, chain and modular conveyors; accumulation and transfers",14],
+    ["6.2","Feeders, vibratory bowls, indexers and escapements",12],
+    ["6.3","End effectors — vacuum, two- and three-finger, magnetic, fork, tool changers",15],
+    ["6.4","Jam clearance, product damage and safe restart",9]]},
+{c:"T1-07",t:"O",h:80,w:"Weeks 12–13",n:"Rotation A — Machine Tending, Assembly, Welding and Dispensing",cell:true,
+ p:"First of two application rotations. Machine tending and automotive assembly are weighted heaviest because <b>45% of India's industrial robot installations are automotive.</b>",
+ a:"Run and recover one cell from each of the four application types, assessed on the shop floor.",
+ s:[["7.1","CNC and press machine tending — door and chuck interface, part present, chips, coolant",24],
+    ["7.2","Assembly cells — screwdriving, insertion, press-fit and torque verification",20],
+    ["7.3","Arc and spot welding cells — torch, wire, gas, positioner, extraction, weld faults",24],
+    ["7.4","Dispensing and sealing cells — bead, flow, standoff, purge",12]]},
+{c:"T1-08",t:"O",h:70,w:"Weeks 14–15",n:"Rotation B — Palletising, Packaging, Sortation and Mobile Robots",cell:true,
+ p:"Second application rotation — end-of-line and material movement, where SCARA, delta and mobile robots live.",
+ a:"Build and run a palletising pattern, and operate an AMR safely in a shared aisle.",
+ s:[["8.1","Palletising and depalletising — layer patterns, slip sheets, stretch wrap, pallet quality",24],
+    ["8.2","Packaging, cartoning, labelling and dispatch",18],
+    ["8.3","Sortation and high-speed pick and place — SCARA and delta",14],
+    ["8.4","AMR and AGV operation, traffic, charging and interaction with people",14]]},
+{c:"T1-09",t:"O",h:30,w:"Week 16",n:"Metrology and First-Piece Inspection",
+ p:"The technician is judged on whether good parts come out. This is how they tell, with an instrument rather than an opinion.",
+ a:"Measure a part against a drawing and correctly accept or reject it.",
+ s:[["9.1","Vernier, micrometer, height gauge, go/no-go and bore gauges",12],
+    ["9.2","Drawing tolerances, GD&T basics and accept/reject decision",10],
+    ["9.3","Control charts and process variation",8]]},
+{c:"T1-10",t:"O",h:30,w:"Week 16",n:"Employability Skills (DGT/VSQ/N0102)",
+ p:"The compulsory national employability standard, delivered as a separate block as the trade framework requires.",
+ a:"Assessed against DGT/VSQ/N0102.",
+ s:[["10.1","Communication, teamwork and workplace conduct",10],
+    ["10.2","Digital and financial literacy",10],
+    ["10.3","Employment rights, records and training documentation",10]]},
+
+/* ---------------- TIER 2 ---------------- */
+{c:"T2-01",t:"M",h:70,w:"Weeks 17–18",n:"Electrical Systems and Panel Maintenance",
+ p:"For most of the intake this is either the strongest area or a total blank. Both are catered for — the assessment is the same.",
+ a:"Diagnose and repair a seeded electrical fault, tracing it from schematic to device.",
+ s:[["1.1","Isolation, proving dead, arc-flash awareness and safe panel working",12],
+    ["1.2","Panel architecture — incomer, MCB, contactor, relay, SMPS, terminal marshalling",16],
+    ["1.3","Reading electrical schematics and tracing a circuit end to end",16],
+    ["1.4","Sensor and device replacement, alignment and verification",14],
+    ["1.5","Cable, connector and intermittent continuity fault finding",12]]},
+{c:"T2-02",t:"M",h:60,w:"Weeks 19–20",n:"Pneumatic and Hydraulic Systems Maintenance",
+ p:"Both power systems. Hydraulics is included because machine tending, pressing and moulding are hydraulic.",
+ a:"Diagnose and repair one seeded pneumatic and one seeded hydraulic fault.",
+ s:[["2.1","Air preparation — compressor, dryer, FRL, moisture and contamination",12],
+    ["2.2","Directional valves, cylinders, actuators and speed control",14],
+    ["2.3","Vacuum generation, cups, seals and leak detection",12],
+    ["2.4","Hydraulic pumps, valves, accumulators and filtration",14],
+    ["2.5","Safe depressurisation and stored-energy release",8]]},
+{c:"T2-03",t:"M",h:55,w:"Week 21",n:"Mechanical Maintenance, Tooling and Alignment",
+ p:"Mechanical drift is the most common cause of faults that present as vision or software problems.",
+ a:"Change and align an end-of-arm tool to a stated accuracy, verified by measurement.",
+ s:[["3.1","End-of-arm tool change, quick-change couplers and re-datuming",14],
+    ["3.2","Fixture, guide and stop alignment using a dial indicator",14],
+    ["3.3","Belts, chains, rollers, couplings and gearbox checks",14],
+    ["3.4","Bearing condition, play, lubrication and fastener torque",13]]},
+{c:"T2-04",t:"M",h:50,w:"Week 22",n:"Drives, Motors and Servo Systems",
+ p:"Between the controller and the motion there is a drive, and it has its own fault codes. Missing from most technician training.",
+ a:"Interpret a drive fault code, identify its cause and carry out the correct reset or repair.",
+ s:[["4.1","Induction motors, servo motors and their failure modes",12],
+    ["4.2","VFD and servo drive parameters, fault codes and reset procedures",14],
+    ["4.3","Encoders, resolvers, feedback loss and battery-backed position",14],
+    ["4.4","Overload, overheat and mechanical binding diagnosis",10]]},
+{c:"T2-05",t:"M",h:80,w:"Weeks 23–24",n:"PLC and Control Logic Interpretation",must:true,
+ p:"<b>Read-only throughout.</b> Trainees interpret and monitor control logic; editing it is outside their authority. Sized at 80 hours because most entrants have never seen a PLC.",
+ a:"Trace a seeded fault from an alarm to its cause using online monitoring. Any attempt to edit logic is an automatic fail.",
+ s:[["5.1","PLC architecture, scan cycle, addressing and memory organisation",12],
+    ["5.2","Ladder logic interpretation — contacts, coils, latches, timers, counters",16],
+    ["5.3","Function block and structured text at reading level",10],
+    ["5.4","Online monitoring mode and live logic observation",16],
+    ["5.5","Alarm-to-logic-to-device cross-referencing",14],
+    ["5.6","Forced I/O and override identification",6],
+    ["5.7","Safety PLC — what it is, why it is separate, why it is never touched",6]]},
+{c:"T2-06",t:"M",h:40,w:"Week 25",n:"Industrial Networks and Fieldbus Diagnostics",
+ p:"The intermittent network dropout that only happens on the night shift is a real and common fault. This is how it gets found.",
+ a:"Identify a dropped node on a live network and distinguish a network fault from a device fault.",
+ s:[["6.1","Ethernet/IP, PROFINET, Modbus TCP, IO-Link and OPC-UA in practice",14],
+    ["6.2","Addressing, topology, cabling, shielding and termination",12],
+    ["6.3","Diagnostic pages, node loss and intermittent dropout",14]]},
+{c:"T2-07",t:"M",h:40,w:"Week 26",n:"Machine Vision System Maintenance",
+ p:"Vision systems degrade rather than fail. This covers restoring them, and recognising the point at which the problem is no longer the technician's to solve.",
+ a:"Diagnose a seeded vision degradation and either correct it or escalate correctly — both are valid passes.",
+ s:[["7.1","Illumination, optics, focus and contamination as failure causes",14],
+    ["7.2","Cleaning and re-running stored calibration routines",14],
+    ["7.3","Distinguishing a model fault from a physical fault; the escalation point",12]]},
+{c:"T2-08",t:"M",h:50,w:"Week 27",n:"Preventive Maintenance, TPM and CMMS",
+ p:"Stopping faults before they happen, structured on the TPM autonomous-maintenance method — with routines written per application family, not one generic checklist.",
+ a:"Carry out a scheduled maintenance routine on two different application types and record both correctly.",
+ s:[["8.1","Cleaning, inspection and lubrication schedules — TPM autonomous maintenance",14],
+    ["8.2","PM routines by application family — welding, tending, palletising, vision",16],
+    ["8.3","CMMS — work orders, spares, history and criticality",12],
+    ["8.4","Planned shutdown participation and return to service",8]]},
+{c:"T2-09",t:"M",h:90,w:"Weeks 28–30",n:"Fault Library and Diagnostic Practice",must:true,cell:true,
+ p:"<b>The heart of the programme.</b> 48 named fault scenarios across seven domains, each one seeded on a real cell by the instructor. Recovery time is measured on every drill.",
+ a:"Timed recovery on unseen seeded faults. Scored on correct diagnosis, time-to-recovery, and staying inside the authority boundary.",
+ s:[["9.1","Six-step fault response procedure and the bisection method",12],
+    ["9.2","Domain-wise fault trees and root cause analysis (5-Why)",14],
+    ["9.3","Seeded-fault drills — the 48-scenario library across seven domains",52],
+    ["9.4","Escalation reporting, evidence and spare-part traceability",12]]},
+{c:"T2-10",t:"M",h:35,w:"Week 31",n:"Shift Operations, Downtime and Plant Systems",
+ p:"The last thing done on a shift decides how the next one starts.",
+ a:"Conduct a shift handover assessed by the incoming shift, and produce a downtime analysis with a recommendation.",
+ s:[["10.1","Shift handover, logbook and machine state",12],
+    ["10.2","Downtime coding, OEE and loss analysis",14],
+    ["10.3","MES and operator-assistant use for procedure retrieval",9]]},
+{c:"T2-11",t:"M",h:30,w:"Week 32",n:"Employability Skills (DGT/VSQ/N0102)",
+ p:"Second half of the compulsory national employability standard.",
+ a:"Assessed against DGT/VSQ/N0102.",
+ s:[["11.1","Customer and contractor interaction, site conduct",10],
+    ["11.2","Problem ownership, initiative and escalation discipline",10],
+    ["11.3","Portfolio, evidence of competence and progression routes",10]]}
+];
+
+const FAULTS=[
+ {d:"Mover — robot and axes",f:["Robot fails to home on power-up","Position or mastering lost after encoder battery failure","Collision detected — safe recovery and accuracy re-check","Servo overload or motor overheat trip","Repeatability loss and positional drift","Brake fault on a vertical axis","Dress-pack or cable wear causing an intermittent axis fault"]},
+ {d:"Gripper and end effector",f:["Vacuum loss from cup wear","Vacuum loss from a blocked filter or generator fault","Part dropped in transit","Gripper fails to open or close — solenoid or valve","Tool changer not latching, no tool-present signal","Wrong tool selected for the recipe","Gripper misalignment after a collision"]},
+ {d:"Sensing and vision",f:["Sensor misaligned — intermittent detection","Sensor failed — no signal at all","Sensor false-triggering from ambient light or reflection","Vision no-read from lens contamination","Vision no-read from degraded illumination","Vision false reject — part variant not in the model","Barcode or RFID read failure","Calibration drift after a fixture was moved"]},
+ {d:"Controller and logic",f:["PLC fault or watchdog trip","Wrong recipe or part number selected","Program corrupted or wrong version loaded","Handshake deadlock between robot and PLC","Forced I/O left in place by a previous shift","HMI unresponsive or communication lost","Alarm cascade — identifying the first alarm"]},
+ {d:"Network and services",f:["Fieldbus node dropped from the network","Intermittent network fault, temperature or vibration related","Low compressed-air pressure","Air contamination — moisture or oil carryover","Power dip or phase loss","Cooling or fume-extraction failure","Hydraulic pressure loss or fluid contamination"]},
+ {d:"Safety and guarding",f:["Gate interlock open or switch faulty","Light curtain blocked or misaligned","Safety scanner field obstructed or contaminated","E-stop latched — locating which station","Safety relay fault","Muting fault on the entry conveyor"]},
+ {d:"Material and product",f:["Crushed or deformed carton","Damp, torn or missing label","Shifted or broken pallet","Part burr or dimensional variation","Incorrect part presented to the cell","Product jam in accumulation"]}
+];
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function render(){
+  let out = TIERS.map(T=>{
+    const mods=M.filter(m=>m.t===T.id), total=mods.reduce((a,m)=>a+m.h,0);
+    const summary='<div class="tw" style="--tint:'+T.tint+'"><table>'
+      +'<thead><tr><th>Code</th><th>Module</th><th class="num">Hours</th><th>When</th><th class="num">Sub-modules</th></tr></thead><tbody>'
+      +mods.map(m=>'<tr><td class="cd" style="--tint:'+T.tint+'">'+m.c+'</td><td>'+esc(m.n)+'</td>'
+        +'<td class="num">'+m.h+'</td><td>'+esc(m.w)+'</td><td class="num">'+m.s.length+'</td></tr>').join('')
+      +'<tr class="tot" style="--tint:'+T.tint+'"><td></td><td>Total</td><td class="num">'+total+'</td><td></td>'
+      +'<td class="num">'+mods.reduce((a,m)=>a+m.s.length,0)+'</td></tr></tbody></table></div>';
+    const cards=mods.map(m=>
+      '<article class="mod" style="--tint:'+T.tint+'">'
+      +'<div class="mh"><span class="mc">'+m.c+'</span><span class="mn">'+esc(m.n)
+        +(m.brand?' <span class="tag brand">4 robot brands</span>':'')
+        +(m.must?' <span class="tag must">Must pass</span>':'')
+        +(m.cell?' <span class="tag cell">Live cell</span>':'')
+        +'</span><span class="mw">'+esc(m.w)+'</span><span class="mhrs">'+m.h+' h</span></div>'
+      +'<p class="plain">'+m.p+'</p>'
+      +'<ul class="subs">'+m.s.map(x=>'<li><span class="sn">'+x[0]+'</span><span>'+esc(x[1])+'</span><span class="sh">'+x[2]+' h</span></li>').join('')+'</ul>'
+      +'<div class="assess"><b>Assessment</b>'+m.a+'</div></article>').join('');
+    return '<section><h2>'+esc(T.name)+' · '+esc(T.hrs)+'</h2>'
+      +'<p class="h2sub">'+esc(T.wk)+'. '+esc(T.sub)+' <em>'+esc(T.note)+'</em></p>'+summary+cards+'</section>';
+  }).join('');
+
+  let n=0;
+  out += '<section><h2>The fault library — 48 scenarios</h2>'
+    + '<p class="h2sub">Every one of these is seeded on a real cell by an instructor and drilled in module T2-09. '
+    + 'This list is the programme’s actual promise: a technician who has already met each of these once, before meeting it on a customer’s line at 2 a.m.</p>'
+    + FAULTS.map(g=>{
+        const start=n+1; const items=g.f.map(f=>{n++; return '<li>'+esc(f)+'</li>';}).join('');
+        return '<div class="fl"><div class="fl-h"><span class="fn">'+esc(g.d)+'</span>'
+          +'<span class="fc">'+g.f.length+' scenarios · '+start+'–'+n+'</span></div>'
+          +'<ol start="'+start+'">'+items+'</ol></div>';
+      }).join('')
+    + '</section>';
+
+  document.getElementById('out').innerHTML=out;
+}
+render();
+
+const PATHS=[
+ {pt:"#0E7C7B",el:"Tier 1 exit",n:"Automation Cell Operator",
+  d:"Runs a cell through a full shift, changes it over, checks first-piece quality, and localises a fault to a domain before calling anyone.",
+  k:["T1-03 four robot brands","T1-04 operation and changeover","T1-07 & T1-08 application rotations"]},
+ {pt:"#0E7C7B",el:"Tier 1 exit",n:"Robot Operator / Robot Technician",
+  d:"Plant-side robot handling — jogging, recovery, backup, restart. Multi-brand literacy is rare at this level.",
+  k:["T1-03 pendant operation, all four brands","T1-01 safety and guarding","T1-06 end effectors"]},
+ {pt:"#B0710D",el:"Tier 2 exit",n:"Automation Maintenance Technician",
+  d:"The title with the most live vacancies in Indian manufacturing. Preventive and first-line corrective work across every subsystem.",
+  k:["T2-01 electrical","T2-02 pneumatic & hydraulic","T2-03 mechanical","T2-08 preventive maintenance"]},
+ {pt:"#B0710D",el:"Tier 2 exit",n:"PLC / Panel Maintenance Technician",
+  d:"Reading control logic to find a fault, and repairing what the logic points at. The single most-requested skill combination.",
+  k:["T2-05 PLC interpretation (80 h)","T2-06 fieldbus diagnostics","T2-01 panel maintenance"]},
+ {pt:"#B0710D",el:"Tier 2 exit",n:"Field Service Technician",
+  d:"Travelling to customer sites for an OEM or an integrator. The four-brand coverage matters most here.",
+  k:["T1-03 four brands","T2-09 48-scenario fault library","T2-11 site conduct"]},
+ {pt:"#5E7280",el:"Tier 2 + experience",n:"Line / Shift Maintenance Technician",
+  d:"Owning uptime for a line across a shift, including handover and downtime recording.",
+  k:["T2-09 fault library","T2-10 shift handover and OEE","T2-08 TPM"]},
+ {pt:"#5E7280",el:"Tier 2 + experience",n:"Installation & Commissioning Assistant",
+  d:"Supporting an integrator's engineers through installation, acceptance testing and handover.",
+  k:["T1-02 documentation","T2-03 alignment","T2-06 network commissioning"]},
+ {pt:"#2E7351",el:"Progression",n:"Onward to the engineer track",
+  d:"With field experience, a Tier 2 holder can enter the six-month engineer programme, and from there the PG Diploma.",
+  k:["No dead-end certificates","Credit for the overlapping content"]}
+];
+
+const EMP=[
+ {et:"#B0710D",n:"Automotive plants and tier-1 suppliers",c:"45% of India's robot installations",v:true,
+  roles:"Maintenance Technician · Automation Technician · Line Technician · Robot Operator",
+  b:"The largest single destination, and Tamil Nadu is India's biggest automotive cluster. Typical employers: Hyundai · TVS · Ashok Leyland · Royal Enfield · Renault-Nissan · Daimler · Bosch · Continental · ZF · Valeo · Sundaram Clayton · Rane · Brakes India · Lucas-TVS. <i>Individual hiring must be confirmed.</i>"},
+ {et:"#0E7C7B",n:"System integrators and automation houses",c:"India, incl. Tamil Nadu",v:true,
+  roles:"Installation Technician · Commissioning Assistant · Service Technician",
+  b:"BGR Neo's own installations first. Also Kaustya Robotics (Pune) · IRATI / WO Group (Pune) · RL Robotics · Difacto · Systemantics · Armstrong · Titan Engineering, plus the regional integrators around Chennai, Coimbatore and Hosur."},
+ {et:"#33628F",n:"Robot manufacturers — field service",c:"Global, Indian operations",v:true,
+  roles:"Field Service Technician · Service Engineer (technician grade) · Training Assistant",
+  b:"FANUC India (Chennai, Coimbatore, Bengaluru, Pune, Manesar, Ahmedabad, Rajkot) · Yaskawa India (Chennai, Pune, Bengaluru, Gurugram, Gujarat) · ABB · KUKA · Universal Robots · Omron · Mitsubishi Electric · Nachi · Kawasaki. Four-brand coverage is unusual and directly valuable in service roles."},
+ {et:"#5B4C8A",n:"Electronics manufacturing",c:"Chennai–Sriperumbudur corridor",v:false,
+  roles:"Equipment Technician · Automation Technician · Vision System Technician",
+  b:"Contract manufacturers and OEM plants along the Chennai corridor. High vision and SMT-automation content; the fastest-growing segment in the state."},
+ {et:"#2E7351",n:"FMCG, food, beverage and pharma",c:"Pan-India",v:false,
+  roles:"Line Maintenance Technician · Packaging Automation Technician",
+  b:"End-of-line palletising, cartoning and labelling is where these plants automate first — exactly module T1-08. Nestlé · Unilever · ITC · Britannia · Coca-Cola · PepsiCo · Amul, plus regional food processors."},
+ {et:"#B0710D",n:"Warehousing and logistics automation",c:"India and global",v:false,
+  roles:"Automation Maintenance Technician · AMR Field Technician",
+  b:"Addverb · GreyOrange · Falcon Autotech, plus the in-house automation teams of Amazon, Flipkart, Reliance, DHL and Delhivery. The AMR and sortation content in T1-08 maps directly."},
+ {et:"#5E7280",n:"Heavy engineering, metals and process plants",c:"Pan-India",v:false,
+  roles:"Maintenance Technician · Instrumentation Technician",
+  b:"L&T · BHEL · Tata Steel · JSW · Godrej · cement and chemical plants. Hydraulics and drives content (T2-02, T2-04) matters most in this segment."},
+ {et:"#33628F",n:"Automation service and AMC contractors",c:"Regional",v:false,
+  roles:"Service Technician · AMC Technician · Breakdown Support",
+  b:"The firms holding annual maintenance contracts for installed cells. An under-recognised but steady employer of exactly this skill set, and the segment where the 48-scenario fault library is most directly saleable."}
+];
+
+function renderJobs(){
+  document.getElementById('paths').innerHTML = PATHS.map(p=>
+    '<article class="path" style="--pt:'+p.pt+'"><div class="pe">'+esc(p.el)+'</div>'
+    +'<h3>'+esc(p.n)+'</h3><div class="pd">'+esc(p.d)+'</div>'
+    +'<div class="pl">Carried by</div><ul>'+p.k.map(k=>'<li>'+esc(k)+'</li>').join('')+'</ul></article>').join('');
+  document.getElementById('emp').innerHTML = EMP.map(e=>
+    '<article class="emp" style="--et:'+e.et+'"><div class="emp-h">'
+    +'<span class="en">'+esc(e.n)+'<span class="vflag'+(e.v?'':' un')+'">'+(e.v?'Verified':'To verify')+'</span></span>'
+    +'<span class="ec">'+esc(e.c)+'</span></div>'
+    +'<div class="emp-b"><span class="roles">'+esc(e.roles)+'</span>'+e.b+'</div></article>').join('');
+}
+renderJobs();
+</script>
