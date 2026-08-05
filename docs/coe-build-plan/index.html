@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="description" content="Centre of Excellence build plan — duration, equipment, space, cost and placement.">
+<meta name="color-scheme" content="light dark">
+<title>Centre of Excellence — Build Plan</title>
+</head>
+<body>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F5F7F8; --panel:#FFFFFF; --panel2:#F8FAFB; --panel3:#EEF3F4;
+  --ink:#182832; --ink2:#48606B; --muted:#7C8F99;
+  --line:#E3E9EC; --line2:#D3DCE0;
+  --teal:#0E7C7B; --teal-d:#0B605F; --teal-soft:#EAF4F3; --teal-line:#CFE7E5;
+  --amber:#B0710D; --amber-d:#8C5A0A; --amber-soft:#F6EBD6; --amber-line:#E8D3AE;
+  --slate:#5E7280; --slate-soft:#EDF1F3; --slate-line:#DCE3E7;
+  --green:#2E7351; --green-soft:#E4F0EA; --green-line:#C9E0D3;
+  --shadow:0 1px 2px rgba(24,40,50,.05),0 6px 20px rgba(24,40,50,.06);
+  --radius:12px;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:clamp(18px,3vw,40px) clamp(14px,3vw,34px) 90px}
+
+/* masthead */
+.kick{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:700}
+h1{margin:8px 0 10px;font-size:clamp(27px,4vw,40px);font-weight:800;letter-spacing:-.022em;line-height:1.08;max-width:20ch;text-wrap:balance}
+.mast p{margin:0;color:var(--ink2);font-size:clamp(15px,1.6vw,17px);max-width:66ch}
+
+.time{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--teal);
+  border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.time-h{padding:15px 20px 4px;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.time-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--line)}
+.tcell{background:var(--panel);padding:14px 20px 16px}
+.tcell .tl{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.tcell .tv{font-size:25px;font-weight:800;letter-spacing:-.03em;margin-top:2px;line-height:1.1;font-variant-numeric:tabular-nums}
+.tcell .tv small{font-size:12.5px;font-weight:600;color:var(--ink2);letter-spacing:0;display:block;margin-top:3px}
+.tcell.hi{background:var(--teal-soft)} .tcell.hi .tv{color:var(--teal-d)}
+.tcell.am{background:var(--amber-soft)} .tcell.am .tv{color:var(--amber-d)}
+
+/* contents */
+.toc{margin-top:16px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:14px 18px 16px}
+.toc-h{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:9px}
+.toc ol{margin:0;padding:0;list-style:none;display:grid;gap:7px 26px;grid-template-columns:1fr}
+@media(min-width:640px){.toc ol{grid-template-columns:1fr 1fr}}
+.toc li{font-size:14px;display:flex;gap:10px;align-items:baseline}
+.toc .tn{font-family:var(--mono);font-size:11.5px;font-weight:700;color:var(--teal);min-width:18px}
+.toc a{color:var(--ink);text-decoration:none;font-weight:620}
+.toc a:hover{color:var(--teal-d);text-decoration:underline}
+
+/* sections */
+section{scroll-margin-top:20px}
+h2{font-size:clamp(20px,2.4vw,26px);font-weight:800;letter-spacing:-.018em;margin:56px 0 5px;
+  text-wrap:balance;display:flex;gap:13px;align-items:baseline}
+h2 .n{font-family:var(--mono);font-size:.6em;color:var(--teal);font-weight:700;letter-spacing:0}
+h3{font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--muted);margin:32px 0 10px}
+.lead{color:var(--ink2);font-size:14.5px;margin:0 0 16px;max-width:76ch}
+p{font-size:14.5px;line-height:1.6;max-width:76ch;color:var(--ink2)}
+p strong,li strong,td strong{color:var(--ink);font-weight:680}
+ul{font-size:14.5px;color:var(--ink2);line-height:1.6;padding-left:20px;max-width:76ch}
+li{margin-bottom:5px}
+li::marker{color:var(--teal)}
+
+/* tables */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);
+  box-shadow:var(--shadow);margin:0 0 16px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
+th{background:var(--panel3);text-align:left;font-weight:700;font-size:10.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);padding:10px 14px;border-bottom:2px solid var(--tint,var(--teal));white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink2)}
+tbody tr:last-child td{border-bottom:none}
+.num{text-align:right;font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cd{font-weight:800;letter-spacing:.03em;color:var(--tint,var(--teal));white-space:nowrap;font-size:12px}
+.tot td{font-weight:800;background:var(--panel3)!important;border-top:2px solid var(--tint,var(--teal));color:var(--ink)}
+.sub td{background:var(--panel2)!important;font-weight:800;color:var(--ink);font-size:10.5px;
+  letter-spacing:.07em;text-transform:uppercase;padding-top:11px;padding-bottom:11px}
+.small{font-size:12.5px;color:var(--muted);display:block;margin-top:2px}
+
+/* who-uses pills */
+.u{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;
+  border-radius:100px;padding:2px 8px;white-space:nowrap}
+.u.b{background:var(--slate-soft);color:var(--slate);border:1px solid var(--slate-line)}
+.u.p{background:var(--teal-soft);color:var(--teal-d);border:1px solid var(--teal-line)}
+.u.i{background:var(--amber-soft);color:var(--amber-d);border:1px solid var(--amber-line)}
+
+/* notes */
+.note{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--nc,var(--teal));
+  border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 17px;margin:0 0 16px}
+.note .cl{font-size:10.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--nc,var(--teal));margin-bottom:5px}
+.note p{margin:0 0 7px;font-size:13.5px;line-height:1.55}
+.note p:last-child{margin:0}
+.note.am{--nc:var(--amber)} .note.gr{--nc:var(--green)} .note.sl{--nc:var(--slate)}
+
+/* cards */
+.grid2{display:grid;gap:14px;grid-template-columns:1fr;margin-bottom:16px}
+@media(min-width:760px){.grid2{grid-template-columns:1fr 1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--pt,var(--teal));
+  border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 18px 17px}
+.card .ce{font-family:var(--mono);font-size:10.5px;font-weight:700;color:var(--pt,var(--teal));letter-spacing:.05em;text-transform:uppercase}
+.card h4{margin:6px 0 4px;font-size:17px;font-weight:800;letter-spacing:-.015em;line-height:1.2;color:var(--ink)}
+.card .big{font-size:27px;font-weight:800;letter-spacing:-.03em;color:var(--pt,var(--teal));
+  font-variant-numeric:tabular-nums;margin:8px 0 2px}
+.card .bs{font-size:13px;color:var(--ink2);margin-bottom:11px}
+.card ul{font-size:13px;padding-left:17px;margin:0}
+.card li{margin-bottom:4px}
+.card li::marker{color:var(--pt,var(--teal))}
+
+/* headline cost strip */
+.money{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);grid-template-columns:1fr;margin-bottom:16px}
+@media(min-width:680px){.money{grid-template-columns:repeat(3,1fr)}}
+.money div{background:var(--panel);padding:16px 20px 18px}
+.money .ml{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.money .mv{font-size:24px;font-weight:800;letter-spacing:-.03em;margin-top:4px;font-variant-numeric:tabular-nums}
+.money .mn{font-size:12.5px;color:var(--ink2);margin-top:4px;line-height:1.4}
+.money .hi{color:var(--teal-d)}
+
+.foot{margin-top:60px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);
+  font-size:12.5px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+a{color:var(--teal-d)}
+a:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:3px}
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <div class="kick">BGR Neo · Centre of Excellence</div>
+    <h1>Build plan</h1>
+    <p>What we run, what we buy, where it goes, what it costs, and where the graduates work.
+      Land and building cost are excluded.</p>
+
+    <div class="time">
+      <div class="time-h">At a glance</div>
+      <div class="time-g">
+        <div class="tcell hi"><div class="tl">PG Diploma</div><div class="tv">1 year<small>1,200 hours · 40 credits</small></div></div>
+        <div class="tcell am"><div class="tl">ITI Technician</div><div class="tv">8 months<small>1,215 hours · 32 weeks</small></div></div>
+        <div class="tcell"><div class="tl">Intake</div><div class="tv">60<small>students a year · 2 cohorts of 30</small></div></div>
+        <div class="tcell"><div class="tl">Space needed</div><div class="tv">1,366<small>m² · about 14,700 sq ft</small></div></div>
+        <div class="tcell"><div class="tl">Equipment — one time</div><div class="tv">₹8.2–14.3<small>crore</small></div></div>
+        <div class="tcell"><div class="tl">Running cost</div><div class="tv">₹0.6–1.8<small>crore a year</small></div></div>
+      </div>
+    </div>
+
+    <nav class="toc">
+      <div class="toc-h">Contents</div>
+      <ol>
+        <li><span class="tn">01</span><a href="#s1">Duration</a></li>
+        <li><span class="tn">02</span><a href="#s2">Equipment — the full list</a></li>
+        <li><span class="tn">03</span><a href="#s3">How 30 trainees share it</a></li>
+        <li><span class="tn">04</span><a href="#s4">Space and layout</a></li>
+        <li><span class="tn">05</span><a href="#s5">One roof, or spread out</a></li>
+        <li><span class="tn">06</span><a href="#s6">Cost — one time</a></li>
+        <li><span class="tn">07</span><a href="#s7">Cost — every year</a></li>
+        <li><span class="tn">08</span><a href="#s8">Jobs, employers and pay</a></li>
+        <li><span class="tn">09</span><a href="#s9">Decisions needed</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <!-- 01 DURATION -->
+  <section id="s1">
+    <h2><span class="n">01</span>Duration</h2>
+    <p class="lead">Both durations are set by regulation, not by preference.</p>
+
+    <div class="tw" style="--tint:var(--teal)">
+      <table>
+        <thead><tr><th>Programme</th><th class="num">Length</th><th class="num">Hours</th><th class="num">Per week</th><th>Award</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>PG Diploma in Applied AI for Industrial Robotics</strong><span class="small">Engineering graduates</span></td>
+            <td class="num">1 year<span class="small">48 teaching + 4 exam weeks</span></td>
+            <td class="num">1,200</td><td class="num">25 h</td>
+            <td>Loyola College, Chennai<span class="small">Autonomous, UGC</span></td>
+          </tr>
+          <tr>
+            <td><strong>Automation Uptime Technician</strong><span class="small">ITI passouts</span></td>
+            <td class="num">8 months<span class="small">32 weeks + 2–4 week bridge</span></td>
+            <td class="num">1,215</td><td class="num">38 h</td>
+            <td>Two certificates<span class="small">Week 16 and week 32</span></td>
+          </tr>
+          <tr style="opacity:.62">
+            <td>Engineer Training <span class="small"><strong>Not in the launch plan.</strong> Held for later — same module library as the diploma, so it needs no equipment of its own</span></td>
+            <td class="num">6 months<span class="small">26 weeks</span></td>
+            <td class="num">810</td><td class="num">31 h</td>
+            <td>CoE certificate + vendor certificates</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note sl">
+      <div class="cl">Why the third programme is deferred, and what deferring it does not save</div>
+      <p>Engineer Training is the diploma's own module library cut short. It shares the same computer lab,
+        the same cells and the same trainers, so <strong>dropping it removes no equipment and saves no capital.</strong>
+        What it frees is timetable and floor space — one classroom, one AV set, and the contended cell weeks.</p>
+      <p>It can be added in any later year without buying anything, provided the cell calendar has room.
+        <strong>Everything in this plan is therefore sized for two cohorts of 30 — the PG Diploma and the ITI Technician.</strong></p>
+    </div>
+
+    <div class="grid2">
+      <div class="card" style="--pt:var(--teal)">
+        <div class="ce">Why 1 year for the diploma</div>
+        <h4>The credit rule fixes it</h4>
+        <p style="font-size:13.5px;margin:0">A Postgraduate Diploma is <strong>40 credits</strong>. The national rule
+          is <strong>1 credit = 30 hours</strong>. 40 × 30 = 1,200 hours = one year. There is no shorter version
+          that is still a PG Diploma. Loyola is autonomous under UGC, so the one-year form is open to us —
+          the two-year rule applies only to AICTE engineering colleges.</p>
+      </div>
+      <div class="card" style="--pt:var(--amber)">
+        <div class="ce">Why 8 months for the technician</div>
+        <h4>It is what the content costs</h4>
+        <p style="font-size:13.5px;margin:0">A national one-year ITI trade is <strong>1,200 taught hours</strong>.
+          This is 1,215 — one full trade-year, delivered in eight months at 38 hours a week.
+          The legal ceiling for ITI training is 40 hours a week, so we are inside it.
+          Four robot brands alone take 140 hours; the 48-fault library takes 90.</p>
+      </div>
+    </div>
+
+    <h3>Two certificates, not one</h3>
+    <div class="tw" style="--tint:var(--amber)">
+      <table>
+        <thead><tr><th>Stage</th><th class="num">Weeks</th><th class="num">Hours</th><th>Award</th><th>What they can do</th></tr></thead>
+        <tbody>
+          <tr><td>Pre-course bridge</td><td class="num">2 or 4</td><td class="num">60 / 150</td><td>Not certified</td><td>Fills the gap for Electrician and Fitter passouts, whose trades contain no automation</td></tr>
+          <tr><td><strong>Tier 1 — Operate</strong></td><td class="num">1–16</td><td class="num">615</td><td><strong>Automation Cell Operator</strong></td><td>Runs any cell, any robot brand. Employable here</td></tr>
+          <tr><td><strong>Tier 2 — Maintain</strong></td><td class="num">17–32</td><td class="num">600</td><td><strong>Automation Uptime Technician</strong></td><td>Diagnoses and repairs across every subsystem. This is the pay step</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note gr">
+      <div class="cl">Why the split matters commercially</div>
+      <p>A trainee who leaves at week 16 leaves with a certificate, not with nothing. Each half is also
+        separately fundable under short-term skilling schemes; a single 1,215-hour block would not be.</p>
+    </div>
+  </section>
+
+  <!-- 02 EQUIPMENT -->
+  <section id="s2">
+    <h2><span class="n">02</span>Equipment — the full list</h2>
+    <p class="lead">Everything needed, assuming we own nothing today. Quantities are sized for
+      <strong>two concurrent cohorts of 30</strong> — the diploma and the technician programme.
+      Costs come in section 6.</p>
+    <p style="margin-bottom:16px"><span class="u b">All 30</span> the diploma's shared foundation &nbsp;
+      <span class="u p">Track</span> one specialisation only, ~6–8 students &nbsp;
+      <span class="u i">Technician</span> ITI tier only</p>
+
+    <div class="note gr">
+      <div class="cl">The sizing rule that keeps five tracks affordable</div>
+      <p>The diploma is <strong>890 hours everyone takes together, then 320 hours in one of five tracks.</strong>
+        So the foundation kit is bought <strong>1 : 1 or 1 : 2 for all 30 students</strong> — that is the computer
+        lab and the bench lab, and it is the bulk of the spend.</p>
+      <p>The specialisation kit only ever faces <strong>about 6 to 8 students</strong>, because 30 students split
+        five ways. Two learning arms serve the whole Robot Learning track. One AMR serves the whole Autonomy track.
+        <strong>Adding four tracks to the flagship does not multiply the bill</strong> — it adds one small block per track,
+        and two of the five tracks need no new hardware at all.</p>
+    </div>
+
+    <div class="tw" style="--tint:var(--slate)">
+      <table>
+        <thead><tr><th>Item</th><th class="num">Qty</th><th>Used by</th><th>What it is for</th></tr></thead>
+        <tbody>
+          <tr class="sub"><td colspan="4">A · The live cell hall — the heart of the Centre</td></tr>
+          <tr><td><strong>Cell 1 — vision-guided pick &amp; place / machine tending</strong><span class="small">FANUC 6-axis, 10–20 kg · 3D bin-picking vision · 2D cameras and lighting · servo gripper, vacuum tool, tool changer · conveyor and fixtures · safety PLC, PLC, HMI · fencing, gate, scanner</span></td><td class="num">1</td><td><span class="u b">Both</span></td><td>The flagship cell. 45% of India's robots are automotive machine-tending</td></tr>
+          <tr><td><strong>Cell 2 — welding / dispensing</strong><span class="small">ABB arc-welding robot · power source, torch, wire feeder · 2-axis positioner · laser seam tracking · fume extraction, fire-rated enclosure · safety circuit</span></td><td class="num">1</td><td><span class="u b">Both</span></td><td>Welding is the second-largest robot application in Tamil Nadu</td></tr>
+          <tr><td><strong>Cell 3 — flexible cell</strong><span class="small">KUKA robot, reconfigurable table, quick-change tooling, safety scanner</span></td><td class="num">1</td><td><span class="u b">Both</span></td><td>Capstone projects and the KUKA pendant block</td></tr>
+          <tr><td><strong>Cell 4 — flexible cell</strong><span class="small">Universal Robots UR10e, reconfigurable table, tooling, safety scanner</span></td><td class="num">1</td><td><span class="u b">Both</span></td><td>Capstone projects and the UR pendant block</td></tr>
+          <tr><td><strong>Cell 5 — assessment cell, ring-fenced</strong><span class="small">Cobot with vision, PLC, safety circuit, reconfigurable tooling</span></td><td class="num">1</td><td><span class="u b">Both</span></td><td><strong>No cohort trains on it.</strong> The final exam is an unseen cell with seeded faults</td></tr>
+          <tr><td><strong>Palletising / depalletising rig</strong><span class="small">Robot, pallet stations, case conveyor, layer tooling, stretch wrapper</span></td><td class="num">1</td><td><span class="u i">Technician</span></td><td>End-of-line work — FMCG, food, cement</td></tr>
+          <tr><td><strong>Fault-injection trainer cell</strong><span class="small">Instructor switches faults in: sensor disconnect, low air, jam, gripper misalignment, dirty optics, comms drop</span></td><td class="num">2</td><td><span class="u i">Technician</span></td><td>The core teaching instrument for the 48-fault library</td></tr>
+          <tr><td><strong>Machine-tending interface for Cell 1</strong><span class="small">CNC or press trainer — door, chuck, part-present, coolant and chip signals</span></td><td class="num">1</td><td><span class="u i">Technician</span></td><td><strong>Assessed.</strong> 24 hours on the door-and-chuck interface. Cell 1 is named "machine tending" but has no machine to tend</td></tr>
+          <tr><td><strong>Industrial AMR</strong><span class="small">VDA 5050 capable, charging dock, aisle-rated safety scanner</span></td><td class="num">1</td><td><span class="u i">Technician</span> <span class="u p">Autonomy</span></td><td><strong>Assessed.</strong> The technician assessment is "operate an AMR safely in a shared aisle." Also carries the Autonomy track's field testing</td></tr>
+          <tr><td><strong>SCARA robot on a sortation conveyor</strong></td><td class="num">1</td><td><span class="u i">Technician</span></td><td>High-speed pick-and-place. Your decision to honour the seven-machine-families claim in full</td></tr>
+          <tr><td><strong>Delta robot on a packaging line</strong></td><td class="num">1</td><td><span class="u i">Technician</span></td><td>End-of-line sortation. Delta robots are common in Tamil Nadu food and packaging plants</td></tr>
+
+          <tr class="sub"><td colspan="4">B · Controls and maintenance workshop</td></tr>
+          <tr><td>PLC trainer kits — Siemens S7-1200 / Allen-Bradley class</td><td class="num">12</td><td><span class="u b">Both</span></td><td>Ladder logic, I/O, fault tracing</td></tr>
+          <tr><td>HMI panels</td><td class="num">12</td><td><span class="u b">Both</span></td><td>Operator screens and recipe selection</td></tr>
+          <tr><td>Safety PLC / safety relay trainers</td><td class="num">6</td><td><span class="u b">Both</span></td><td>Why the safety circuit is separate and never touched</td></tr>
+          <tr><td>VFD + motor + encoder trainers</td><td class="num">6</td><td><span class="u b">Both</span></td><td>Drive fault codes — missing from most technician training</td></tr>
+          <tr><td>Industrial network kits — Ethernet/IP, PROFINET, Modbus, OPC-UA</td><td class="num">12</td><td><span class="u b">Both</span></td><td>Finding the dropped node on the night shift</td></tr>
+          <tr><td>Pneumatics trainers</td><td class="num">3</td><td><span class="u b">Both</span></td><td>Air preparation, valves, cylinders, leaks</td></tr>
+          <tr><td>Hydraulic trainer boards</td><td class="num">6</td><td><span class="u i">Technician</span></td><td>Machine tending, pressing and moulding are hydraulic</td></tr>
+          <tr><td>Electrical panel build kits</td><td class="num">6</td><td><span class="u b">Both</span></td><td>DIN rail, contactors, terminals, wiring discipline</td></tr>
+          <tr><td>Electrical fault-finding trainer boards</td><td class="num">6</td><td><span class="u i">Technician</span></td><td>Tracing a fault from schematic to device</td></tr>
+          <tr><td>Pneumatic fault trainer boards</td><td class="num">6</td><td><span class="u i">Technician</span></td><td>Seeded pneumatic faults</td></tr>
+
+          <tr class="sub"><td colspan="4">C · Robotics bench lab</td></tr>
+          <tr><td>Desktop 6-axis educational arms + grippers</td><td class="num">6</td><td><span class="u p">Diploma</span></td><td>Kinematics, ROS 2, programming practice without occupying a live cell</td></tr>
+          <tr><td>Educational mobile robots — TurtleBot 4 class</td><td class="num">6</td><td><span class="u p">Diploma</span></td><td>Navigation, SLAM, AMR fleet basics</td></tr>
+          <tr><td>Depth cameras — Intel RealSense class</td><td class="num">15</td><td><span class="u p">Diploma</span></td><td>3D perception, one per pair</td></tr>
+          <tr><td>Industrial machine-vision cameras + lenses</td><td class="num">8</td><td><span class="u p">Diploma</span></td><td>Optics, lighting and inspection labs</td></tr>
+          <tr><td>Machine-vision lighting kits</td><td class="num">4</td><td><span class="u p">Diploma</span></td><td>Bar, ring, dome and backlight</td></tr>
+          <tr><td>LiDAR (2D and 3D) and IMU / encoder kits</td><td class="num">14</td><td><span class="u p">Diploma</span></td><td>Mapping and state estimation</td></tr>
+          <tr><td>Thermal imaging cameras</td><td class="num">2</td><td><span class="u b">Both</span></td><td>Condition monitoring and inspection</td></tr>
+          <tr><td>Two-finger servo grippers — Robotiq class</td><td class="num">4</td><td><span class="u p">Diploma</span></td><td>End-of-arm tooling for cell projects</td></tr>
+          <tr><td>Vacuum / suction tooling + generators</td><td class="num">3</td><td><span class="u b">Both</span></td><td>The most common gripper on an Indian line</td></tr>
+          <tr><td>Six-axis force–torque sensors</td><td class="num">2</td><td><span class="u p">Diploma</span></td><td>Contact-rich assembly and insertion</td></tr>
+          <tr><td>Quick-change tool changers</td><td class="num">3</td><td><span class="u b">Both</span></td><td>Tool change and re-datuming practice</td></tr>
+          <tr><td>3D printers + calibration artefacts</td><td class="num">2 + 1 set</td><td><span class="u b">Both</span></td><td>Fixtures, jigs, gripper fingers, ISO 9283 accuracy testing</td></tr>
+          <tr><td>Fixture and jig fabrication allowance</td><td class="num">1 lot</td><td><span class="u b">Both</span></td><td>Every cell project needs custom holding</td></tr>
+
+          <tr class="sub"><td colspan="4">D · Computer lab and IT</td></tr>
+          <tr><td><strong>GPU student workstations</strong> — RTX-class, 64 GB RAM</td><td class="num">32</td><td><span class="u p">Diploma</span></td><td>Simulation, deep learning, offline robot programming. 30 + 2 spare</td></tr>
+          <tr><td>Instructor workstations + dual displays</td><td class="num">2</td><td><span class="u p">Diploma</span></td><td>Demonstration and authoring</td></tr>
+          <tr><td>Shared training server — multi-GPU</td><td class="num">1</td><td><span class="u p">Diploma</span></td><td>Overnight model training and batch jobs</td></tr>
+          <tr><td>Storage server — about 100 TB usable</td><td class="num">1</td><td><span class="u p">Diploma</span></td><td>Datasets, student projects, backups</td></tr>
+          <tr><td>Edge AI kits — NVIDIA Jetson Orin Nano</td><td class="num">15</td><td><span class="u p">Diploma</span></td><td>Running AI on the robot, one per pair</td></tr>
+          <tr><td>Edge AI kits — NVIDIA Jetson AGX Orin</td><td class="num">3</td><td><span class="u p">Diploma</span></td><td>Cell-side vision deployment</td></tr>
+          <tr><td>Microcontroller dev kits</td><td class="num">15</td><td><span class="u p">Diploma</span></td><td>Embedded and real-time labs</td></tr>
+          <tr><td>Commissioning laptops</td><td class="num">6</td><td><span class="u b">Both</span></td><td>Taken onto the shop floor</td></tr>
+          <tr><td>Basic PCs</td><td class="num">10</td><td><span class="u i">Technician</span></td><td>Maintenance records, HMI, documentation</td></tr>
+          <tr><td>Tablets</td><td class="num">15</td><td><span class="u i">Technician</span></td><td>Work orders and procedures at the machine</td></tr>
+          <tr><td>Network — switches, rack, firewall, 10 GbE, UPS</td><td class="num">1 set</td><td><span class="u b">Both</span></td><td>Site infrastructure</td></tr>
+          <tr><td>Classroom AV — display, camera, audio</td><td class="num">2 sets</td><td><span class="u b">Both</span></td><td>One per classroom</td></tr>
+
+          <tr class="sub"><td colspan="4">E · Safety — not optional, not deferrable</td></tr>
+          <tr><td>Safety laser scanners and light curtains — spare and bench stock</td><td class="num">1 set</td><td><span class="u b">Both</span></td><td>Beyond what is built into each cell</td></tr>
+          <tr><td>Safety relays, E-stop stations, interlocked gate switches</td><td class="num">5 sets</td><td><span class="u b">Both</span></td><td>Building and testing safety circuits</td></tr>
+          <tr><td>PPE sets — shoes, glasses, gloves, hi-vis</td><td class="num">70</td><td><span class="u b">Both</span></td><td>Every person on the floor</td></tr>
+          <tr><td>Welding PPE — helmets, aprons, gauntlets</td><td class="num">10</td><td><span class="u b">Both</span></td><td>Cell 2</td></tr>
+          <tr><td>Lockout–tagout kits</td><td class="num">12</td><td><span class="u b">Both</span></td><td>Nobody enters a cell without one</td></tr>
+          <tr><td>Fire extinguishers, first-aid stations, eyewash</td><td class="num">per code</td><td><span class="u b">Both</span></td><td>Facility requirement</td></tr>
+
+          <tr class="sub"><td colspan="4">F · Condition monitoring and predictive maintenance</td></tr>
+          <tr><td>Machinery fault simulator — rotating rig with seeded bearing, misalignment and imbalance faults</td><td class="num">1</td><td><span class="u b">Both</span></td><td>Teaches vibration analysis without breaking a real machine</td></tr>
+          <tr><td>Vibration data acquisition + triaxial accelerometers</td><td class="num">2 sets</td><td><span class="u b">Both</span></td><td>Trend reading and diagnosis</td></tr>
+          <tr><td>Handheld vibration analysers</td><td class="num">3</td><td><span class="u i">Technician</span></td><td>Shop-floor first checks</td></tr>
+          <tr><td>Power and energy monitoring clamps</td><td class="num">6</td><td><span class="u b">Both</span></td><td>Current signature as a fault signal</td></tr>
+          <tr><td>Ultrasonic leak detectors</td><td class="num">2</td><td><span class="u i">Technician</span></td><td>Compressed-air leaks — the cheapest saving in any plant</td></tr>
+          <tr><td>IIoT gateway + data historian</td><td class="num">1 set</td><td><span class="u b">Both</span></td><td>Where the maintenance data lands</td></tr>
+
+          <tr class="sub"><td colspan="4">G · Technician hand tools and instruments</td></tr>
+          <tr><td>Hand-tool sets + tool trolleys</td><td class="num">6</td><td><span class="u i">Technician</span></td><td>One per team of five</td></tr>
+          <tr><td>Torque wrenches, dial indicators, alignment tools</td><td class="num">6 sets</td><td><span class="u i">Technician</span></td><td>Mechanical alignment to a stated accuracy</td></tr>
+          <tr><td>Metrology kits — calipers, micrometers, gauges, height gauge</td><td class="num">6</td><td><span class="u i">Technician</span></td><td>Accept or reject a part with an instrument, not an opinion</td></tr>
+          <tr><td>Multimeters, clamp meters, insulation testers</td><td class="num">15</td><td><span class="u i">Technician</span></td><td>One per pair</td></tr>
+          <tr><td>Sensor alignment and replacement bench kits</td><td class="num">6</td><td><span class="u i">Technician</span></td><td>The single most common repair on a cell</td></tr>
+
+          <tr class="sub"><td colspan="4">H · Software</td></tr>
+          <tr><td>ROS 2, Isaac Sim, MuJoCo, OpenCV, PyTorch and the open robotics stack</td><td class="num">30 seats</td><td><span class="u p">Diploma</span></td><td><strong>Free.</strong> The GPU is the real cost, not the software</td></tr>
+          <tr><td>Offline robot programming — RoboDK plus vendor simulators</td><td class="num">15 seats</td><td><span class="u p">Diploma</span></td><td>Programming a cell without occupying it</td></tr>
+          <tr><td>PLC and HMI programming suites</td><td class="num">12 seats</td><td><span class="u b">Both</span></td><td>Read-only for the technician tier</td></tr>
+          <tr><td>Maintenance management system (CMMS)</td><td class="num">1 site</td><td><span class="u i">Technician</span></td><td>Work orders, spares, fault history</td></tr>
+          <tr><td>Learning management, assessment and attendance</td><td class="num">1 site</td><td><span class="u b">Both</span></td><td>Required for any funded programme</td></tr>
+          <tr><td>Machine-vision suite and MATLAB <em>(optional)</em></td><td class="num">4–30 seats</td><td><span class="u b">All 30</span></td><td>Only if industry projects demand the licensed tools</td></tr>
+          <tr><td><strong>LLM API access</strong><span class="small">Anthropic / equivalent, metered</span></td><td class="num">30 students</td><td><span class="u b">All 30</span></td><td><strong>Recurring, and missing from every earlier list.</strong> 250 hours of the shared foundation are LLMs, RAG and copilots. Every student needs metered API access for the whole year</td></tr>
+          <tr><td><strong>Cloud compute credits</strong><span class="small">AWS / Azure / GCP</span></td><td class="num">1 account</td><td><span class="u b">All 30</span></td><td><strong>Recurring.</strong> The software-engineering module teaches cloud and GPUs; the MLOps module deploys to all three clouds. Also the overflow when the training server is saturated</td></tr>
+
+          <tr class="sub"><td colspan="4">I · Track kit — Robot Learning <span style="text-transform:none;letter-spacing:0;font-weight:600">(~6–8 students)</span></td></tr>
+          <tr><td><strong>Torque-controlled learning arm</strong><span class="small">Franka Research 3 class; SO-101 as the low-cost option</span></td><td class="num">2</td><td><span class="u p">Learning</span></td><td>The track's own capstone is "a sim-to-real skill on <em>a real arm</em>", and the imitation module runs on LeRobot with recorded demonstrations. An industrial arm behind a fence cannot be hand-guided or force-controlled</td></tr>
+          <tr><td><strong>Teleoperation rig</strong><span class="small">Leader–follower, ALOHA class</span></td><td class="num">1 set</td><td><span class="u p">Learning</span></td><td>The imitation and diffusion-policy module collects demonstrations by teleoperation, and the capstone fine-tunes on real teleoperated data. Without the rig both are lectures</td></tr>
+          <tr><td>Quadruped — Unitree Go2 class <em>(optional)</em></td><td class="num">0–1</td><td><span class="u p">Learning</span></td><td>Learned locomotion, and the most effective thing to walk a visiting official past. Not required by any module</td></tr>
+
+          <tr class="sub"><td colspan="4">J · Track kit — Perception &amp; Autonomy <span style="text-transform:none;letter-spacing:0;font-weight:600">(~6–8 students)</span></td></tr>
+          <tr><td><strong>Outdoor-capable AMR base</strong><span class="small">Clearpath Jackal / AgileX class</span></td><td class="num">1</td><td><span class="u p">Autonomy</span></td><td>The track capstone is "full-system field testing in a <em>real environment</em>". The 6 educational mobile robots cover indoor SLAM and Nav2; they do not survive a yard</td></tr>
+          <tr><td>Survey-grade 3D LiDAR — Ouster class</td><td class="num">1</td><td><span class="u p">Autonomy</span></td><td>LiDAR odometry, loop closure and neural 3D reconstruction need better than the teaching LiDAR</td></tr>
+          <tr><td>Stereo camera + RTK GNSS</td><td class="num">1 each</td><td><span class="u p">Autonomy</span></td><td>Visual-inertial odometry and outdoor localisation</td></tr>
+          <tr><td><strong>Automotive radar module</strong></td><td class="num">1</td><td><span class="u p">Autonomy</span></td><td>The 3D Perception module teaches "LiDAR <em>and radar</em> processing". Radar appears in no earlier equipment list</td></tr>
+
+          <tr class="sub"><td colspan="4">K · Factory Analytics and Agentic &amp; Applied AI <span style="text-transform:none;letter-spacing:0;font-weight:600">— no new hardware</span></td></tr>
+          <tr><td>Factory Analytics — runs on the condition-monitoring rig, the historian and the GPU lab</td><td class="num">—</td><td><span class="u p">Analytics</span></td><td>Already bought in block F. What this track actually needs is <strong>real production data</strong> from BGR Neo customers, with permission — a contract question, not a purchase</td></tr>
+          <tr><td><strong>Mock MES / ERP / PLC sandbox</strong><span class="small">OPC UA and Modbus TCP over the existing PLC trainers</span></td><td class="num">1 set</td><td><span class="u b">All 30</span> <span class="u p">Agentic</span></td><td>The shared foundation's copilot module and the Agentic track both build agents against MES/ERP/HMI systems. Software and configuration on hardware we already own</td></tr>
+          <tr class="sub"><td colspan="4">L · Humanoid platform <span style="text-transform:none;letter-spacing:0;font-weight:600">— a management decision, not a syllabus requirement</span></td></tr>
+          <tr><td><strong>Humanoid robot</strong><span class="small">Unitree G1 class · charging dock, spares kit, matted demo area</span></td><td class="num">1</td><td><span class="u b">Centre</span></td><td>Carries <strong>no teaching hours in either programme.</strong> Bought as a visibility, recruitment and inspection asset, and as the platform for the humanoid work the Centre expects to be asked for. See the note below</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note gr">
+      <div class="cl">The one thing worth noticing in this list</div>
+      <p><strong>The four robot brands are not four extra robots.</strong> Cells 1 to 4 are FANUC, ABB, KUKA and
+        Universal Robots — the same five cells, bought from four vendors instead of one. Multi-brand coverage
+        is the thing no manufacturer's own training centre can offer, and it costs us nothing extra.</p>
+    </div>
+
+    <div class="note am">
+      <div class="cl">The humanoid — what it is for, stated plainly</div>
+      <p><strong>Decision taken: one humanoid at launch.</strong> This note records what it buys, so that nobody
+        later mistakes it for something it was not.</p>
+      <p><strong>It carries no teaching hours.</strong> Every module in both programmes was checked. The closest is
+        the Vision-Language-Action module, which names NVIDIA's GR00T humanoid model — but it runs in simulation and
+        its capstone is explicitly a skill on <em>a real arm</em>. The humanoid does not displace the learning arms
+        or the teleoperation rig, which do carry hours.</p>
+      <p><strong>What it does buy:</strong> a Centre of Excellence gets visited, inspected and photographed. A
+        humanoid is the most effective thing on the floor for that, and it is the platform ready in the building on
+        the day a customer or the State asks about humanoid work. It should be positioned as a
+        <strong>research and demonstration platform</strong>, not as something graduates are trained on.</p>
+      <p><strong>One thing to hold the line on:</strong> the placement claims. Frontier humanoid firms hire globally
+        and mostly ask for a master's with published research. Owning a humanoid does not change that, and the
+        jobs section already says so. Keep those two facts apart in every conversation.</p>
+      <p><strong>It also needs floor:</strong> a clear, matted demonstration area. A humanoid that falls is a real
+        hazard and it is not covered by the cells' guarding — the bench lab grew 20 m² to hold it.</p>
+    </div>
+  </section>
+
+  <!-- 03 ROTATION -->
+  <section id="s3">
+    <h2><span class="n">03</span>How 30 trainees share it</h2>
+    <p class="lead">We do not buy 30 of anything. Three rotation patterns do the work.</p>
+
+    <div class="grid2">
+      <div class="card" style="--pt:var(--amber)">
+        <div class="ce">Pattern 1 · Technician, weeks 4–7</div>
+        <h4>Four-brand rotation</h4>
+        <div class="big">5.5 h</div>
+        <div class="bs">of pendant time per pair, on <em>each</em> of the four brands</div>
+        <ul>
+          <li>Cohort splits into <strong>4 groups of 7–8</strong>, working in pairs</li>
+          <li>Each group is on a different brand at any moment, then rotates</li>
+          <li>Needs <strong>one robot of each brand available at the same time</strong> — not four of one</li>
+        </ul>
+      </div>
+      <div class="card" style="--pt:var(--teal)">
+        <div class="ce">Pattern 2 · Diploma, weeks 31–40</div>
+        <h4>Six-station rotation</h4>
+        <div class="big">1 of each</div>
+        <div class="bs">station, not six of everything</div>
+        <ul>
+          <li><strong>6 teams of 5</strong> rotate through 6 stations</li>
+          <li>Vision cell · welding cell · integration bench · condition-monitoring rig · MES workstation · calibration bench</li>
+          <li>Module hours are balanced at 40–45 h each so the round-robin actually schedules</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Pattern 3 · The year — two cohorts, one cell hall</h3>
+    <p style="margin-bottom:14px">Start both programmes in the same week and cell demand very nearly sequences itself.</p>
+    <div class="tw" style="--tint:var(--slate)">
+      <table>
+        <thead><tr><th class="num">Weeks</th><th>Who is on the live cells</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1–11</td><td>Nobody — classroom, simulation and trainer cells</td><td>Clear</td></tr>
+          <tr><td class="num">12–15</td><td>Technician cohort — application rotations</td><td>Clear</td></tr>
+          <tr><td class="num">16–27</td><td>Nobody — the technician tier is on the maintenance benches</td><td>Clear</td></tr>
+          <tr><td class="num">28–30</td><td>Technician cohort — the 48-fault library</td><td>Clear</td></tr>
+          <tr><td class="num">31–32</td><td>Technician finishing, diploma starting</td><td><strong>2 weeks overlap</strong></td></tr>
+          <tr><td class="num">33–48</td><td>Diploma cohort — specialisation and capstone</td><td>Clear</td></tr>
+          <tr class="tot"><td class="num">52</td><td>Cell demand across the year</td><td>25 weeks busy · <strong>only 2 contended</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note gr">
+      <div class="cl">Fix available at no cost — and headroom we did not have before</div>
+      <p>Staggering the technician intake by two weeks removes both contended weeks. It is a timetable
+        decision, not a purchase.</p>
+      <p>Dropping the third cohort takes cell demand from 34 weeks to <strong>25 of 52</strong>. That headroom is
+        what makes it realistic to add Engineer Training back later, or to run a second technician intake,
+        without buying another cell.</p>
+    </div>
+  </section>
+
+  <!-- 04 SPACE -->
+  <section id="s4">
+    <h2><span class="n">04</span>Space and layout</h2>
+    <p class="lead">Sized for two cohorts of 30 running at the same time.</p>
+
+    <div class="tw" style="--tint:var(--teal)">
+      <table>
+        <thead><tr><th>Space</th><th class="num">m² each</th><th class="num">Qty</th><th class="num">m² total</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Live cell hall</strong></td><td class="num">400</td><td class="num">1</td><td class="num">400</td><td>5 guarded cells, palletising rig, 2 fault rigs, <strong>machine-tending interface, SCARA and delta lines</strong>, forklift access, and a marked <strong>AMR run-and-charge aisle</strong></td></tr>
+          <tr><td>Classrooms, 30 seats</td><td class="num">65</td><td class="num">2</td><td class="num">130</td><td>One per concurrent cohort</td></tr>
+          <tr><td>Controls &amp; maintenance workshop</td><td class="num">120</td><td class="num">1</td><td class="num">120</td><td>PLC, network, drives, hydraulics, fault-finding benches, MES/ERP sandbox</td></tr>
+          <tr><td>Robotics bench lab</td><td class="num">160</td><td class="num">1</td><td class="num">160</td><td>Educational arms and mobile robots for all 30, vision and tooling, plus the <strong>track kits — learning arms, teleoperation rig, outdoor AMR bay</strong></td></tr>
+          <tr><td>Computer lab, 30 seats</td><td class="num">85</td><td class="num">1</td><td class="num">85</td><td>Needs its own cooling load</td></tr>
+          <tr><td>Staff room and offices</td><td class="num">60</td><td class="num">1</td><td class="num">60</td><td>7 staff plus placement liaison</td></tr>
+          <tr><td>Washrooms, pantry, first-aid room</td><td class="num">60</td><td class="num">1</td><td class="num">60</td><td>60 occupants</td></tr>
+          <tr><td>Store, tool cribs, lockers</td><td class="num">50</td><td class="num">1</td><td class="num">50</td><td>Spares pool and 70 PPE sets</td></tr>
+          <tr><td>Reception and administration</td><td class="num">40</td><td class="num">1</td><td class="num">40</td><td>A CoE gets visited and inspected</td></tr>
+          <tr><td>Server and network room</td><td class="num">15</td><td class="num">1</td><td class="num">15</td><td>Rack, UPS, dedicated cooling</td></tr>
+          <tr><td>Circulation, corridors, stairs</td><td class="num">—</td><td class="num">22%</td><td class="num">246</td><td>Cell hall needs wide safety walkways</td></tr>
+          <tr class="tot"><td>Total built-up</td><td class="num"></td><td class="num"></td><td class="num">1,366</td><td><strong>About 14,700 sq ft</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note gr">
+      <div class="cl">Where the space went, against the earlier figure of 1,275 m²</div>
+      <p><strong>Down 65 m²</strong> — one classroom, from dropping the third cohort.
+        <strong>Up 80 m² in the cell hall</strong> — the machine-tending interface, the SCARA and delta lines, and an
+        aisle the AMR can actually run in. <strong>Up 60 m² in the bench lab</strong> — the two track kits and a matted area for the humanoid.</p>
+      <p>Net <strong>+91 m²</strong>. The 70 PPE sets now comfortably cover 60 trainees, 7 staff and visitors —
+        at three cohorts they did not.</p>
+    </div>
+
+    <div class="note am">
+      <div class="cl">The cell hall decides which buildings are even candidates</div>
+      <p>Square metres are the easy part. The hall also needs <strong>4.5 m clear height</strong>, three-phase power
+        with proper earthing, <strong>compressed air at 7 bar</strong> piped to every cell, floor loading rated for
+        robot pedestals, <strong>forklift or hoist access</strong> to install and move cells, fume extraction at the
+        welding cell, and 500 lux at the benches.</p>
+      <p>An ordinary first-floor office shell cannot take a robot cell. This list should be the screening test for
+        any building we are offered.</p>
+    </div>
+  </section>
+
+  <!-- 05 SITING -->
+  <section id="s5">
+    <h2><span class="n">05</span>One roof, or spread out</h2>
+    <p class="lead">Four options, compared on the two things that matter — space we must build, and money we must spend.</p>
+
+    <div class="tw" style="--tint:var(--green)">
+      <table>
+        <thead><tr><th>Option</th><th class="num">Space we build</th><th class="num">Equipment cost</th><th>Trade-off</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>A · Everything under one roof</strong><span class="small">Recommended</span></td>
+            <td class="num">1,366 m²<span class="small">14,700 sq ft</span></td>
+            <td class="num">₹8.2–14.3 cr</td>
+            <td>Nothing is bought twice. Diploma students and technicians work the same cell, which is what the
+              handover teaching depends on. One safety officer and one lab technician cover both cohorts.</td>
+          </tr>
+          <tr>
+            <td><strong>B · Technical site + Loyola for classrooms</strong></td>
+            <td class="num">1,208 m²<span class="small">both classrooms move · 12% less</span></td>
+            <td class="num">₹8.2–14.3 cr<span class="small">unchanged</span></td>
+            <td><strong>Saves building, not equipment.</strong> Loyola also absorbs 230 hours of foundation teaching
+              — maths, programming, machine learning — which their Data Science department already runs.
+              Cost: travel time in the diploma timetable from week 31.</td>
+          </tr>
+          <tr>
+            <td><strong>C · Sited in a government building</strong><span class="small">If TNSDC route is taken</span></td>
+            <td class="num">Cell hall only<span class="small">space supplied</span></td>
+            <td class="num">₹7.8–13.8 cr<span class="small">PCs and furniture supplied</span></td>
+            <td>The published EOI has the space, furniture, basic PCs and connectivity provided.
+              <strong>Risk:</strong> the building must still pass the cell-hall service test in section 4,
+              and most government buildings will not.</td>
+          </tr>
+          <tr>
+            <td><strong>D · Two separate sites</strong><span class="small">Not recommended</span></td>
+            <td class="num">2 × ~900 m²</td>
+            <td class="num">₹11.4–19.6 cr</td>
+            <td><strong>The five cells, the controls bench and the safety infrastructure get bought twice.</strong>
+              Extra cost of ₹3.2–5.3 crore for no teaching benefit.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid2">
+      <div class="card" style="--pt:var(--green)">
+        <div class="ce">What must stay together</div>
+        <h4>The technical block</h4>
+        <ul>
+          <li>The live cell hall</li>
+          <li>The controls and maintenance workshop</li>
+          <li>The robotics bench lab</li>
+          <li>The store and spares</li>
+        </ul>
+        <p style="font-size:13px;margin:10px 0 0">These are the shared, expensive assets. Splitting them is what
+          creates the ₹3.2–5.3 crore of duplication.</p>
+      </div>
+      <div class="card" style="--pt:var(--slate)">
+        <div class="ce">What can sit elsewhere</div>
+        <h4>The academic front-end</h4>
+        <ul>
+          <li>Classroom teaching</li>
+          <li>Examinations and student records</li>
+          <li>Library and student services</li>
+          <li>Reception and administration</li>
+        </ul>
+        <p style="font-size:13px;margin:10px 0 0">Keep the computer lab on the technical site unless we settle
+          who owns, insures and holds keys to 32 GPU workstations.</p>
+      </div>
+    </div>
+
+    <div class="note gr">
+      <div class="cl">On the Loyola partnership</div>
+      <p>Loyola brings the award, the admissions pipeline, examination machinery, student services and
+        230 hours of foundation teaching. It brings <strong>no robots, no PLCs and no safety infrastructure</strong>,
+        and a normal college computer lab cannot run our simulation software.</p>
+      <p>So the partnership should be judged on the degree, the intake and the teaching load it absorbs —
+        <strong>not on equipment savings, because there are none.</strong></p>
+    </div>
+  </section>
+
+  <!-- 06 ONE-TIME COST -->
+  <section id="s6">
+    <h2><span class="n">06</span>Cost — one time</h2>
+    <p class="lead">Hardware and software only. Land, building and civil works excluded.
+      Figures in ₹ lakh; 100 lakh = 1 crore.</p>
+
+    <div class="money">
+      <div><div class="ml">Lower estimate</div><div class="mv">₹8.16 cr</div><div class="mn">Careful specification, Indian sourcing where possible</div></div>
+      <div><div class="ml">Upper estimate</div><div class="mv">₹14.33 cr</div><div class="mn">Premium brands, imported vision and optional software</div></div>
+      <div><div class="ml">Plan against</div><div class="mv hi">₹11.2 cr</div><div class="mn">Midpoint — the figure to budget until quotations land</div></div>
+    </div>
+
+    <div class="note am">
+      <div class="cl">Read this before quoting any number above</div>
+      <p>The nine original lines below were planning estimates. The <strong>two new lines are scaled from the
+        per-item averages already in this table — they are not quotations, and no vendor has priced them.</strong>
+        They are shown because leaving them at zero would understate the Centre by about a third, which is worse
+        than an openly-labelled estimate.</p>
+      <p>Everything here is superseded the moment three quotations land. That is the one action blocking a
+        real budget.</p>
+    </div>
+
+    <h3>By area of the Centre</h3>
+    <div class="tw" style="--tint:var(--teal)">
+      <table>
+        <thead><tr><th>Area</th><th class="num">Low</th><th class="num">High</th><th class="num">Share</th><th>Biggest single item</th></tr></thead>
+        <tbody>
+          <tr><td><strong>A · Live cell hall</strong></td><td class="num">284</td><td class="num">426</td><td class="num">35%</td><td>Cell 1, with 3D bin-picking vision</td></tr>
+          <tr><td><strong>D · Computer lab and IT</strong></td><td class="num">128</td><td class="num">194</td><td class="num">16%</td><td>32 GPU workstations</td></tr>
+          <tr><td><strong>A+ · New cell-hall machines</strong> <em>(scaled, not quoted)</em></td><td class="num">120</td><td class="num">200</td><td class="num">15%</td><td>Machine-tending interface, industrial AMR, SCARA, delta</td></tr>
+          <tr><td><strong>C · Robotics bench lab</strong></td><td class="num">91</td><td class="num">177</td><td class="num">11%</td><td>Educational arms and grippers</td></tr>
+          <tr><td><strong>I + J · Track kits</strong> <em>(scaled, not quoted)</em></td><td class="num">60</td><td class="num">110</td><td class="num">7%</td><td>Learning arms and the outdoor AMR</td></tr>
+          <tr><td><strong>B · Controls and maintenance workshop</strong></td><td class="num">48</td><td class="num">101</td><td class="num">6%</td><td>Hydraulic and network trainers</td></tr>
+          <tr><td><strong>L · Humanoid</strong> <em>(scaled, not quoted)</em></td><td class="num">25</td><td class="num">60</td><td class="num">3%</td><td>Platform, dock, spares kit and matting. <strong>Carries no teaching hours</strong></td></tr>
+          <tr><td><strong>F · Condition monitoring</strong></td><td class="num">20</td><td class="num">54</td><td class="num">2%</td><td>Machinery fault simulator</td></tr>
+          <tr><td><strong>G · Technician tools and instruments</strong></td><td class="num">13</td><td class="num">29</td><td class="num">2%</td><td>Metrology and test instruments</td></tr>
+          <tr><td><strong>E · Safety</strong></td><td class="num">10</td><td class="num">20</td><td class="num">1%</td><td>Scanners, PPE, lockout kits</td></tr>
+          <tr><td><strong>H · Software</strong></td><td class="num">8</td><td class="num">43</td><td class="num">1%</td><td>Optional vision suite and MATLAB</td></tr>
+          <tr><td>Consumables and spares, first year</td><td class="num">9</td><td class="num">19</td><td class="num">1%</td><td>Welding gas, workpieces, cable</td></tr>
+          <tr class="tot"><td>Total</td><td class="num">816</td><td class="num">1,433</td><td class="num">100%</td><td><strong>₹8.16 – 14.33 crore</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>By programme</h3>
+    <div class="tw" style="--tint:var(--amber)">
+      <table>
+        <thead><tr><th>Bucket</th><th class="num">Low</th><th class="num">High</th><th>What is in it</th></tr></thead>
+        <tbody>
+          <tr><td><span class="u b">All 30</span> diploma foundation</td><td class="num">₹2.00 cr</td><td class="num">₹3.65 cr</td><td>GPU workstations, training server, storage, edge kits, MCU kits, educational arms and mobile robots, vision and sensing stock, grippers and force sensors, simulation software</td></tr>
+          <tr><td><span class="u p">Track</span> kits — Learning + Autonomy</td><td class="num">₹0.60 cr</td><td class="num">₹1.10 cr</td><td>2 learning arms, teleoperation rig, outdoor AMR base, survey LiDAR, stereo camera, RTK GNSS, radar. <strong>Analytics and Agentic need nothing</strong></td></tr>
+          <tr><td><span class="u b">Centre</span> — humanoid</td><td class="num">₹0.25 cr</td><td class="num">₹0.60 cr</td><td>Visibility, recruitment and demonstration platform. <strong>Serves no module in either programme</strong> — the one line here that can be removed without touching the teaching</td></tr>
+          <tr><td><span class="u i">Technician</span> only</td><td class="num">₹2.10 cr</td><td class="num">₹3.67 cr</td><td>Fault-injection cells, palletising rig, <strong>machine-tending interface, SCARA, delta, industrial AMR</strong>, hydraulics, fault trainer boards, hand tools, metrology, test instruments, tablets, maintenance software</td></tr>
+          <tr><td><span class="u b">Shared</span> by both programmes</td><td class="num">₹3.21 cr</td><td class="num">₹5.31 cr</td><td>The five cells, the controls bench, safety infrastructure, condition monitoring, network and AV</td></tr>
+          <tr class="tot"><td>Total, one site</td><td class="num">₹8.16 cr</td><td class="num">₹14.33 cr</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note gr">
+      <div class="cl">Two things this table shows that are worth saying out loud</div>
+      <p><strong>Adding four specialisations costs ₹0.6–1.1 crore, not four times anything.</strong> Thirty students
+        split five ways is about six per track, so the track kit only ever faces six people. Two of the five tracks —
+        Factory Analytics and Agentic &amp; Applied AI — need no new hardware at all.</p>
+      <p><strong>The technician programme, not the diploma, absorbed the increase.</strong> Honouring the seven
+        machine families and the assessed AMR and machine-tending hours moved that bucket from ₹0.9 cr to ₹2.1 cr
+        at the low end. Run the technician programme alone and it now costs ₹5.3–9.0 crore.</p>
+    </div>
+
+    <h3>Savings available, each with its cost</h3>
+    <div class="tw" style="--tint:var(--slate)">
+      <table>
+        <thead><tr><th>Option</th><th class="num">Saves</th><th>What we give up</th></tr></thead>
+        <tbody>
+          <tr><td>GPU workstations at 1 per 1.5 students instead of 1 each, plus rented cloud GPU for training runs</td><td class="num">₹20–30 L</td><td>Pair working in simulation labs; a dependency on connectivity</td></tr>
+          <tr><td>Replace the welding cell with a dispensing cell</td><td class="num">₹15–25 L<span class="small">plus fume and fire services</span></td><td>Welding is 24 hours of teaching and a large share of Tamil Nadu's robot population. The weakest of the three</td></tr>
+          <tr><td>Drop the dedicated assessment cell; lock a different configuration on Cell 3 or 4 during exams</td><td class="num">₹34–43 L</td><td>The final exam is meant to be an <em>unseen</em> cell. Workable, but weaker</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note sl">
+      <div class="cl">For scale</div>
+      <p>Tamil Nadu is upgrading <strong>71 government ITIs into Industry 4.0 centres at ₹2,877 crore</strong> —
+        about ₹40 crore per centre, including civil works. Our ₹8–14 crore of equipment sits well inside
+        what the State already treats as normal for a technology centre.</p>
+    </div>
+  </section>
+
+  <!-- 07 RECURRING -->
+  <section id="s7">
+    <h2><span class="n">07</span>Cost — every year</h2>
+    <p class="lead">The line that is routinely forgotten, and the one that strands a training centre.
+      A cell with a failed drive and no spare stops a cohort, not a shift.</p>
+
+    <div class="tw" style="--tint:var(--amber)">
+      <table>
+        <thead><tr><th>Recurring item</th><th class="num">Per year</th><th>What it covers</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Spares and maintenance</strong><span class="small">5–10% of equipment value</span></td><td class="num">₹41–143 L</td><td>Grippers, cameras, cables, drives, sensors. Lower in year 1 while equipment is under warranty, then steady</td></tr>
+          <tr><td><strong>Training consumables</strong></td><td class="num">₹9–19 L</td><td>Welding wire and gas, sample workpieces, cable and connectors, vacuum cups, seals, filters, fuses, printer filament</td></tr>
+          <tr><td><strong>Software licences and renewals</strong></td><td class="num">₹5–15 L</td><td>Maintenance management system, learning platform, PLC and vision suites, simulation seats</td></tr>
+          <tr><td><strong>LLM API and cloud compute</strong><span class="small">30 students, metered</span></td><td class="num">not yet priced</td><td><strong>New, and genuinely unpredictable.</strong> 250 hours of the shared foundation are LLM, RAG and copilot work, and the MLOps module deploys to public cloud. Cost depends entirely on model choice and per-student caps — <strong>meter it in a pilot before committing a figure</strong></td></tr>
+          <tr class="tot"><td>Total recurring</td><td class="num">₹55 L – 1.77 cr</td><td><strong>Budget ₹0.6–1.8 crore a year, plus metered AI usage</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note sl">
+      <div class="cl">Also recurring, and not costed here</div>
+      <p>Staff — one lead trainer, three trainers, one dedicated safety officer, one controls trainer,
+        one lab technician, one placement liaison. Plus electricity, compressed air, insurance and
+        annual safety re-validation of the cells. These are operating costs for finance to complete,
+        not equipment.</p>
+    </div>
+  </section>
+
+  <!-- 08 JOBS -->
+  <section id="s8">
+    <h2><span class="n">08</span>Jobs, employers and pay</h2>
+
+    <h3>PG Diploma — a shared foundation, then one specialisation</h3>
+    <div class="note am">
+      <div class="cl">This table needs one reconciliation pass before it goes to anyone</div>
+      <p>The roles, employers and pay bands below are sound and sourced. What has moved underneath them is the
+        <strong>shape of the diploma</strong>: the programme now being proposed runs a shared foundation and then
+        <strong>one</strong> specialisation of five, where this table still assumes a vision core plus two picks.</p>
+      <p>The consequence is one missing row — <strong>Perception &amp; Autonomy</strong>, the mobile-robotics and
+        navigation track. It is deliberately left blank rather than filled in from memory: its roles, employers and
+        pay bands need the same sourcing the other rows had.</p>
+    </div>
+    <div class="tw" style="--tint:var(--teal)">
+      <table>
+        <thead><tr><th>Specialisation</th><th>Job roles</th><th>Employers</th><th class="num">Starting pay, India</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Machine Vision</strong><span class="small">Core — everyone takes it, 90 hours</span></td>
+            <td>Machine Vision Engineer<br>Vision Systems Engineer<br>Inspection Automation Engineer</td>
+            <td>Cognex · Keyence · Omron · Datalogic · Bosch · Continental · ZF · Valeo · Tata Elxsi · Wipro PARI · CynLr · Difacto · Systemantics · the Sriperumbudur electronics plants</td>
+            <td class="num">₹5–8 L<span class="small">₹60–80k a month</span></td>
+          </tr>
+          <tr>
+            <td><strong>Robot Learning</strong><span class="small">Reinforcement and imitation learning, sim-to-real</span></td>
+            <td>Reinforcement Learning Engineer<br>Robot Learning Engineer<br>Sim-to-Real Engineer<br>Manipulation Engineer</td>
+            <td><em>India:</em> CynLr · Addverb · Ati Motors · Niqo Robotics · Rapyuta · NVIDIA India · Bosch and Siemens R&amp;D centres<br><em>Global:</em> Figure · 1X · Apptronik · Agility · Tesla Optimus · Unitree · Physical Intelligence</td>
+            <td class="num">₹4–10 L<span class="small">see note below</span></td>
+          </tr>
+          <tr>
+            <td><strong>Predictive Maintenance</strong><span class="small">Industrial data and condition monitoring</span></td>
+            <td>Predictive Maintenance Engineer<br>Reliability Engineer<br>Industrial Data Scientist</td>
+            <td>Siemens · Schneider Electric · ABB · Honeywell · L&amp;T Technology Services · Cyient · Tata Elxsi · UptimeAI · Detect Technologies</td>
+            <td class="num">₹5–8 L<span class="small">₹15 L+ with experience</span></td>
+          </tr>
+          <tr>
+            <td><strong>Digital Twin</strong><span class="small">Simulation and virtual commissioning</span></td>
+            <td>Simulation Engineer<br>Digital Twin Engineer<br>Virtual Commissioning Engineer<br>Offline Programming Engineer</td>
+            <td>Siemens · Dassault Systèmes · Rockwell · Tata Technologies · L&amp;T Technology Services · Cyient · Wipro PARI · every system integrator</td>
+            <td class="num">₹4.5–7 L<span class="small">₹15 L average with experience</span></td>
+          </tr>
+          <tr>
+            <td><strong>Agentic AI</strong><span class="small">AI assistants for the shop floor</span></td>
+            <td>Applied AI Engineer (Manufacturing)<br>MES / AI Integration Engineer</td>
+            <td>Siemens · SAP · Rockwell · PTC · Honeywell · the manufacturing arms of the large IT firms</td>
+            <td class="num">₹5–8 L<span class="small">newest role, band still forming</span></td>
+          </tr>
+          <tr>
+            <td><strong>Open to all graduates</strong><span class="small">From the core robotics and integration modules</span></td>
+            <td>Robotics Application Engineer<br>Controls / Automation Engineer<br>Commissioning Engineer<br>Robot Service Engineer</td>
+            <td>FANUC India · Yaskawa India · ABB · KUKA · Universal Robots · Omron · Mitsubishi Electric · every integrator including BGR Neo</td>
+            <td class="num">₹4.5–10 L<span class="small">FANUC India averages ₹7.7 L</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note am">
+      <div class="cl">Position the humanoid path honestly</div>
+      <p>Frontier humanoid companies — Figure, 1X, Apptronik, Tesla Optimus — hire globally and mostly ask for a
+        PhD or a master's with published research. <strong>A diploma graduate will not be hired into them directly.</strong></p>
+      <p>The realistic route is <strong>diploma → an Indian robotics, integrator or R&amp;D-centre role at ₹5–8 L →
+        three to five years of shipped work → then those companies become reachable.</strong> That version holds up
+        with a recruiter. The direct version does not, and one graduate finding that out becomes a complaint.</p>
+    </div>
+
+    <h3>Overseas, for diploma graduates with experience</h3>
+    <div class="tw" style="--tint:var(--slate)">
+      <table>
+        <thead><tr><th>Country</th><th class="num">Machine vision / robotics engineer</th><th>Route</th></tr></thead>
+        <tbody>
+          <tr><td>Germany</td><td class="num">€70,000 average</td><td>Automotive and industrial automation; strong Indian-engineer pipeline</td></tr>
+          <tr><td>Japan</td><td class="num">¥7–13 million</td><td>Robotics and automotive perception — Toyota, Panasonic, Sony, Fanuc</td></tr>
+          <tr><td>Singapore</td><td class="num">S$85,000–160,000</td><td>Government-backed robotics and smart manufacturing</td></tr>
+          <tr><td>United States</td><td class="num">US$96,000 typical<span class="small">US$200k+ at frontier firms</span></td><td>Requires a postgraduate degree and visa sponsorship in almost all cases</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>ITI Technician — what changes between week 16 and week 32</h3>
+    <div class="tw" style="--tint:var(--amber)">
+      <table>
+        <thead><tr><th>Exit</th><th>Job roles</th><th>Employers</th><th class="num">Pay, India</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Week 16</strong><span class="small">Tier 1<br>Automation Cell Operator</span></td>
+            <td>Automation Cell Operator<br>Robot Operator<br>Robot Technician<br>Production Operator, automated line</td>
+            <td>Tamil Nadu automotive and tier-1 plants — Hyundai · TVS · Ashok Leyland · Renault-Nissan · Daimler · Royal Enfield · Bosch · Continental · ZF · Valeo · Sundaram Clayton · Rane · Brakes India · Lucas-TVS<br>Electronics plants in the Sriperumbudur corridor<br>FMCG, food and beverage lines</td>
+            <td class="num">₹15–22k a month<span class="small">₹1.8–2.6 L a year</span></td>
+          </tr>
+          <tr>
+            <td><strong>Week 32</strong><span class="small">Tier 2<br>Automation Uptime Technician</span></td>
+            <td><strong>Automation Maintenance Technician</strong><span class="small">the title with the most live vacancies in Indian manufacturing</span>PLC / Panel Maintenance Technician<br>Field Service Technician<br>Line / Shift Maintenance Technician<br>Installation &amp; Commissioning Assistant</td>
+            <td>All of the above, plus:<br>System integrators — BGR Neo's own installations first, then Difacto · Systemantics · RL Robotics · Armstrong · Titan Engineering and the Chennai, Coimbatore and Hosur integrators<br>Robot makers' field service — FANUC · Yaskawa · ABB · KUKA · Universal Robots · Omron · Mitsubishi · Nachi · Kawasaki<br>Warehouse automation — Addverb · GreyOrange · Falcon Autotech · Amazon · Flipkart · Delhivery · DHL</td>
+            <td class="num">₹20–28k a month<span class="small">₹2.4–3.4 L a year</span></td>
+          </tr>
+          <tr>
+            <td><strong>After 5 years</strong><span class="small">With field experience</span></td>
+            <td>Senior Maintenance Technician<br>Shift Maintenance Lead<br>Service Engineer<br><em>or</em> the bridge into our own engineer programme, and from there the diploma</td>
+            <td>Same employers. Robot-maker field service pays best</td>
+            <td class="num">₹5.0–6.5 L a year</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note gr">
+      <div class="cl">The commercial point in that table</div>
+      <p>The second sixteen weeks lift a graduate from <strong>₹15–22k to ₹20–28k a month</strong>, and open
+        field service and integrator work that the operator certificate does not.
+        <strong>Tier 2 is where the pay step is</strong> — because first-line repair is what plants are short of,
+        not operators.</p>
+    </div>
+  </section>
+
+  <!-- 09 DECISIONS -->
+  <section id="s9">
+    <h2><span class="n">09</span>Decisions needed</h2>
+    <p class="lead">Nothing here blocks the plan. Each item changes a number or a date.</p>
+
+    <div class="tw" style="--tint:var(--slate)">
+      <table>
+        <thead><tr><th>Decision</th><th>Why it matters</th><th>Who settles it</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Site — one roof, Loyola split, or a government building</strong></td><td>Sets the space we build and whether the cell hall's services can be met. Everything else follows from it</td><td>Management</td></tr>
+          <tr><td><strong>Which diploma specialisations open in year 1</strong></td><td>The flagship industrial track is fully equipped. <strong>Robot Learning</strong> needs the learning arms and the teleoperation rig; <strong>Perception &amp; Autonomy</strong> needs the autonomy sensors. Factory Analytics and Applied AI need no new hardware at all. This decision, not the budget, is what sets Block I</td><td>Academic + management</td></tr>
+          <tr><td><strong>Three vendor quotations for the cell hall — now including Block I</strong></td><td>About a quarter of the capital sits in items with no public price — the 3D vision, the palletising rig, the fault-injection cells and integration labour — and Block I is unpriced entirely. Quotations will move the ₹8.2–14.3 crore range considerably</td><td>Procurement</td></tr>
+          <tr><td><strong>The AMR and the machine-tending interface</strong></td><td>38 assessed technician hours currently have no machine behind them — "operate an AMR safely in a shared aisle" and 24 hours on a CNC door-and-chuck interface. Either buy them, or amend the technician syllabus and the published coverage claims</td><td>Academic + procurement</td></tr>
+          <tr><td><strong>Humanoid — decision taken, one at launch</strong></td><td><strong>Settled.</strong> ₹25–60 lakh, carries no teaching hours in either programme, and is bought as a visibility and demonstration platform. It is the one line in the capital plan that can be deferred without touching a single taught hour — worth knowing if quotations come back high</td><td>Management — decided</td></tr>
+          <tr><td><strong>GPU workstations — one each, or one per pair</strong></td><td>₹20–30 lakh, and a decision about whether simulation labs run in pairs</td><td>Academic + finance</td></tr>
+          <tr><td><strong>Welding cell, or dispensing cell</strong></td><td>₹15–25 lakh plus fume extraction and fire-rated services, against 24 hours of teaching on the second-largest robot application in the state</td><td>Academic</td></tr>
+          <tr><td><strong>Loyola approval calendar</strong></td><td>An autonomous college awards through its Board of Studies and Academic Council. This is a lead-time question, and it sets the earliest possible start date</td><td>Management + Loyola</td></tr>
+          <tr><td><strong>Confirm which employers are hiring now</strong></td><td>The role titles and pay bands above are drawn from published sources. Which named companies have live vacancies, and what they ask for, needs checking before any of it goes into a prospectus or a placement promise</td><td>Placement liaison</td></tr>
+          <tr><td><strong>Contact-hour split for the diploma</strong></td><td>1,200 is <em>notional</em> hours — teaching plus supervised study. Staffing for 1,200 contact hours would over-staff by about 40%</td><td>Academic</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="foot">
+    <span>BGR Neo Centre of Excellence · build plan</span>
+    <span>Costs are planning estimates pending vendor quotation · August 2026</span>
+  </div>
+</div>
+</body>
+</html>

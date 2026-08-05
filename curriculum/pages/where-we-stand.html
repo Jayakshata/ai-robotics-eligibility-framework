@@ -1,0 +1,671 @@
+<title>Where We Stand — Competitive Position</title>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F6F7F9; --panel:#FFFFFF; --panel2:#FAFBFC; --panel3:#EFF2F5;
+  --ink:#1A2430; --ink2:#4A5A6B; --muted:#7E8C9B;
+  --line:#E4E8ED; --line2:#D2D9E1;
+  --indigo:#3B4E8C; --indigo-d:#2C3C70; --indigo-soft:#ECEFF8; --indigo-line:#CFD7EC;
+  --teal:#0E7C7B; --teal-d:#0B605F; --teal-soft:#EAF4F3; --teal-line:#CFE7E5;
+  --amber:#B0710D; --amber-d:#8C5A0A; --amber-soft:#F7ECD8; --amber-line:#E8D5B0;
+  --red:#9A3324; --red-soft:#F8EAE6; --red-line:#E9D1CA;
+  --green:#2E7351; --green-soft:#E5F0EA; --green-line:#C9E0D3;
+  --slate:#5E7280; --slate-soft:#EDF0F3; --slate-line:#DBE1E7;
+  --shadow:0 1px 2px rgba(26,36,48,.05),0 6px 20px rgba(26,36,48,.06);
+  --radius:12px;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:clamp(18px,3vw,40px) clamp(14px,3vw,34px) 90px}
+
+.kick{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--indigo);font-weight:700}
+h1{margin:8px 0 10px;font-size:clamp(27px,4vw,40px);font-weight:800;letter-spacing:-.022em;line-height:1.08;max-width:20ch;text-wrap:balance}
+.mast p{margin:0;color:var(--ink2);font-size:clamp(15px,1.6vw,17px);max-width:68ch}
+
+.time{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--indigo);
+  border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.time-h{padding:15px 20px 4px;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.time-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--line)}
+.tcell{background:var(--panel);padding:14px 20px 16px}
+.tcell .tl{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.tcell .tv{font-size:24px;font-weight:800;letter-spacing:-.03em;margin-top:2px;line-height:1.1;font-variant-numeric:tabular-nums}
+.tcell .tv small{font-size:12.5px;font-weight:600;color:var(--ink2);letter-spacing:0;display:block;margin-top:3px}
+.tcell.hi{background:var(--indigo-soft)} .tcell.hi .tv{color:var(--indigo-d)}
+.tcell.gr{background:var(--green-soft)} .tcell.gr .tv{color:var(--green)}
+
+.toc{margin-top:16px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:14px 18px 16px}
+.toc-h{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:9px}
+.toc ol{margin:0;padding:0;list-style:none;display:grid;gap:7px 26px;grid-template-columns:1fr}
+@media(min-width:640px){.toc ol{grid-template-columns:1fr 1fr}}
+.toc li{font-size:14px;display:flex;gap:10px;align-items:baseline}
+.toc .tn{font-family:var(--mono);font-size:11.5px;font-weight:700;color:var(--indigo);min-width:18px}
+.toc a{color:var(--ink);text-decoration:none;font-weight:620}
+.toc a:hover{color:var(--indigo-d);text-decoration:underline}
+
+section{scroll-margin-top:20px}
+h2{font-size:clamp(20px,2.4vw,26px);font-weight:800;letter-spacing:-.018em;margin:56px 0 5px;
+  text-wrap:balance;display:flex;gap:13px;align-items:baseline}
+h2 .n{font-family:var(--mono);font-size:.6em;color:var(--indigo);font-weight:700;letter-spacing:0}
+h3{font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:32px 0 10px}
+.lead{color:var(--ink2);font-size:14.5px;margin:0 0 16px;max-width:78ch}
+p{font-size:14.5px;line-height:1.6;max-width:78ch;color:var(--ink2)}
+p strong,li strong,td strong{color:var(--ink);font-weight:680}
+ul{font-size:14.5px;color:var(--ink2);line-height:1.6;padding-left:20px;max-width:78ch}
+li{margin-bottom:5px}
+li::marker{color:var(--indigo)}
+
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);
+  box-shadow:var(--shadow);margin:0 0 16px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px}
+th{background:var(--panel3);text-align:left;font-weight:700;font-size:10.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);padding:10px 13px;border-bottom:2px solid var(--tint,var(--indigo));white-space:nowrap}
+th.rot{text-align:center;font-size:10px;padding:10px 6px}
+td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink2)}
+td.mid{text-align:center;vertical-align:middle}
+tbody tr:last-child td{border-bottom:none}
+.num{text-align:right;font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tot td{font-weight:800;background:var(--indigo-soft)!important;border-top:2px solid var(--indigo);color:var(--ink)}
+.sub td{background:var(--panel2)!important;font-weight:800;color:var(--ink);font-size:10.5px;
+  letter-spacing:.07em;text-transform:uppercase;padding-top:11px;padding-bottom:11px}
+.small{font-size:12.5px;color:var(--muted);display:block;margin-top:3px;font-weight:400}
+.ours td{background:var(--green-soft)!important}
+.ours td:first-child{border-left:4px solid var(--green)}
+
+/* yes / no / partial marks */
+.m{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+  border-radius:100px;padding:3px 9px;white-space:nowrap;min-width:52px;text-align:center}
+.m.y{background:var(--green-soft);color:var(--green);border:1px solid var(--green-line)}
+.m.n{background:var(--panel3);color:var(--muted);border:1px solid var(--line2)}
+.m.p{background:var(--amber-soft);color:var(--amber-d);border:1px solid var(--amber-line)}
+
+.note{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--nc,var(--indigo));
+  border-radius:var(--radius);box-shadow:var(--shadow);padding:15px 18px;margin:0 0 16px}
+.note .cl{font-size:10.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--nc,var(--indigo));margin-bottom:6px}
+.note p{margin:0 0 8px;font-size:13.5px;line-height:1.55}
+.note p:last-child{margin:0}
+.note.am{--nc:var(--amber)} .note.gr{--nc:var(--green)} .note.rd{--nc:var(--red)} .note.sl{--nc:var(--slate)}
+
+.grid2{display:grid;gap:14px;grid-template-columns:1fr;margin-bottom:16px}
+@media(min-width:760px){.grid2{grid-template-columns:1fr 1fr}}
+.grid3{display:grid;gap:14px;grid-template-columns:1fr;margin-bottom:16px}
+@media(min-width:820px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--pt,var(--indigo));
+  border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 18px 17px}
+.card .ce{font-family:var(--mono);font-size:10.5px;font-weight:700;color:var(--pt,var(--indigo));letter-spacing:.05em;text-transform:uppercase}
+.card h4{margin:6px 0 8px;font-size:16.5px;font-weight:800;letter-spacing:-.015em;line-height:1.22;color:var(--ink)}
+.card p{font-size:13.5px;margin:0 0 9px;line-height:1.55}
+.card p:last-child{margin:0}
+.card ul{font-size:13px;padding-left:17px;margin:0}
+.card li{margin-bottom:4px}
+.card li::marker{color:var(--pt,var(--indigo))}
+.rank{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  border-radius:100px;padding:3px 10px;margin-bottom:9px}
+.rank.keep{background:var(--green-soft);color:var(--green)}
+.rank.fight{background:var(--amber-soft);color:var(--amber-d)}
+.rank.drop{background:var(--red-soft);color:var(--red)}
+
+.foot{margin-top:60px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);
+  font-size:12.5px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+a{color:var(--indigo-d)}
+a:focus-visible{outline:2px solid var(--indigo);outline-offset:2px;border-radius:3px}
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <div class="kick">BGR Neo · Centre of Excellence</div>
+    <h1>Where we stand</h1>
+    <p>Fourteen comparable centres in Tamil Nadu, India and abroad — what each one actually offers,
+      and what is genuinely ours once the Centre runs as an independent body.</p>
+
+    <div class="time">
+      <div class="time-h">The finding, in six numbers</div>
+      <div class="time-g">
+        <div class="tcell hi"><div class="tl">Centres compared</div><div class="tv">14<small>9 in India, 5 abroad</small></div></div>
+        <div class="tcell hi"><div class="tl">That teach 4 robot brands</div><div class="tv">0<small>every one is single-vendor</small></div></div>
+        <div class="tcell hi"><div class="tl">That award a UGC diploma</div><div class="tv">0<small>all others give certificates</small></div></div>
+        <div class="tcell"><div class="tl">That serve ITI passouts <em>and</em> graduates</div><div class="tv">1<small>the government ITI network — one tier only</small></div></div>
+        <div class="tcell"><div class="tl">That publish real placement data</div><div class="tv">0<small>everyone claims, nobody publishes</small></div></div>
+        <div class="tcell gr"><div class="tl">Claims that survive as our own</div><div class="tv">6<small>see section 4</small></div></div>
+      </div>
+    </div>
+
+    <div class="tw" style="--tint:var(--teal);margin-top:16px">
+      <table>
+        <thead><tr><th>The Centre as now planned</th><th class="num">Figure</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>Intake a year</td><td class="num">60</td><td>Two cohorts of 30 — the PG Diploma and the ITI Automation Uptime Technician. The 6-month Engineer Training programme is <strong>deferred</strong>, and needs no equipment of its own when it returns</td></tr>
+          <tr><td>PG Diploma shape</td><td class="num">890 + 320 h</td><td>A shared AI foundation everyone takes, then <strong>one of five specialisations</strong> — Industrial Manufacturing · Perception &amp; Autonomy · Robot Learning · Factory Analytics · Agentic &amp; Applied AI</td></tr>
+          <tr><td>Technician programme</td><td class="num">1,215 h</td><td>32 weeks, two separately certified tiers, four robot brands, seven machine families</td></tr>
+          <tr><td>Equipment</td><td class="num">₹8.2–14.3 cr</td><td>Planning estimates. Budget ₹11.2 cr until three quotations land</td></tr>
+          <tr><td>Space</td><td class="num">1,366 m²</td><td>About 14,700 sq ft, one roof</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <nav class="toc">
+      <div class="toc-h">Contents</div>
+      <ol>
+        <li><span class="tn">01</span><a href="#s1">What changes if the CoE stands alone</a></li>
+        <li><span class="tn">02</span><a href="#s2">Who else is doing this — India</a></li>
+        <li><span class="tn">03</span><a href="#s3">Who else is doing this — abroad</a></li>
+        <li><span class="tn">04</span><a href="#s4">Where we genuinely stand</a></li>
+        <li><span class="tn">05</span><a href="#s5">Research, incubation, placement — tested</a></li>
+        <li><span class="tn">06</span><a href="#s6">What incubation really requires</a></li>
+        <li><span class="tn">07</span><a href="#s7">What to put in the course that nobody has</a></li>
+        <li><span class="tn">08</span><a href="#s8">The position, in one paragraph</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <!-- 01 -->
+  <section id="s1">
+    <h2><span class="n">01</span>What changes if the CoE stands alone</h2>
+    <p class="lead">Running the Centre as an independent body, separate from BGR Neo's project work, is a clean and
+      defensible decision. It does change one thing, and it is better to know which.</p>
+
+    <div class="grid2">
+      <div class="card" style="--pt:var(--red)">
+        <div class="ce">Loses its force</div>
+        <h4>"We train on live customer cells"</h4>
+        <p>The strongest claim in the earlier material was that trainees work on a <strong>real integration
+          project — a paying customer, an acceptance test, a real handover, and a consequence when the line
+          stops.</strong> No training centre in India can say that.</p>
+        <p>Without the order book behind it, our cells are <strong>training cells, like everyone else's.</strong>
+          The claim does not become false — it becomes unavailable until internships or project placements
+          are added later.</p>
+      </div>
+      <div class="card" style="--pt:var(--green)">
+        <div class="ce">Unaffected</div>
+        <h4>Everything built into the curriculum</h4>
+        <p>Four robot brands · the fault-domain method · the 48-scenario fault library · recovery time as a
+          graded result · the authority boundary · the ITI-to-postgraduate ladder · the UGC diploma through
+          Loyola.</p>
+        <p><strong>None of these depend on an order book.</strong> They are design decisions, and they are
+          what the rest of this page compares.</p>
+      </div>
+    </div>
+
+    <div class="note am">
+      <div class="cl">The practical consequence</div>
+      <p>Our differentiation now has to come from <strong>what we teach and what we award</strong>, not from
+        where we teach it. That is a harder position to hold but a more durable one — an order book can be lost,
+        a curriculum and a degree cannot.</p>
+      <p>An internship or project-placement arrangement with BGR Neo later restores the live-cell claim
+        <strong>without changing anything in the Centre's structure.</strong> Keep it as a year-two option,
+        not a founding assumption.</p>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section id="s2">
+    <h2><span class="n">02</span>Who else is doing this — India</h2>
+    <p class="lead">Nine comparable centres. The columns are the things a student, a funder or a government
+      committee actually asks about.</p>
+
+    <div class="tw" style="--tint:var(--indigo)">
+      <table>
+        <thead>
+          <tr>
+            <th>Centre</th>
+            <th class="rot">Multi-<br>brand</th>
+            <th class="rot">Formal<br>award</th>
+            <th class="rot">Serves<br>ITI level</th>
+            <th class="rot">Research</th>
+            <th class="rot">Incubation</th>
+            <th class="rot">Placement<br>published</th>
+            <th>What it actually is</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="ours">
+            <td><strong>BGR Neo CoE</strong><span class="small">Proposed · Chennai</span></td>
+            <td class="mid"><span class="m y">Yes</span><span class="small">4 brands</span></td>
+            <td class="mid"><span class="m y">Yes</span><span class="small">UGC PG Dip</span></td>
+            <td class="mid"><span class="m y">Yes</span></td>
+            <td class="mid"><span class="m p">Planned</span></td>
+            <td class="mid"><span class="m p">Planned</span></td>
+            <td class="mid"><span class="m p">Proposed</span></td>
+            <td>Three stacked programmes from ITI passout to postgraduate diploma, built around keeping automated cells running</td>
+          </tr>
+          <tr>
+            <td><strong>TANSAM</strong><span class="small">Siemens + TIDCO + TN Govt · TIDEL Park, Chennai</span></td>
+            <td class="mid"><span class="m n">No</span><span class="small">Siemens</span></td>
+            <td class="mid"><span class="m n">No</span><span class="small">certificates</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m y">Yes</span></td>
+            <td class="mid"><span class="m y">Yes</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td>The closest thing to our model. Opened 2022. 16,000 students, 700 professors, 2,000 small businesses. PLM, AR/VR and digital-technology labs — <strong>simulation-rich, cell-light</strong></td>
+          </tr>
+          <tr>
+            <td><strong>TN DET + Tata Technologies</strong><span class="small">71 government ITIs · ₹2,877 crore</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m y">Yes</span><span class="small">ITI trade</span></td>
+            <td class="mid"><span class="m y">Yes</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span><span class="small">intake only</span></td>
+            <td>The volume play. Industrial robotics labs in 71 ITIs, about ₹40 crore per centre. <strong>Publishes admission numbers and no placement outcomes at all</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Delta Electronics + TNSDC</strong><span class="small">College of Engineering, Bargur · opened 2026</span></td>
+            <td class="mid"><span class="m n">No</span><span class="small">Delta</span></td>
+            <td class="mid"><span class="m n">No</span><span class="small">certificates</span></td>
+            <td class="mid"><span class="m p">Partly</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m p">Claimed</span><span class="small">70% assured</span></td>
+            <td>The named CoE slot is taken. 120-hour and 272-hour courses, 20–25 per batch, 4-axis and 6-axis robots, PLC and a screwdriving assembly cell</td>
+          </tr>
+          <tr>
+            <td><strong>FANUC + KCG College</strong><span class="small">Chennai · starts June 2026</span></td>
+            <td class="mid"><span class="m n">No</span><span class="small">FANUC</span></td>
+            <td class="mid"><span class="m p">Partly</span><span class="small">inside a degree</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td>500 students, 50 faculty and 35 outside participants a year. Industrial-grade FANUC systems inside an engineering college</td>
+          </tr>
+          <tr>
+            <td><strong>KUKA + Chennai Institute of Technology</strong></td>
+            <td class="mid"><span class="m n">No</span><span class="small">KUKA</span></td>
+            <td class="mid"><span class="m p">Partly</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td>One KUKA KR-16 training cell with welding, painting and gluing tooling. A lab, not a programme</td>
+          </tr>
+          <tr>
+            <td><strong>Bosch Rexroth college network</strong><span class="small">Ahmedabad, Ghaziabad, Coimbatore, Bhubaneswar, Tamil Nadu and others</span></td>
+            <td class="mid"><span class="m n">No</span><span class="small">Bosch</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td>The most replicated model in India — six labs covering hydraulics, pneumatics, sensors, PLC, drives and mechatronics, dropped into engineering colleges. <strong>Proof that a branded lab is easy to copy</strong></td>
+          </tr>
+          <tr>
+            <td><strong>ARTPARK</strong><span class="small">IISc Bengaluru · ₹170 crore from DST</span></td>
+            <td class="mid"><span class="m n">n/a</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m y">Yes</span></td>
+            <td class="mid"><span class="m y">Yes</span><span class="small">₹2 cr equity</span></td>
+            <td class="mid"><span class="m n">n/a</span></td>
+            <td>A 75,000 sq ft robotics build-and-test facility with a venture programme investing up to ₹2 crore per startup. <strong>The national benchmark for robotics incubation</strong></td>
+          </tr>
+          <tr>
+            <td><strong>IIT Madras Incubation Cell</strong><span class="small">Chennai · 500+ startups</span></td>
+            <td class="mid"><span class="m n">n/a</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m y">Yes</span></td>
+            <td class="mid"><span class="m y">Yes</span><span class="small">₹600 cr fund</span></td>
+            <td class="mid"><span class="m n">n/a</span></td>
+            <td>India's largest deep-tech incubator, in our own city — 500+ startups, 100+ in a single year, with a ₹600 crore deep-tech fund. <strong>Sets the local bar for the word "incubation"</strong></td>
+          </tr>
+          <tr>
+            <td><strong>NIELIT</strong><span class="small">Robotic Programming &amp; Maintenance Technician</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m y">Yes</span><span class="small">NSQF 4</span></td>
+            <td class="mid"><span class="m y">Yes</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td class="mid"><span class="m n">No</span></td>
+            <td>A 450-hour national qualification whose title says maintenance — but <strong>219 of its 450 hours are programming and only 17 are maintenance</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note gr">
+      <div class="cl">The two patterns in that table</div>
+      <p><strong>Everyone who teaches, teaches one brand.</strong> Delta, FANUC, KUKA, Bosch Rexroth and Siemens
+        all fund centres that showcase their own equipment. That is why they fund them. It is a structural limit,
+        not an oversight — and it is the one gap nobody in the list can close.</p>
+      <p><strong>Everyone who incubates, doesn't teach a trade.</strong> ARTPARK and IIT Madras run world-class
+        deep-tech incubation and no shop-floor training. TANSAM is the only one attempting both,
+        and it does it with simulation rather than production hardware.</p>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section id="s3">
+    <h2><span class="n">03</span>Who else is doing this — abroad</h2>
+    <p class="lead">Five models worth knowing, because they show what a mature version of this looks like —
+      and because a committee will ask what we are modelled on.</p>
+
+    <div class="tw" style="--tint:var(--slate)">
+      <table>
+        <thead><tr><th>Centre</th><th>Model</th><th>Scale</th><th>What we can borrow</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Odense Robotics</strong><span class="small">Denmark · national robotics cluster</span></td>
+            <td>Cluster + startup incubator + startup fund + universities, all in one city</td>
+            <td>160+ companies · fund of about €2.5 M for 30 startups over six years · <strong>80% startup survival</strong> · EU gold-rated</td>
+            <td><strong>The closest match to what we are describing.</strong> Universal Robots itself came out of this ecosystem. The incubator is deliberately <em>hardware</em>-focused — it lends robots, grippers, vision and 3D printing, not just desks</td>
+          </tr>
+          <tr>
+            <td><strong>ARM Institute</strong><span class="small">Pittsburgh, USA · Carnegie Mellon + US Dept of Defense</span></td>
+            <td>Member consortium. Three pillars: ecosystem, technical projects, workforce</td>
+            <td>460+ member organisations</td>
+            <td><strong>It endorses other people's training programmes</strong> against a national competency standard rather than only running its own. A powerful position — the one who sets the standard outranks the one who teaches to it</td>
+          </tr>
+          <tr>
+            <td><strong>A*STAR ARTC</strong><span class="small">Singapore · government + Nanyang Technological University</span></td>
+            <td>Industry-led public-private partnership with paying consortium members</td>
+            <td>95+ members across five industry sectors · 1,400+ students trained since 2020</td>
+            <td><strong>Members pay to join and set the research agenda.</strong> That is a revenue model and a placement pipeline in one — the companies funding the research are the ones hiring the graduates</td>
+          </tr>
+          <tr>
+            <td><strong>Fraunhofer IPA</strong><span class="small">Germany · applied research institute</span></td>
+            <td>Applied research + vocational training + a robotics testing facility, under one roof</td>
+            <td>50 years in robotics and automation</td>
+            <td>Training and research feed each other. Seminar participants work on <strong>real robots in the research labs</strong>, so the teaching content is never more than a year behind the research</td>
+          </tr>
+          <tr>
+            <td><strong>ROBOTT-NET</strong><span class="small">Denmark, Germany, Spain, UK</span></td>
+            <td>Four national institutes offering free robotics consulting and open labs to companies</td>
+            <td>60+ company projects · 1,500 lab visitors</td>
+            <td><strong>Free "open lab" days for local manufacturers.</strong> Cheap to run, generates the industry relationships that later become placements, projects and consortium members</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section id="s4">
+    <h2><span class="n">04</span>Where we genuinely stand</h2>
+    <p class="lead">Six claims survive scrutiny. Three are contested. One is gone. Being clear about which is which
+      is what makes the other six believable.</p>
+
+    <h3>Ours — structural, and hard to copy</h3>
+    <div class="grid2">
+      <div class="card" style="--pt:var(--green)">
+        <div class="ce">Claim 1 · Strongest</div>
+        <span class="rank keep">Keep and lead with</span>
+        <h4>Four robot brands</h4>
+        <p>FANUC, ABB, KUKA and Universal Robots, taught to operating competence — <strong>140 hours in the
+          technician programme.</strong></p>
+        <p>Every other teaching centre in the comparison is funded by one manufacturer and teaches that
+          manufacturer's equipment. <strong>They cannot copy this without giving up their funding.</strong>
+          It is the single most defensible thing we have.</p>
+      </div>
+      <div class="card" style="--pt:var(--green)">
+        <div class="ce">Claim 2</div>
+        <span class="rank keep">Keep and lead with</span>
+        <h4>A real qualification, not a certificate</h4>
+        <p>A one-year, 40-credit <strong>UGC Postgraduate Diploma awarded by Loyola College.</strong></p>
+        <p>Everyone else issues attendance or vendor certificates. A postgraduate diploma is recognised by
+          employers, by government schemes and by universities for further study.
+          <strong>Nothing else in the Tamil Nadu robotics landscape offers one.</strong></p>
+      </div>
+      <div class="card" style="--pt:var(--green)">
+        <div class="ce">Claim 3</div>
+        <span class="rank keep">Keep</span>
+        <h4>One ladder, ITI to postgraduate</h4>
+        <p>An ITI passout can enter at the technician tier, work for a period, and return for the diploma —
+          <strong>with credit for the content that overlaps.</strong> The 6-month Engineer Training programme sits
+          between them as a later addition; the ladder holds without it.</p>
+        <p>Every other centre serves exactly one audience. Nobody offers a route that starts at a 10th-standard
+          trade certificate and ends at a postgraduate award.</p>
+      </div>
+      <div class="card" style="--pt:var(--green)">
+        <div class="ce">Claim 4</div>
+        <span class="rank keep">Keep</span>
+        <h4>Built around uptime, not programming</h4>
+        <p>Seven fault domains · a six-step fault procedure drilled to reflex · <strong>48 named fault scenarios
+          seeded on real cells</strong> · recovery time measured and graded · a clear boundary of what a
+          technician may and may not touch.</p>
+        <p>No programme found in India is built this way. The nearest national qualification calls itself
+          maintenance and spends <strong>219 of 450 hours on programming and 17 on maintenance.</strong></p>
+      </div>
+      <div class="card" style="--pt:var(--green)">
+        <div class="ce">Claim 5 · New</div>
+        <span class="rank keep">Keep and lead with</span>
+        <h4>AI is the subject, not the robot</h4>
+        <p>The diploma's shared foundation is <strong>890 hours of AI</strong> — computer vision, robot learning,
+          reinforcement and imitation learning, LLMs, retrieval and agents — before a student picks one of
+          <strong>five specialisations.</strong></p>
+        <p>Read the comparison in section 2 again. Every centre there teaches <em>robots and automation</em>:
+          Siemens teaches PLM and AR/VR, FANUC teaches FANUC systems, KUKA runs one welding cell, Delta teaches PLC.
+          <strong>None of them teaches AI as the subject</strong>, and none offers a choice of specialisation
+          under one award.</p>
+      </div>
+      <div class="card" style="--pt:var(--green)">
+        <div class="ce">Claim 6</div>
+        <span class="rank keep">Keep, position carefully</span>
+        <h4>Graduates are not all going to factories</h4>
+        <p>Only one of the five tracks is manufacturing. <strong>Perception &amp; Autonomy</strong> leads to defence,
+          drones, autonomous vehicles, mining, agriculture and inspection. <strong>Robot Learning</strong> leads to
+          research labs and robotics companies. Analytics and Agentic AI serve any industry with data.</p>
+        <p>That widens the placement pool well beyond the Tamil Nadu automotive corridor every other centre competes
+          in. <strong>The employer and salary evidence for the four non-manufacturing tracks is not yet gathered</strong>
+          — it needs the same sourcing the manufacturing roles had before it goes into a prospectus.</p>
+      </div>
+    </div>
+
+    <div class="note am">
+      <div class="cl">The humanoid — a visitor asset, and how to talk about it</div>
+      <p>One humanoid is in the launch build at ₹25–60 lakh. It carries <strong>no teaching hours in either
+        programme</strong>, and it is deliberately not in the comparison table above, because it is not a competitive
+        claim about training. It is a demonstration and research platform — and the thing a visiting official or a
+        journalist will photograph.</p>
+      <p><strong>Say:</strong> the Centre holds a humanoid platform for demonstration and for the frontier work it
+        expects to be asked for. <strong>Do not say:</strong> that we train people on humanoids, or place graduates
+        into humanoid companies. The build plan already records why the second version does not survive a recruiter —
+        those firms hire globally and mostly want a master's with published research.</p>
+    </div>
+
+    <h3>Contested — everyone claims these, so they win nothing on their own</h3>
+    <div class="tw" style="--tint:var(--amber)">
+      <table>
+        <thead><tr><th>Claim</th><th>Who already says it</th><th>What would make it ours</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>"We provide research support"</strong></td>
+            <td>TANSAM with Siemens · ARTPARK with ₹170 crore of central funding · IIT Madras Research Park · every engineering college in the state</td>
+            <td>Not frontier research — we cannot outspend IISc. <strong>Applied reliability research on real cells:</strong> fault statistics, recovery times, failure modes by application. Nobody owns that ground, and it is the natural output of our own teaching</td>
+          </tr>
+          <tr>
+            <td><strong>"We provide incubation support"</strong></td>
+            <td>ARTPARK invests up to ₹2 crore per startup · IIT Madras has 500+ startups and a ₹600 crore fund, in this city · TANSAM states start-up incubation in its founding vision</td>
+            <td>Not deep-tech incubation — that contest is lost before it starts. <strong>Automation service and integration ventures</strong> started by our own graduates: small firms doing maintenance contracts, retrofits and commissioning. A different and unserved segment</td>
+          </tr>
+          <tr>
+            <td><strong>"We provide placement support"</strong></td>
+            <td>Delta at Bargur advertises 70% assured placement · the state's own tender terms require at least 70% · every private institute claims it</td>
+            <td><strong>Publishing audited outcomes.</strong> The 71-ITI programme publishes admission numbers and no placement data whatsoever. Being the first to publish placement rate, six-month retention and starting salary — verified — is a real and unoccupied position</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note rd">
+      <div class="cl">Gone, for now</div>
+      <p><strong>"Trainees work on live customer cells."</strong> This needs an order book behind it.
+        It returns the day an internship or project-placement arrangement with BGR Neo is signed —
+        so treat it as a year-two upgrade, and do not build the pitch on it today.</p>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section id="s5">
+    <h2><span class="n">05</span>Research, incubation, placement — tested</h2>
+    <p class="lead">The idea was that offering all three together would set us apart. Tested against the landscape,
+      that is half right: offering all three is not unusual, but <em>the shape</em> we give each one can be.</p>
+
+    <div class="grid3">
+      <div class="card" style="--pt:var(--amber)">
+        <div class="ce">Pillar 1</div>
+        <span class="rank fight">Reframe</span>
+        <h4>Research</h4>
+        <p><strong>Weak as stated.</strong> ARTPARK has ₹170 crore. IIT Madras Research Park is in our city.
+          We cannot compete on research funding or publications.</p>
+        <p><strong>Strong if narrowed to:</strong> an annual reliability report on Tamil Nadu automation —
+          which subsystems fail, how often, how long recovery takes, by application. Built from our own
+          fault library and our own graduates' field data. <strong>Nobody has this data because nobody
+          collects it.</strong></p>
+      </div>
+      <div class="card" style="--pt:var(--amber)">
+        <div class="ce">Pillar 2</div>
+        <span class="rank fight">Reframe and stage</span>
+        <h4>Incubation</h4>
+        <p><strong>Weak as stated,</strong> and it has a hard entry requirement — see section 6.</p>
+        <p><strong>Strong if narrowed to:</strong> helping graduates start <strong>automation service
+          businesses</strong> — maintenance contracts, retrofits, commissioning support for small
+          manufacturers. Low capital, immediate revenue, and it multiplies our placement numbers instead of
+          competing with them.</p>
+        <p>Deep-tech venture incubation should be a <strong>referral</strong> to ARTPARK or IIT Madras, not
+          something we attempt.</p>
+      </div>
+      <div class="card" style="--pt:var(--green)">
+        <div class="ce">Pillar 3</div>
+        <span class="rank keep">Strongest of the three</span>
+        <h4>Placement</h4>
+        <p><strong>Strong, if we publish.</strong> Everyone promises 70%. Nobody publishes what actually
+          happened.</p>
+        <p>Commit to publishing, every year: <strong>placement rate, median starting salary, six-month
+          retention, and employer names.</strong> Audited. It costs almost nothing and it is the one claim a
+          government committee can verify — which is exactly why nobody makes it.</p>
+      </div>
+    </div>
+
+    <div class="note gr">
+      <div class="cl">A fourth pillar worth considering</div>
+      <p>The ARM Institute in Pittsburgh does not mainly deliver training — <strong>it endorses other people's
+        training against a national standard.</strong> Japan legally requires robot safety training before a
+        worker may touch an industrial robot; India requires nothing.</p>
+      <p>A state-backed Centre could propose becoming the body that <strong>sets and certifies that
+        standard for Tamil Nadu.</strong> It is a bigger ask than running courses, it costs little, and it
+        would put us above every centre in section 2 rather than beside them.</p>
+    </div>
+  </section>
+
+  <!-- 06 -->
+  <section id="s6">
+    <h2><span class="n">06</span>What incubation really requires</h2>
+    <p class="lead">If the word "incubation" is going to appear in the proposal, it should mean something
+      specific. The national scheme has firm entry conditions.</p>
+
+    <div class="tw" style="--tint:var(--indigo)">
+      <table>
+        <thead><tr><th>Requirement of a recognised technology incubator</th><th>Can BGR Neo meet it?</th></tr></thead>
+        <tbody>
+          <tr><td>The applicant must be an <strong>academic, technical or R&amp;D institution</strong> with a track record in promoting technology entrepreneurship</td><td><strong>Not as a company.</strong> <span class="m y">Yes</span> if <strong>Loyola College is the host institution</strong> and we are the industry partner — this is the unlock</td></tr>
+          <tr><td>Land and building committed on a <strong>minimum 30-year lease</strong></td><td>A major commitment. Straightforward if hosted on a college campus; hard on rented premises</td></tr>
+          <tr><td>Capacity to incubate <strong>at least 30 ventures at a time</strong></td><td>Needs co-working space, meeting rooms, prototyping facilities and connectivity — beyond the equipment already costed in the build plan</td></tr>
+          <tr><td>A <strong>dedicated full-time team</strong> with domain and management expertise</td><td>Additional headcount, not shared with teaching staff</td></tr>
+          <tr><td>A transparent selection process for the startups admitted</td><td>Process design; no cost of consequence</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note am">
+      <div class="cl">The honest recommendation on incubation</div>
+      <p><strong>Stage it.</strong> Year one, run a graduate venture support desk — mentoring, workspace,
+        tooling access and help with registration for graduates starting automation service firms.
+        It costs very little and produces stories.</p>
+      <p><strong>Apply for formal incubator recognition only in year two or three,</strong> with Loyola as the
+        host institution and a real track record behind the application. Claiming formal incubation in year one,
+        in the same city as IIT Madras, invites a comparison we would lose.</p>
+    </div>
+  </section>
+
+  <!-- 07 -->
+  <section id="s7">
+    <h2><span class="n">07</span>What to put in the course that nobody has</h2>
+    <p class="lead">Five additions. Each is cheap, each is checkable, and none of them needs an order book.</p>
+
+    <div class="tw" style="--tint:var(--green)">
+      <table>
+        <thead><tr><th>Addition</th><th>What it is</th><th>Why nobody else has it</th><th>Cost</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>A recovery-time score on the certificate</strong></td>
+            <td>Every graduate's certificate carries their measured average time to recover a cell from a seeded fault, and their diagnostic accuracy</td>
+            <td>No training centre anywhere publishes a performance number on a certificate. It converts a claim into evidence a plant manager can compare</td>
+            <td class="num">Nil<span class="small">already measured</span></td>
+          </tr>
+          <tr>
+            <td><strong>A multi-brand competence card</strong></td>
+            <td>A single card showing verified pendant competence on FANUC, ABB, KUKA and Universal Robots, with the date and assessor</td>
+            <td>Requires four brands in one building. Structurally impossible for every OEM-funded centre in section 2</td>
+            <td class="num">Nil</td>
+          </tr>
+          <tr>
+            <td><strong>Annual recertification</strong></td>
+            <td>Graduates return for a one-day reassessment. Certification lapses if they do not</td>
+            <td>Every other centre issues a certificate that never expires. Recertification creates a return revenue line, keeps alumni contactable, and makes the certificate mean something current</td>
+            <td class="num">Low<span class="small">and it earns</span></td>
+          </tr>
+          <tr>
+            <td><strong>Open lab days for local manufacturers</strong></td>
+            <td>Small manufacturers around Chennai, Coimbatore and Hosur bring a real problem and use the cells for a day, free, with our staff</td>
+            <td>Borrowed from the European model, where it produced 60+ industry projects. It builds the employer relationships that become placements — before we need them</td>
+            <td class="num">Low</td>
+          </tr>
+          <tr>
+            <td><strong>The Tamil Nadu uptime report</strong></td>
+            <td>An annual published report on what actually breaks in automated plants in this state, and how long it takes to fix</td>
+            <td>It is the research pillar made concrete. It is data nobody collects, it positions us as the authority, and it costs one person's time</td>
+            <td class="num">Low</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 08 -->
+  <section id="s8">
+    <h2><span class="n">08</span>The position, in one paragraph</h2>
+
+    <div class="note gr">
+      <div class="cl">Say this</div>
+      <p style="font-size:15px;line-height:1.65"><strong>Every robotics training centre in Tamil Nadu is funded
+        by one equipment manufacturer and teaches that manufacturer's robots, and every one of them issues a
+        certificate. We teach four brands, we award a postgraduate diploma through Loyola College, and we run a
+        single ladder from an ITI passout to a postgraduate qualification. We train people to keep automated
+        plants running — measured on how fast they recover a stopped cell — and we will publish what happens to
+        our graduates, which nobody in the state currently does.</strong></p>
+    </div>
+
+    <h3>What to claim, and what to leave out</h3>
+    <div class="grid2">
+      <div class="card" style="--pt:var(--green)">
+        <div class="ce">Lead with</div>
+        <h4>Four claims</h4>
+        <ul>
+          <li>Four robot brands — nobody else can</li>
+          <li>A UGC postgraduate diploma — nobody else has one</li>
+          <li>One ladder from ITI to postgraduate — nobody else spans it</li>
+          <li>Built around uptime and recovery time — nobody else is</li>
+        </ul>
+      </div>
+      <div class="card" style="--pt:var(--red)">
+        <div class="ce">Do not lead with</div>
+        <h4>Three claims</h4>
+        <ul>
+          <li><strong>Research</strong> — until it is narrowed to the reliability report</li>
+          <li><strong>Incubation</strong> — until Loyola is the host and there is a track record</li>
+          <li><strong>Live customer cells</strong> — until an internship arrangement exists</li>
+        </ul>
+        <p style="margin-top:10px">Each of these becomes usable later. Claiming them early is what a committee
+          tests first, and what a competitor points at.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="foot">
+    <span>BGR Neo Centre of Excellence · competitive position</span>
+    <span>Compiled from published sources · August 2026</span>
+  </div>
+</div>

@@ -19,8 +19,11 @@ fresh graduates and ITI passouts in AI-for-robotics. Two parts:
 ### Resuming the curriculum work
 
 ```
-git checkout coe-curriculum          # it is NOT on main
+git checkout coe-curriculum          # main is fast-forwarded to it, so both carry the work
 ```
+
+`main` is kept level with `coe-curriculum` because **GitHub Pages serves from `main` + `/docs`** — a page
+is not live until `main` has it. Do the work on `coe-curriculum`, then fast-forward `main` and push both.
 
 Then read, in order:
 
